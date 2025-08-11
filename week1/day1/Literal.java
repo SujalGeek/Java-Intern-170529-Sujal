@@ -2,7 +2,7 @@
 // Author: Sujal Morwani
 // Creation Date: 05/08/2025
 
-import java.lang.*;
+import java.lang8.*;
 
 class Literal {
 	public static void main(String args[]) {

@@ -1,0 +1,32 @@
+// Object oriented Programming 4 major pillars
+
+1. Abstraction:
+
+It means hiding the details and showing the required things
+for example a man driving a car while he focuses on using it rather than knowing
+the inner mechanism of the car
+
+2. Encapsulation:
+It is the process of grouping the data in a single section
+
+for example the complete television is single box where all the mechanism are hidden inside the 
+box all are capusled
+
+3. Inheritance
+
+It means designing an object or a class by re using the properties of the existing
+class and Object
+
+Same as specialization
+
+4. Polymorphism 
+
+It means a concept which we can execute a single operation in differenet ways
+It is same as Generalization
+
+
+Class vs Objects
+
+Object is defined in terms of properties and behaviour 
+It will affect the properties
+anything can be the object

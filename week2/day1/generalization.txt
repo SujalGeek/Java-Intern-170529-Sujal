@@ -1,0 +1,9 @@
+Generalization vs specialization
+
+It involves identifying common attributes and behaviour among several entities.
+and grouping them into a more general term.
+
+Specialization
+
+It involves creating a more specific , lower level entities or classes from a more 
+general one, adding unique features 
