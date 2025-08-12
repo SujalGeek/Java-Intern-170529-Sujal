@@ -1,0 +1,22 @@
+There are two type of classes are there:
+1. concrete classes
+2. abstrcat classes
+
+
+You can create the object of the concrete classes but you can not create the 
+object of abstract classes
+But you can create the reference of the abstract classes
+
+abstract class and abstract method
+A method which is not having any body is known as abstract method
+must declare as abstract
+
+If any class having atleast one abstract method it is known as abstract 
+class
+And a class is created abstract as if we declaring time
+
+Class can be abstract without abstract methods
+
+If a class is inherting from abstract class then it also become an abstract
+to become concrete class it must override all the abstract class methods(parent class)
+
