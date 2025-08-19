@@ -30,7 +30,6 @@ public class ThrowThrowsPrac {
     try {
       meth2();
     } catch (NegativeDimesionException e) {
-      // TODO: handle exception
       System.out.println(e);
     }
     System.out.println("Done with the program!!");

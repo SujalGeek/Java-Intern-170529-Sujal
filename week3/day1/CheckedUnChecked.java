@@ -27,7 +27,6 @@ public class CheckedUnChecked {
       // Now for the userdefined exception the class should be throws and one should
       // catch block
     } catch (LowBalanceException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
   }

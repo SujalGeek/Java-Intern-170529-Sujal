@@ -1,0 +1,72 @@
+Now likely to understand the concept of the mutlithreading in Java
+
+It is the concurrent  exceution of programs
+Running multiple threads within the same programs 
+
+
+Different ways to create the threads
+1. Extending the Thread Class
+2. Implementing the Runnable Interface
+
+
+Thread states and lifecycle
+1. new
+2. Runnable
+3. blocked
+4. waiting
+5. timed waiting
+6. terminated
+
+for threads
+Synchronization
+1. Resource Sharing
+
+more than one thread accessing the same Resource(file,printer)
+more than one threads are running and want to access the same file or data object
+
+a thread will have their own stack but heap is Common 
+an object in the heap can be accessed by multiple threads
+so if they are accessing then it is Resource Sharing
+
+It can shared by muliple threads
+2. Critical Section
+
+The lines of code which are accessing the shared object is called as Critical Section
+A piece of code which is Critical that may cause problems
+
+3. Mutual exculsion
+The one thread one has used it and finished it and then thread will use it and make sure
+in coordination and also that both are not using the same object simultaneously
+
+Accessing of one thread will prevent the accessong the other thread
+
+When the Synchronization is introduced in os for muliple processes what mechanisms are suggested
+4. Locking / Mutex
+
+Problem using the mutex is there two people who have seen this is printer
+now both need to print their papers both need to give data and it will print something else
+5. Semaphore
+Os need to take care : Somebody should stand need to see somebody is using it and make sure
+one person should use it
+wait() and signal()
+
+
+The someone who is at the shared object will tell everyone that somebody is there
+and should wait and then if the person who is holding the object
+There will dequeue should it!!
+ready and block queue were there and signal method will called
+
+OS is responsoible for mutual exculsion
+
+6. Monitor
+There is shared object which consists of along with's data and read() and write()
+are within data only and there is queue it is!!
+
+Thread will just say read and write these methods belong to the object takes the responsoibilty of
+achieving mutual exculsion
+Complete mechanism inside in the object
+
+7. Race condition
+8. Inter Thread Commuincation
+
+
