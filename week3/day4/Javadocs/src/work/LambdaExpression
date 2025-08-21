@@ -1,0 +1,42 @@
+After the java 1.8 version the Lambda Expression and Spring Api is introduced
+Lambda is anonyomous function
+and having no name
+and no modifier
+and no return type
+
+() ->{
+}
+
+This is lambda
+
+It reduces the lines of code
+It sequential and parallel execution support
+to call apis very effectively
+and tow write more readable ,concise code
+
+Only used with the functional interface
+After the lambda expression introduced it also behaves as Functional programming
+as an argument of methods we can also pass on the functions
+public int sum(int a,int b)
+{
+return (a+b);
+}
+(int a,int b)->
+{
+return (a+b);
+}
+
+Rules for the lambda expression
+-> body contains one lines then the curly braces are optional
+-> Java compiler also inter pret the type of variable that passed in the arguments and
+type is optional
+e.g (a,b) -> {
+    return (a+b);
+}
+
+e.g (str) -> str.length;
+-> Functional Interface :
+If the interface contains only one abstract method then it is Functional Interface
+
+Lambda is used to implement functional interface
+

@@ -1,0 +1,17 @@
+These streams are related to Collection FrameWorks. These streams are very different
+from io stream, io streams are the sequence of data
+
+
+-> IO Streams are the sequence of data.
+Data ko read or write karne ke liye
+
+
+-> The Stream API are related to Collection Frameworks
+When there is group of objects and need to work together so then the Stream API's
+are used
+
+These streams are introduced in java 1.8 version.
+It basically perform bulk operations and process the objects of Collection.
+Reduce the code length
+
+
