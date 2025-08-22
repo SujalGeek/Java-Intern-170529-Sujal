@@ -1,0 +1,89 @@
+Java program is residing inside the method area
+
+All the local variables and the reference variables in the stack
+Whatever the objects we create using new keyword reside in the Heap area
+
+For any java program the method area and stack is known as the Context of the program
+All other things are resources
+File,input device is resource and some program on network is also a resource
+Heap is also resources
+
+Stream is flow of data
+The data may be flowing from resource to a program and may be flowing from program
+to resource
+program -> file or file -> program
+program -> arrray object or array object(heap) -> program
+
+Contionus flow of data can be treated as stream of characters or stream of bytes
+
+2 important things to IO streams
+1. Buffer
+If there is no match that's why buffer is needed
+If the Java program is sending the data so fast(higher rate) for another Java program if is
+slow that's why needed the buffer 
+The java program will drop the data in the buffer
+and will finish the work soon
+Slowly the program will read the read data from buffer
+
+Buffer is a memory object and used for holding the data for some time to bring
+compatibiliy between devcies.
+
+2. How the data flows
+name="Sujal"
+How these can be sent complete string is not given
+byte by byte data is sent (complete data is not sent)
+
+Java provides two Stream Classes
+1. Byte Stream :- 1 byte
+InputStream
+OutputStream
+2. Character Stream 2 bytes
+Reader
+Writer
+
+----------------------------------------------------------------------------------------
+InputStream
+used for the fetching the data from there
+Various methods are there
+int read() -> read one byte from resource
+if nothing to read then it will return -1
+
+int read(byte b[]) -> It will easily read the byte array and depends on the array size
+we can mention off set and can give me the len provide
+
+int available() -> check if available or not 
+how many bytes available
+
+long skip(long n) -> you want to skip some alphabets and jump here
+
+void mark(int limit) ->  upto that mark it should be valid(limit)
+go back to the mark (reset())
+
+Every inputstream have not the marksSupported()
+
+If you are consuming the byte then it will not be in the stream
+and wanted to stay there only by putting mark
+if possible if the stream is buffered 
+If the stream is buffered then only the mark is supported 
+
+close() -> close the resource
+
+OutputStream
+
+void write(int b)
+void write(byte [] b)
+void write(byte [] b,int off,int len)
+
+void flush()
+void close()
+
+ByteType -> For every Input Stream there is one OutputStream also there
+CharacterType -> for every Reader and Writer(2 bytes and unicode).
+
+RandomAccess can be used to perform both operations
+One file pointer is used for reading operations as well as writing operations
+This is not case for Sequential Access
+
+seek (Randomly move anything in between the file)
+where the current the pointer is pointing on!
+ 
