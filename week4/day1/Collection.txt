@@ -1,0 +1,42 @@
+Collection is nothing just data structure
+It is useful for making applications
+
+Data is most important part of program
+Collection deals with arranging the data inside the main memory
+that data will be used by Java program
+
+Why collections are needed
+The limatation of array is size as array is always fixed size
+same array can not be modified 
+
+
+Set in the unique objects should be there and programmer should write down code
+unique and sorted so sorted collection is there
+
+List is a collection of ordered elements
+The elements will have numbers
+Insert, add or delete based on indices
+List can duplicate elements but the elements is ordered
+It is Interface
+
+ArrayList, LinkedList , Vector and Stack
+
+Set will not have duplicates you cannot insert that same object arranging
+It is not ordered but it will have unique 
+
+SortedSet , HashSet and LinkedHashSet
+TreeSet is used for faster searching in the SortedSet
+
+Frequent searches in the Set
+
+Queue follows FIFO structure 
+
+Priority Queue, Dequeue -> ArrayDequeue
+
+It will be stored on key and value pair
+Map -> Sorted Map -> TreeMap
+HashMap, LinkedHashMap and HashTable
+
+
+The Collection ->>> List, Set and Queue are in java.util package
+These Collection classes and interfaces are Generic -> object of any class
