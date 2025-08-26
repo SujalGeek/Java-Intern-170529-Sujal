@@ -1,0 +1,115 @@
+Key Features of ArrayList: 
+
+Dynamic size → No need to specify size during declaration.
+Indexed access → Elements can be accessed via indexes (like arrays).
+Allows duplicates → Stores duplicate values.
+Maintains insertion order → Elements are retrieved in the order they were added.
+Heterogeneous storage (if no generics are used, but with generics you enforce type safety).
+Not synchronized (if multiple threads modify an ArrayList simultaneously, external synchronization is needed).
+
+
+LinkedList:
+Implements Deque → Can work as a Queue (FIFO) or Stack (LIFO).
+Efficient Insert/Delete → O(1) for add/remove at head/tail.
+Not thread-safe → Needs external synchronization.
+Memory overhead → More memory than ArrayList (because of node pointers).
+Traversal → Can use Iterator or ListIterator (which allows bidirectional traversal).
+
+
+When to use what ArrayList vs LinkedList:-
+ArrayList is backed by a dynamic array, which allows fast random access (O(1) for get(index)) but makes insertions and deletions expensive (O(n) in worst case due to shifting and resizing). On the other hand, LinkedList is backed by a doubly-linked list, which allows efficient insertions and deletions at the head/tail (O(1) for addFirst, addLast, removeFirst, removeLast) but slower element access (O(n) for get(index) since traversal is needed).
+In terms of memory, LinkedList uses more overhead because each node stores element data plus references to previous and next nodes, while ArrayList consumes memory proportional to its capacity (sometimes larger than the number of elements due to pre-allocation).
+When to Use: Use ArrayList when you need frequent access/lookups, iteration, and predictable performance, such as maintaining a product catalog, or when you expect data to be mostly read-only. 
+Use LinkedList when your use case involves frequent insertions/removals, especially at the beginning/middle of the list, such as implementing queues, undo/redo functionality, or playlist management where order and quick structural changes matter.
+
+
+
+Priority Queue
+-> It is mainly for implementing for heap like for the max heap and for the min heap
+higher Priority -> min heap
+
+For implementing the max heap you have to use the comparator 
+
+Comparable supports only single sorting and withing the class
+Comparator supports multiple sorting logic while comparable supports single sorting only
+It is in java.util -> Comparator
+java.lang -> Comparable
+
+
+1. Load Factor
+
+The load factor is a measure of how full a hash table can get before it needs to resize (rehash).
+
+In Java HashMap, the default load factor is 0.75.
+This means: when the table is 75% full, it doubles its size and rehashes the entries to maintain efficient lookup performance.
+If table size = 16 and load factor = 0.75 → rehashing occurs when 12 entries are inserted.
+
+2. Open Addressing
+
+In open addressing, all elements are stored inside the hash table array itself.
+If the desired slot is already occupied (collision), then we try another slot using a probing technique:
+Linear Probing → check next slot (index+1) % m.
+Quadratic Probing → check slots at increasing quadratic intervals (index + i²) % m.
+Double Hashing → use a second hash function to find the next slot.
+
+Advantage: memory efficient (no linked lists).
+Disadvantage: clustering problem (consecutive slots get filled).
+
+Java HashMap and HashSet (default chaining)
+
+When two (or more) keys hash to the same index in a hash table, this is called a collision.
+Chaining handles this by storing a collection (usually a linked list, or sometimes a balanced tree in Java) at each index of the hash table.
+
+Each slot of the hash table points to a list of elements that hash to the same index.
+When a new element collides, it is simply added to the list at that index.
+
+Advantages of Chaining
+
+Simple and easy to implement.
+Can handle high load factor (>1) since multiple elements can exist in the same bucket.
+Deletion is straightforward (just remove from list).
+
+Disadvantages
+
+Requires extra memory for pointers (linked list/tree).
+Cache performance is worse than open addressing (elements scattered in memory).
+
+Comparable (java.lang.Comparable<T>)
+
+Used when: You want a default / natural ordering for your objects.
+
+You implement Comparable<T> in your class and override compareTo(T other).
+Only one way of sorting is possible (the natural order you define).
+
+Comparator (java.util.Comparator<T>)
+
+Used when: You want multiple ways of sorting (different custom orders).
+You create a separate class (or use a lambda/anonymous class) that implements Comparator<T>.
+Doesn’t modify the actual class.
+
+
+A HashSet is a collection that stores elements without duplicates.
+It is implemented using a HashMap internally.
+The order of elements is not guaranteed (no insertion order, no sorting).
+
+Key Points:
+
+Null allowed (only one null element).
+Operations like add, remove, search → O(1) average case (because of hashing).
+Backed by hash table (bucket + linked list or tree internally in Java 8+).
+
+TreeSet
+
+Definition:
+
+A TreeSet is a SortedSet implementation that stores unique elements in sorted order.
+Internally it uses a Red-Black Tree (self-balancing BST).
+
+Key Points:
+
+No duplicates.
+Maintains elements in ascending order by default.
+Can use Comparable (natural ordering) or Comparator (custom ordering).
+Operations like add, remove, search → O(log n) because tree traversal is required.
+
+
