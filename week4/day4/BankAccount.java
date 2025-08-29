@@ -26,7 +26,7 @@ public class BankAccount {
     // try {
     // Thread.sleep(1000);
     // } catch (InterruptedException e) {
-    // // TODO Auto-generated catch block
+    // //
     // // throw new RuntimeErrorException(e);
     // }
     // balanace -= amount;
