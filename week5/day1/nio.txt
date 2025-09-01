@@ -1,0 +1,18 @@
+Why we need the nio package?
+
+We already have the package of io to read from file and write into the file
+Basic reason is providing the multi threading capabilities in the nio library
+
+Basically from using the nio package you can read the file from one thread and
+write into the file from another thread so it is providing the multithreading
+capabilities and non blocking capabilities
+
+There are channels and buffers in the nio package
+Data is always written from a buffer to a channel and read from channel to buffer
+
+the selectors is an object that can be used for montioring the multiple channels
+for events like data arrived and connection opened thus single thread can montior
+multiple channel
+
+The package helps when the application returns immediately whenever the data
+avaliable and application should have pooling mechansim
