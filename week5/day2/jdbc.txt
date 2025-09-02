@@ -1,0 +1,38 @@
+JDBC is an API that helps communicate  with database it allows Java programs to 
+connect with the database, queries and retrieve the database
+It can easily work with different relational databases
+
+
+JDBC Components
+DriverManager Class
+Conncection Interface
+Statement and PreparedStatement Interfaces
+Resultset Interface
+
+-> DriverManager .. have many methods 
+named method getconnection that connects with database
+so then will have to store in the instance so that instance will be of Conncection
+interface so when we need to connect with the database then need the instance of
+connection interface 
+
+Now when need to run the sql queries in Java the statment interface will helps
+or PreparedStatement interface 
+
+After running the SQL the query will returns the output the data is in form of 
+result set so now then result set is need (result set means table )
+
+So now in Java the result set is the interface so an instance will be created 
+and that instance will be added to that table 
+
+instance means object (so now result set interface instance will holding the table
+return after performing the sql queries)
+
+
+How the program flow
+Connect with my IDE with the database using necessary connector
+load necessary drivers 
+create connection
+create statment
+exceute query
+
+
