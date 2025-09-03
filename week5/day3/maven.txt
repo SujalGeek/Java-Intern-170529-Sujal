@@ -1,0 +1,37 @@
+What is Maven?
+Apache Maven is a build automation and project management tool for Java.
+It helps you compile, package, test, and deploy Java applications.
+Instead of manually adding .jar files and managing dependencies, 
+Maven does it for you via a central repository.
+
+Why Do We Need Maven?
+
+Without Maven:
+
+You’d have to download and manage .jar files manually.
+Projects become messy when multiple libraries depend on different versions.
+Building, testing, and packaging would require custom scripts.
+
+With Maven:
+
+You just declare dependencies in pom.xml, Maven downloads them automatically.
+Provides standard project structure.
+Integrates with IDEs (Eclipse, IntelliJ, VS Code) easily.
+Automates build → test → package → deploy cycle.
+
+Maven Lifecycle & Commands
+
+Maven has predefined build lifecycles:
+
+clean → deletes previous build files
+compile → compiles Java source code
+test → runs unit tests
+package → creates .jar or .war
+install → installs artifact into local repo (~/.m2/repository)
+deploy → pushes artifact to remote repo
+
+Types of Maven Repositories
+
+Local Repository → On your machine (~/.m2/repository)
+Central Repository → Maven’s default repo with tons of libraries
+Remote Repository → Company/private repo for internal libs

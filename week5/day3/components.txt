@@ -1,0 +1,15 @@
+Component is a graphical element
+Example of Component are GUI or AWT Components are frame, window,panel
+All these are components
+
+Ex Button is Component -> 
+1. Properties -> means data members 
+2. Methods -> which perform some operation are related to properties
+3. Events -> if the button is clicked it will generate the event and if the
+item is selected in the list box it is an event
+
+Component generate the event
+For handling the events we have listeners 
+listeners means somebody handle it or reponse to the events
+They themselves handle it or can be other listeners can handle it
+
