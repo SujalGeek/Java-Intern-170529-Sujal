@@ -1,0 +1,71 @@
+Caching in Hibernate
+
+Caching = Storing data temporarily so that repeated access can be served faster without hitting the database every time.
+
+Hibernate provides different levels of cache to improve performance.
+
+1. First-Level Cache (Session Cache)
+
+Scope: per session (i.e., org.hibernate.Session object).
+
+Default: Always enabled.
+
+Behavior:
+
+When you fetch an entity, Hibernate keeps it in memory within that session.
+
+If you fetch the same entity again → Hibernate doesn’t hit the DB, it serves from cache.
+
+Cleared only when session is closed or manually flushed/cleared.
+
+Relation with Fetching:
+
+If Alien is loaded EAGERLY, related entities also enter the first-level cache immediately.
+
+If LAZY, related entities are cached only after they are fetched.
+
+Second-Level Cache
+
+Scope: SessionFactory-wide (shared among all sessions).
+
+Optional – must be enabled and configured (e.g., using Ehcache, Infinispan, Hazelcast).
+
+When enabled:
+
+If Session1 loads an Alien(101), it gets stored in L2 cache.
+
+Later, Session2 loads the same Alien(101), Hibernate serves from cache (no DB hit).
+
+
+Query Cache
+
+Works on top of second-level cache.
+Stores query results (not just entities).
+
+Must be explicitly enabled:
+Useful when you repeat the same HQL/JPQL query frequently.
+
+
+. How It Relates to EAGER vs LAZY
+
+EAGER Fetching: More data is cached up-front (parent + child).
+LAZY Fetching: Only parent goes into cache initially. Children (like laptops) are cached only when accessed.
+
+First-level cache respects the fetch strategy:
+
+If Lazy → only the proxy is cached, actual data fetched later.
+If Eager → all entities involved are cached immediately.
+
+Always rely on First-Level Cache (it’s free and built-in).
+
+Use Second-Level Cache for:
+Frequently accessed read-only/reference data (e.g., products, categories).
+Not good for highly transactional data (frequent updates).
+Use Query Cache sparingly → only if queries are repeated often.
+Keep LAZY fetching with caching → avoids unnecessary memory usage.
+
+
+First-level cache → session scoped, always on.
+Second-level cache → optional, shared across sessions.
+Query cache → caches query results.
+EAGER vs LAZY impacts what gets cached and when.
