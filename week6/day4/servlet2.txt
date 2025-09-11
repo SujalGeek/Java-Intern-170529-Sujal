@@ -1,0 +1,31 @@
+Disadvantages of Servlets:
+Servlets are very powerful, but writing complex web pages using only Servlets has drawbacks:
+Difficult to Maintain (Mix of Java + HTML)
+In Servlets, HTML is written inside out.println("<html> ... </html>"); statements.
+This mixes presentation (HTML) with business logic (Java), making the code messy and hard to maintain.
+Poor Separation of Concerns
+Designers (UI/UX people) usually work with HTML/CSS, but Servlets require Java knowledge to modify even the UI.
+Any small UI change needs Java code updates + recompilation.
+Harder for Large Pages
+Writing large HTML forms, tables, or templates inside Java code becomes lengthy, unreadable, and error-prone.
+
+Not Scalable for Presentation Layer
+For big applications with many pages, Servlets alone become too complex to handle both request processing and page rendering.
+
+When to Use JSP
+JSP (JavaServer Pages) was introduced to solve these servlet drawbacks.
+You should use JSP when:
+Focus is on Presentation/UI
+JSP is better suited for writing HTML, CSS, and JavaScript with small embedded Java code (<% %> or JSTL/EL).
+
+Need Separation of Concerns
+Servlet = Controller (handles logic, request/response, DB calls).
+JSP = View (renders output as HTML to the user).
+
+Together, they follow MVC architecture.
+
+Dynamic Web Pages
+When the page content is mostly static HTML but with some dynamic values (e.g., username, product list, feedback results).
+Ease of Maintenance
+UI designers can edit JSP files directly (without needing to touch Java code).
+Developers can keep business logic inside Servlets/Beans.
