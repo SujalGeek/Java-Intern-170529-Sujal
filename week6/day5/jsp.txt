@@ -1,0 +1,111 @@
+Servlet Disadvantages
+
+Requires writing a lot of Java code for HTML output (out.println("<h1>...</h1>") → messy).
+Hard to maintain for large applications with lots of UI.
+Mixing Java code with HTML makes it less readable.
+UI developers (like frontend team) cannot easily work on it.
+
+That’s why JSP was introduced to separate presentation (HTML) from business logic (Java code).
+
+2. JSP Basics
+JSP (Java Server Pages) = Servlet technology extension.
+Allows you to write HTML + Java code inside .jsp files.
+Easier to maintain compared to Servlets.
+On first request, JSP is converted into a Servlet by the container.
+
+3. JSP Directives
+
+Directives give instructions to the JSP container. Three main types:
+Page Directive (<%@ page ... %>)
+Defines page-level settings like error handling, imports, session.
+Example:
+
+<%@ page import="java.util.*, java.sql.*" %>
+<%@ page errorPage="error.jsp" %>
+<%@ page isErrorPage="true" %>
+
+
+Include Directive (<%@ include file="..." %>)
+Inserts static content (like header/footer JSP fragments).
+Done at translation time (before JSP converts to servlet).
+Example:
+
+<%@ include file="header.jsp" %>
+
+Taglib Directive (<%@ taglib ... %>)
+
+Used to include custom tag libraries (JSTL or user-defined tags).
+Example:
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+4. JSP Error Page with Page Directive
+Define error page:
+<%@ page errorPage="error.jsp" %>
+On error.jsp, specify it is an error page:
+
+<%@ page isErrorPage="true" %>
+<h3>Error Occurred: <%= exception %></h3>
+
+
+Be careful not to create infinite loops (don’t set errorPage of error.jsp itself).
+
+
+5. JSP Implicit Objects (9 types)
+Available automatically in JSP (no need to declare).
+request → HttpServletRequest (data from client).
+response → HttpServletResponse (send data to client).
+out → JspWriter (write output to browser).
+session → HttpSession (user session tracking).
+application → ServletContext (application-wide data).
+config → ServletConfig (servlet configuration).
+pageContext → PageContext (manage attributes across scopes).
+page → current JSP page instance (this).
+exception → available only in error pages.
+
+6. Custom Tags & Tag Library
+Custom Tag = User-defined JSP tag that replaces Java code with an XML-style tag.
+Useful for reusable logic (e.g., math operations, formatting, authentication).
+
+Steps:
+Create a class extending SimpleTagSupport.
+public class DivideTag extends SimpleTagSupport {
+    private double n1, n2;
+    public void setN1(double n1) { this.n1 = n1; }
+    public void setN2(double n2) { this.n2 = n2; }
+
+    public void doTag() throws IOException {
+        JspWriter out = getJspContext().getOut();
+        if (n2 == 0) out.println("Error: Division by zero!");
+        else out.println(n1 + " / " + n2 + " = " + (n1 / n2));
+    }
+}
+
+
+Define Tag Library Descriptor (TLD) file → divide.tld.
+Configure in web.xml or use annotation.
+Use in JSP with <%@ taglib ... %>.
+
+7. Filter in Servlet
+A Filter is a component that can preprocess requests and postprocess responses before reaching a servlet or JSP.
+Uses:
+Authentication & Authorization → check login before access.
+Logging → track request/response info.
+Validation → sanitize inputs (XSS, SQL injection).
+Compression → gzip response.
+Character Encoding → set UTF-8 for all requests.
+
+Lifecycle:
+init() → called once.
+doFilter() → executed for every request.
+destroy() → cleanup.
+
+Example:
+public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+        throws IOException, ServletException {
+    System.out.println("Filter applied!");
+    chain.doFilter(request, response); // continue to servlet
+}
+
+
+Configured in web.xml with <filter> and <filter-mapping>.

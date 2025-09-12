@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                            https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_3_0.xsd"
+        version="3.0">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>math</short-name>
+    <uri>http://example.com/tags/math</uri>
+
+    <tag>
+        <name>divide</name>
+        <tag-class>org.example.tags.DivideTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>n1</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>n2</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>
