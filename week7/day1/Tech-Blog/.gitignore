@@ -12,6 +12,8 @@ target/
 *.iml
 *.ipr
 *.project
+/src/main/webapp/WEB-INF/lib
+/src/main/webapp/META-INF
 
 ### Eclipse ###
 .apt_generated

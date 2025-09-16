@@ -1,0 +1,34 @@
+Spring Inversion of Control (IoC) and Dependency Injection (DI) are fundamental concepts of the Spring Framework. They are distinct but closely related, with DI being a specific implementation of the broader IoC principle.
+
+Inversion of Control (IoC)
+IoC is a design principle where a framework or container takes over the control of object creation and lifecycle management. Traditionally, you would write code to create objects using the new keyword, and your code would be in charge of managing those objects and their dependencies.
+
+With IoC, you hand over this control to the Spring IoC container. The container is responsible for:
+
+Instantiating objects (called "beans" in Spring).
+
+Configuring those objects.
+
+Assembling their dependencies.
+
+Managing their complete lifecycle, from creation to destruction.
+
+This "inversion" of control means that instead of your code calling the framework, the framework calls your code. This design makes your application components more modular and less dependent on each other, which is known as loose coupling.
+
+Dependency Injection (DI)
+DI is the primary method for achieving IoC in the Spring framework. It is a design pattern that allows a container to "inject" a component's dependencies into it, rather than the component creating them itself. This means that a class doesn't have to know how to create the objects it needs to do its work. Instead, it declares what it needs, and the Spring container provides it.
+
+There are three common ways to perform Dependency Injection in Spring:
+
+Constructor Injection: The dependencies are provided through the class's constructor. This is the recommended approach for required dependencies because it ensures that the object is created in a fully initialized and valid state.
+
+Setter Injection: The dependencies are provided through public setter methods. This is often used for optional dependencies that can be changed after the object has been created.
+
+Field Injection: Dependencies are injected directly into a field using an annotation like @Autowired. While convenient, this approach is generally discouraged as it can make testing more difficult and lead to a tighter coupling with the Spring framework.
+
+The Relationship Between IoC and DI
+Think of IoC as the "what" and DI as the "how."
+
+IoC is the principle: What is the design goal? The goal is to invert control from the application to the framework.
+
+DI is the pattern: How do you achieve that goal in a concrete way? You achieve it by injecting dependencies.
