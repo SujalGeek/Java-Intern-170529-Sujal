@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+   <bean class="com.springcore.lifecycle.Demo" name="d1" init-method="hey" destroy-method="byy">
+   <property name="price" value="20" />
+   </bean>
+
+	<bean class="com.springcore.lifecycle.Demo_Interface" name="d2">
+	<property name="price" value="40" />
+	</bean>
+	
+	<bean class="com.springcore.lifecycle.Example" name="example">
+	<property name="subject" value="Chemistry" />
+	</bean>
+	
+<!-- How to inject the list -->
+</beans>

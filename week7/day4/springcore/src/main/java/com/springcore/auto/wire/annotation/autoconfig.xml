@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable annotation support -->
+    <context:annotation-config />
+
+    <!-- Beans -->
+    <bean id="address" class="com.springcore.auto.wire.annotation.Address">
+        <property name="street" value="Temp Street" />
+        <property name="city" value="Jaipur" />
+    </bean>
+
+    <bean id="address1" class="com.springcore.auto.wire.annotation.Address">
+        <property name="street" value="Street Famous" />
+        <property name="city" value="Raipur" />
+    </bean>
+
+    <!-- Emp bean (no manual wiring, annotation will handle it) -->
+    <bean id="emp" class="com.springcore.auto.wire.annotation.Emp" />
+
+</beans>

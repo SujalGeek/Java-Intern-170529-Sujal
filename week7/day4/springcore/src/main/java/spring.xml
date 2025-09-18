@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <!-- bean definitions here -->
+    <bean class="com.springcore.Student" name="student1">
+    <property name="studentId">
+    <value>21212</value>
+    </property>
+    <property name="studentName">
+    <value>Sujal Morwani</value>
+    </property>
+    
+    <property name="studentAddress">
+    	<value>Gujarat</value>
+    </property>
+    </bean>
+
+<bean class="com.springcore.Student" id="student2">
+<property name="studentId" value="1234"/>
+<property name="studentName" value="Shyam Tiwari"/>
+<property name="studentAddress" value="MP"/>
+</bean>
+
+<bean class="com.springcore.Student" name="student3" 
+p:studentId="21213" 
+p:studentName="Ramesh"
+p:studentAddress="Kanpur"
+/>
+
+<!-- How to inject the list -->
+</beans>
