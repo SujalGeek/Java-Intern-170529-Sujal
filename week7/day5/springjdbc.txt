@@ -1,0 +1,88 @@
+Why plain JDBC is not preferred
+
+Using JDBC directly has several drawbacks:
+
+Lots of boilerplate code
+You have to manually write code for:
+
+Getting a connection
+
+Creating a Statement/PreparedStatement
+
+Executing queries
+
+Iterating over ResultSet
+
+Closing ResultSet, Statement, Connection in finally block
+
+Error-prone resource management
+If you forget to close even one of these resources, it can lead to memory leaks or connection pool exhaustion.
+
+Checked exceptions everywhere
+JDBC throws SQLException for almost everything, which makes code verbose with try-catch blocks scattered everywhere.
+
+Manual mapping
+You have to manually map ResultSet rows into your model/entity objects.
+
+2. Why use Spring JDBC
+
+Spring’s JDBC Template is built to simplify JDBC programming:
+
+Removes boilerplate
+Handles opening/closing of resources automatically.
+You only focus on writing the SQL and processing the result.
+
+Exception translation
+Converts SQLException into Spring’s DataAccessException hierarchy (runtime exceptions) → makes code cleaner.
+
+RowMapper support
+You can map rows from ResultSet into objects with a simple RowMapper instead of writing manual code.
+
+Cleaner code
+Example of plain JDBC vs Spring JDBC:
+
+JDBC (without Spring):
+public List<User> getAllUsers() {
+    List<User> users = new ArrayList<>();
+    Connection conn = null;
+    PreparedStatement ps = null;
+    ResultSet rs = null;
+
+    try {
+        conn = DriverManager.getConnection("jdbc:mysql://localhost/test", "root", "pass");
+        ps = conn.prepareStatement("SELECT * FROM users");
+        rs = ps.executeQuery();
+
+        while (rs.next()) {
+            User user = new User();
+            user.setId(rs.getInt("id"));
+            user.setName(rs.getString("name"));
+            users.add(user);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    } finally {
+        try { if (rs != null) rs.close(); } catch (Exception e) {}
+        try { if (ps != null) ps.close(); } catch (Exception e) {}
+        try { if (conn != null) conn.close(); } catch (Exception e) {}
+    }
+    return users;
+}
+
+Spring JDBC:
+@Autowired
+private JdbcTemplate jdbcTemplate;
+
+public List<User> getAllUsers() {
+    return jdbcTemplate.query(
+        "SELECT * FROM users",
+        (rs, rowNum) -> new User(rs.getInt("id"), rs.getString("name"))
+    );
+}
+
+
+Summary:
+
+JDBC → verbose, lots of manual work, error-prone.
+
+Spring JDBC → less boilerplate, automatic resource management, cleaner exception handling, object mapping, and much more maintainable.
