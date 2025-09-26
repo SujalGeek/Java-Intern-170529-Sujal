@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+       	http://www.springframework.org/schema/tx/spring-tx.xsd">
+       	
+    <context:component-scan base-package="productcrudapp"/>
+  
+    <tx:annotation-driven/>
+  
+    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="ds">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/productcrud" />
+        <property name="username" value="root" />
+        <property name="password" value="Waheguru&quot;071!" />
+    </bean>
+  
+    <bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" name="factory">
+        <property name="dataSource" ref="ds" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop> 
+            </props>
+        </property>  
+        
+        <property name="packagesToScan" value="productcrudapp.model" /> 
+    </bean>
+  
+    <bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transactionManager">
+        <property name="sessionFactory" ref="factory" /> 
+    </bean>
+    
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" name="viewResolver">
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="suffix" value=".jsp" />
+    </bean>
+</beans>
