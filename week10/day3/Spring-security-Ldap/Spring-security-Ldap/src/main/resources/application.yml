@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+# --- EXPLICIT CONFIGURATION TO FORCE EMBEDDED SERVER START ---
+spring:
+  ldap:
+    embedded:
+      # Base DN used in your LDIF file
+      base-dn: dc=springframework,dc=org
+      # Port the embedded server must run on
+      port: 8389
+      # Path to your renamed LDIF file
+      ldif: test-server.ldif

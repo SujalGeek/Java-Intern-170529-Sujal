@@ -1,0 +1,47 @@
+# Base domain
+dn: dc=springframework,dc=org
+objectClass: top
+objectClass: domain
+dc: springframework
+
+# People organizational unit
+dn: ou=people,dc=springframework,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: people
+
+# Users
+dn: uid=john,ou=people,dc=springframework,dc=org
+objectClass: inetOrgPerson
+cn: John Doe
+sn: Doe
+uid: john
+userPassword: {noop}password
+
+dn: uid=emma,ou=people,dc=springframework,dc=org
+objectClass: inetOrgPerson
+cn: Emma Watson
+sn: Watson
+uid: emma
+userPassword: {noop}password
+
+# Groups organizational unit
+dn: ou=groups,dc=springframework,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+# Group: developers
+dn: cn=developers,ou=groups,dc=springframework,dc=org
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: developers
+uniqueMember: uid=john,ou=people,dc=springframework,dc=org
+uniqueMember: uid=emma,ou=people,dc=springframework,dc=org
+
+# Admin (bind DN)
+dn: cn=admin,dc=springframework,dc=org
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+userPassword: {noop}admin

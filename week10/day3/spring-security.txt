@@ -1,0 +1,131 @@
+Spring Security is an application-level framework that allows or blocks access to URLs for logged-in users.
+It can also control access based on specific user roles.
+
+
+It handles common vulnerabilities
+like session fixation
+click jacking
+click site request forgery
+
+
+What the Spring Security can do
+username and password authentication
+sso/okta/ldap
+app level authorization
+intra app authorization oauth
+microservice security (using tokens, JWT)
+method level security
+
+
+5 core principles of spring security
+Authentication
+Authorization
+
+Authentication in Spring Security is the process of verifying a user's identity — ensuring they are who they claim to be and possess the correct credentials to access protected resources or perform privileged actions.
+The Knowledge Based Authentication
+You have to know the password or some secret information that are used during the authentication
+
+Advantages:
+Easy to implement and use
+Disadvantages:
+Not fully safe if somebody steal the credentials
+
+Possession Based Authentication
+This method verifies identity based on something the user possesses, such as:
+
+like OTP sent to mobiles/email
+smart cards
+authenticator apps like google authenticator 
+
+advantages of it:
+adds a layer of protection beyond passwords
+
+disadvantage of it:
+if the device is stolen then access can be compromised 
+
+after possession plus knowledge based authentication we get the multi factor authentication
+
+Authorization:-
+Authorization in Spring Security is the process of determining what actions or resources an authenticated user is allowed to access after their identity has been verified.
+
+
+1. Role-Based Authorization (RBAC)
+Access is granted based on the user’s assigned role (e.g., ROLE_ADMIN, ROLE_USER).
+
+
+@PreAuthorize("hasRole('ADMIN')")
+public String adminDashboard() { ... }
+
+2. Permission-Based Authorization
+More fine-grained — checks specific permissions or authorities (e.g., READ_PRIVILEGE, WRITE_PRIVILEGE
+
+3. URL-Level Authorization
+Restricts or allows access to specific endpoints based on roles.
+http
+    .authorizeHttpRequests()
+    .requestMatchers("/admin/**").hasRole("ADMIN")
+    .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
+    .anyRequest().authenticated();
+
+4. Method-Level Authorization
+Protects specific service-layer or controller methods using annotations like:
+
+@PreAuthorize
+@PostAuthorize
+@Secured
+
+5. Expression-Based Access Control
+Uses Spring Expression Language (SpEL) for complex access logic.
+@PreAuthorize("#username == authentication.name")
+
+Advantages of Authorization
+
+Enforces least privilege principle — users get only the access they need.
+Protects sensitive endpoints and resources.
+Supports both declarative (annotations) and programmatic (custom logic) security.
+
+Disadvantages
+
+Misconfigured roles or authorities can lead to security loopholes.
+Overly granular permissions can complicate maintenance.
+
+
+Principal
+It is the currently logged in user
+In Spring Security, the Principal represents the currently authenticated user — that is, the entity (person, system, or service) whose identity has been verified by the application.
+
+
+Concepts
+When a user logs in successfully, Spring Security creates an Authentication object.
+
+This object contains three main parts:
+
+Principal → The identity of the user (who they are)
+Credentials → The secret used to prove identity (e.g., password)
+Authorities → The roles or permissions granted to that user
+
+
+Difference between authority and the role:
+An authority in Spring Security represents a specific permission or privilege granted to a user.
+It’s the lowest level of access control — something the user is allowed to do
+
+E.g :-
+READ_PRIVILEGE
+WRITE_PRIVILEGE
+DELETE_USER
+
+
+A role is a collection of authorities (permissions) that define a user’s overall level of access or responsibility in the system.
+
+ROLE_USER → [READ_PRIVILEGE]
+ROLE_ADMIN → [READ_PRIVILEGE, WRITE_PRIVILEGE, DELETE_PRIVILEGE]
+So, a role is built on top of authorities.
+
+Filters
+Filters are right in the middle and they intercept every request check every request while servlets are mapped to urls
+so here comes the spring security comes
+
+So it adds mandatory authentication for the urls
+adds the login form
+it handles login error
+creates the user and set as default password
