@@ -1,0 +1,20 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 61271818010-uacdkgt9pef25bs1f5ff3u9kk00tm8lm.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - openid
+              - profile
+              - email
+          github:
+            client-id: Ov23li8vTx0YwTtOVtwr
+            client-secret: 748e930425cb452c57ff94c98fdb9f37f5724b3a
+            scope:
+              - read:user
+              - user:email
+#  main:
+#    allow-circular-references: true
