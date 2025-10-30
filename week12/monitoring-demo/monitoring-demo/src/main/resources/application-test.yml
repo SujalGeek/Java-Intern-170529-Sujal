@@ -1,0 +1,4 @@
+app:
+  environment: testing
+server:
+  port: 7070

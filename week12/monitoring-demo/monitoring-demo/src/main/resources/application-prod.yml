@@ -1,0 +1,4 @@
+app:
+  environment: production
+server:
+  port: 9090
