@@ -1,6 +1,8 @@
 package com.bezkoder.spring.thymeleaf.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tutorials")

@@ -1,6 +1,6 @@
-F:\0-Wasim\STS Workspace\Spring-Boot-REST-API\src\main\java\com\wasim\rest\api\entity\Student.java
-F:\0-Wasim\STS Workspace\Spring-Boot-REST-API\src\main\java\com\wasim\rest\api\controller\StudentController.java
-F:\0-Wasim\STS Workspace\Spring-Boot-REST-API\src\main\java\com\wasim\rest\api\repository\StudentRepository.java
-F:\0-Wasim\STS Workspace\Spring-Boot-REST-API\src\main\java\com\wasim\rest\api\service\StudentServiceImpl.java
-F:\0-Wasim\STS Workspace\Spring-Boot-REST-API\src\main\java\com\wasim\rest\api\SpringBootRestApiApplication.java
-F:\0-Wasim\STS Workspace\Spring-Boot-REST-API\src\main\java\com\wasim\rest\api\service\StudentService.java
+C:\Projects\Java-Intern-170529-Sujal\week12\day2\Spring-Boot-REST-API-main\Spring-Boot-REST-API\src\main\java\com\example\rest\api\controller\StudentController.java
+C:\Projects\Java-Intern-170529-Sujal\week12\day2\Spring-Boot-REST-API-main\Spring-Boot-REST-API\src\main\java\com\example\rest\api\entity\Student.java
+C:\Projects\Java-Intern-170529-Sujal\week12\day2\Spring-Boot-REST-API-main\Spring-Boot-REST-API\src\main\java\com\example\rest\api\repository\StudentRepository.java
+C:\Projects\Java-Intern-170529-Sujal\week12\day2\Spring-Boot-REST-API-main\Spring-Boot-REST-API\src\main\java\com\example\rest\api\service\StudentService.java
+C:\Projects\Java-Intern-170529-Sujal\week12\day2\Spring-Boot-REST-API-main\Spring-Boot-REST-API\src\main\java\com\example\rest\api\service\StudentServiceImpl.java
+C:\Projects\Java-Intern-170529-Sujal\week12\day2\Spring-Boot-REST-API-main\Spring-Boot-REST-API\src\main\java\com\example\rest\api\SpringBootRestApiApplication.java

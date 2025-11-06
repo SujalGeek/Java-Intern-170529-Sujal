@@ -1,8 +1,9 @@
 package com.fatihhernn.ecommerce.entities;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.persistence.*;
+
 import java.math.BigDecimal;
 import java.util.Date;
 

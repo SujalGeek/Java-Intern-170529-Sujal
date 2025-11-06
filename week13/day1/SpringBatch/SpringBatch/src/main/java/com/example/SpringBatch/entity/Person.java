@@ -13,6 +13,9 @@ public class Person {
     @Column(nullable = false)
     private Long id;
 
+    @Transient   // <— means: ignore this field in DB
+    private String index;
+
     private String customerId;
     private String firstName;
     private String lastName;
@@ -24,6 +27,14 @@ public class Person {
     private String email;
     private String subscriptionDate;
     private String website;
+
+    public String getIndex() {
+        return index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
+    }
 
     public Long getId() {
         return id;
