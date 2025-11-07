@@ -1,0 +1,50 @@
+Spring AI is a project under the Spring ecosystem that provides a unified way to integrate AI models (LLMs) into Spring Boot applications.
+
+It acts as a bridge between your Java app and different AI providers like:
+
+Ollama (local models)
+OpenAI (GPT models)
+Vertex AI (Google)
+Anthropic (Claude)
+HuggingFace, etc.
+
+You only need to change configurations, not your code, to switch models.
+Core Components of Spring AI
+a) ChatModel
+
+The low-level interface representing the actual AI model backend.
+
+Responsible for:
+
+Sending prompts to the model
+
+Receiving generated responses
+
+Handling API communication
+
+Each provider has its own ChatModel implementation:
+
+OllamaChatModel
+
+OpenAiChatModel
+
+VertexAiGeminiChatModel
+
+It directly connects with the LLM endpoint (local or cloud).
+
+b) ChatClient
+
+The developer-friendly abstraction built on top of ChatModel.
+Provides a simple, fluent API for interaction.
+
+Handles:
+Message roles (system, user, assistant)
+Prompt construction
+Response parsing
+
+You interact with the ChatClient, not directly with the model.
+
+
+Layer		Role								Example
+ChatClient	High-level interface to interact with AI			You use this in controllers
+ChatModel	Low-level bridge that sends requests to the actual LLM		OllamaChatModel or VertexAiGeminiChatModel
