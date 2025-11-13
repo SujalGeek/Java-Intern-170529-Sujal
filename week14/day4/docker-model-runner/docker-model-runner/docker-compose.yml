@@ -1,0 +1,23 @@
+services:
+  ollama-service:
+    image: ollama/ollama:latest
+    container_name: ollama_runner
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+  app:
+    build: .
+    container_name: spring_ai_app
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_AI_OPENAI_BASE_URL=http://ollama-service:11434
+      - SPRING_AI_OPENAI_API_KEY=nopassword
+      - SPRING_AI_OPENAI_CHAT_OPTIONS_MODEL=llama3
+    depends_on:
+      - ollama-service
+
+volumes:
+  ollama_data:

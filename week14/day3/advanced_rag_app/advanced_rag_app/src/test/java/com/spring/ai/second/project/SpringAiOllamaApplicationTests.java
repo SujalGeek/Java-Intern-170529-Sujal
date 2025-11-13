@@ -8,11 +8,19 @@ import org.junit.jupiter.api.Test;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.List;
 
 @SpringBootTest
+@EnableAutoConfiguration(exclude = {
+        DataSourceAutoConfiguration.class,
+        HibernateJpaAutoConfiguration.class
+})
 class SpringAiOllamaApplicationTests {
 
 //    @Autowired
@@ -38,7 +46,7 @@ class SpringAiOllamaApplicationTests {
         @Autowired
         private DataTransformer dataTransformer;
 
-        @Autowired
+        @MockBean
         private VectorStore vectorStore;
 
         @Test
@@ -75,4 +83,4 @@ class SpringAiOllamaApplicationTests {
             this.vectorStore.add(tranformedDocument);
             System.out.println("done");
         }
-}   
+}
