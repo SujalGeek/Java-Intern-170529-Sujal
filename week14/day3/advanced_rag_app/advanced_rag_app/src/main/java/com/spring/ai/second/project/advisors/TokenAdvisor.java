@@ -8,34 +8,67 @@ import org.springframework.ai.chat.client.advisor.api.CallAdvisor;
 import org.springframework.ai.chat.client.advisor.api.CallAdvisorChain;
 import org.springframework.ai.chat.client.advisor.api.StreamAdvisor;
 import org.springframework.ai.chat.client.advisor.api.StreamAdvisorChain;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
+@Component
+@ConditionalOnProperty(
+        value = "advisor.token.enabled",
+        havingValue = "true",
+        matchIfMissing = false
+)
 public class TokenAdvisor implements CallAdvisor, StreamAdvisor {
 
-    private Logger logger = LoggerFactory.getLogger(TokenAdvisor.class);
+    private static final Logger logger = LoggerFactory.getLogger(TokenAdvisor.class);
+
+    /**
+     * Logs request & response WITHOUT modifying the prompt.
+     */
     @Override
-    public ChatClientResponse adviseCall(ChatClientRequest chatClientRequest, CallAdvisorChain callAdvisorChain) {
+    public ChatClientResponse adviseCall(ChatClientRequest chatClientRequest,
+                                         CallAdvisorChain callAdvisorChain) {
 
-      this.logger.info("My Token Print Advisor is called: ");
-      this.logger.info("Request: "+chatClientRequest.prompt().getContents());
+        logger.info("=== TokenAdvisor: Incoming Request ===");
+        logger.info("Prompt Messages: {}", chatClientRequest.prompt().getContents());
 
-      ChatClientResponse chatClientResponse = callAdvisorChain.nextCall(chatClientRequest);
+        // ***** IMPORTANT: Do NOT modify the request *****
+        ChatClientResponse response = callAdvisorChain.nextCall(chatClientRequest);
 
-      this.logger.info("Token Advisor: Resposne received from the model: ");
-      this.logger.info("Response: "+chatClientResponse.chatResponse().getResult().getOutput().getText());
-      this.logger.info("Total token consumed: "+chatClientResponse.chatResponse().getMetadata().getUsage().getTotalTokens());
-      return chatClientResponse;
+        logger.info("=== TokenAdvisor: Model Response ===");
+        logger.info("Response Text: {}", response.chatResponse().getResult().getOutput().getText());
+
+        try {
+            logger.info("Total Tokens Used: {}",
+                    response.chatResponse().getMetadata().getUsage().getTotalTokens());
+        } catch (Exception e) {
+            logger.warn("Token usage information not available.");
+        }
+
+        return response;  // RETURN UNCHANGED RESPONSE
     }
 
+    /**
+     * Logs streaming responses (no modification).
+     */
     @Override
-    public Flux<ChatClientResponse> adviseStream(ChatClientRequest chatClientRequest, StreamAdvisorChain streamAdvisorChain) {
-    Flux<ChatClientResponse> chatClientResponseFlux=   streamAdvisorChain.nextStream(chatClientRequest);
-        return chatClientResponseFlux;
+    public Flux<ChatClientResponse> adviseStream(ChatClientRequest chatClientRequest,
+                                                 StreamAdvisorChain streamAdvisorChain) {
+
+        logger.info("=== TokenAdvisor: Streaming Request ===");
+        logger.info("Prompt Messages: {}", chatClientRequest.prompt().getContents());
+
+        // Pass through without modification
+        return streamAdvisorChain.nextStream(chatClientRequest)
+                .doOnNext(resp -> {
+                    logger.info("Stream chunk received: {}",
+                            resp.chatResponse().getResult().getOutput().getText());
+                });
     }
 
     @Override
     public String getName() {
-        return this.getClass().getName();
+        return this.getClass().getSimpleName();
     }
 
     @Override

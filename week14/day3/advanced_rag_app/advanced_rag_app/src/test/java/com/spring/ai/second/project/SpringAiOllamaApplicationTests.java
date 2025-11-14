@@ -8,79 +8,57 @@ import org.junit.jupiter.api.Test;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.List;
 
+
 @SpringBootTest
-@EnableAutoConfiguration(exclude = {
-        DataSourceAutoConfiguration.class,
-        HibernateJpaAutoConfiguration.class
-})
 class SpringAiOllamaApplicationTests {
 
-//    @Autowired
-//    private ChatService chatService;
-//	@Test
-//	void contextLoads() {
-//
-//	}
-//
-//    @Test
-//    void testTemplateRender(){
-//        System.out.println("Template Renderer");
-////        var output = this.chatService.chatTemplate();
-////        System.out.println(output);
-//    }
+    @Autowired
+    private ChatService chatService;
 
-        @Autowired
-        private ChatService chatService;
+    @Autowired
+    private DataLoader dataLoader;
 
-        @Autowired
-        private DataLoader dataLoader;
+    @Autowired
+    private DataTransformer dataTransformer;
 
-        @Autowired
-        private DataTransformer dataTransformer;
+    // Use @Autowired to inject the REAL VectorStore bean
+    @Autowired
+    private VectorStore vectorStore;
 
-        @MockBean
-        private VectorStore vectorStore;
-
-        @Test
-        void savedDataToVectorDatabase(){
+    @Test
+    void savedDataToVectorDatabase(){
+        // This test will now save data to the real database
         this.chatService.saveData(Helper.getData());
-            System.out.println("Data is saved successfully");
-        }
+        System.out.println("Data is saved successfully");
+    }
 
-        @Test
+    @Test
     void testDataLoader(){
-    List<Document> documents = dataLoader.loadDocumentsFromJson();
-            System.out.println(documents.size());
+        List<Document> documents = dataLoader.loadDocumentsFromJson();
+        System.out.println(documents.size());
 
-            documents.forEach(item->{
-                System.out.println(item);
-            });
-        }
-
-        @Test
-        void testPdfLoader(){
-            List<Document> documents = this.dataLoader.loadDocumentsFromPdf();
-
-            System.out.println(documents.size());
         documents.forEach(item->{
             System.out.println(item);
-            System.out.println("-----------------------");
         });
+    }
 
-            System.out.println("Data is read now going to transform");
-          var tranformedDocument = this.dataTransformer.transform(documents);
-            System.out.println(tranformedDocument.size());
-        // going to save to db;
+    @Test
+    void testPdfLoaderAndSaveToDatabase(){
+        System.out.println("Reading PDF data...");
+        List<Document> documents = this.dataLoader.loadDocumentsFromPdf();
+        System.out.println("PDF documents found: " + documents.size());
 
-            this.vectorStore.add(tranformedDocument);
-            System.out.println("done");
-        }
+        System.out.println("Transforming documents...");
+        var tranformedDocument = this.dataTransformer.transform(documents);
+        System.out.println("Transformed documents: " + tranformedDocument.size());
+
+        // This will now call the REAL database (pgvector)
+        this.vectorStore.add(tranformedDocument);
+
+        System.out.println("Data successfully saved to pgvector database!");
+    }
 }
