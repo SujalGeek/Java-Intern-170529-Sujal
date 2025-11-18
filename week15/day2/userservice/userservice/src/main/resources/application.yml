@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: userservice
+
+  data:
+    mongodb:
+      #  MANUALLY CONSTRUCTED STANDARD STRING
+      # This tells the app exactly where the 3 servers are, bypassing the DNS block.
+      # Replace <db_password> with your real password.
+      uri: mongodb://morwanisujal875:<db_password>@cluster0-shard-00-00.tcirwh4.mongodb.net:27017,cluster0-shard-00-01.tcirwh4.mongodb.net:27017,cluster0-shard-00-02.tcirwh4.mongodb.net:27017/vectorDB?ssl=true&authSource=admin&retryWrites=true&w=majority
+      database: vectorDB
+
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+    vectorstore:
+      mongodb:
+        collection-name: embeddings
+        initialize-schema: true

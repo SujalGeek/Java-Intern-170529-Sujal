@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="098035f5-f489-4691-b9b5-1bfc70202c35" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../week10/day4/spring-boot-data-jpa-hospital/spring-boot-data-jpa-hospital-management-system/src/main/java/com/codingshuttle/youtube/hospitalManagement/service/OAuth2SuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week10/day4/spring-boot-data-jpa-hospital/spring-boot-data-jpa-hospital-management-system/src/main/java/com/codingshuttle/youtube/hospitalManagement/service/OAuth2SuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week10/day4/spring-boot-data-jpa-hospital/spring-boot-data-jpa-hospital-management-system/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week10/day4/spring-boot-data-jpa-hospital/spring-boot-data-jpa-hospital-management-system/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week10/day4/spring-boot-data-jpa-hospital/spring-boot-data-jpa-hospital-management-system/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week10/day4/spring-boot-data-jpa-hospital/spring-boot-data-jpa-hospital-management-system/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week15/day1/revise-ai/revise-ai/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week15/day1/revise-ai/revise-ai/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day2/demo-jpa/demo-jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../day2/demo-jpa/demo-jpa/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEcom/SpringEcom/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringEcom/SpringEcom/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="35e6vJQPqVJHmXxY9npHnCpoRwT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Projects/Java-Intern-170529-Sujal/week9/day3/t-ecom"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="098035f5-f489-4691-b9b5-1bfc70202c35" name="Changes" comment="" />
+      <created>1763458419036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763458419036</updated>
+    </task>
+    <servers />
+  </component>
+</project>

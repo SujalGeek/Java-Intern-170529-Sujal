@@ -1,0 +1,11 @@
+services:
+  pgvector-db:
+    image: ankane/pgvector:latest
+    container_name: pgvector-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: vector_db
+    ports:
+      - "5432:5432"
+    restart: always
