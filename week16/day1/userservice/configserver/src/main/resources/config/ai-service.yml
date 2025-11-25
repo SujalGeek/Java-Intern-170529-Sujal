@@ -44,5 +44,5 @@ logging:
 
 gemini:
   api:
-    url:  ttps://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent
-    key:  AIzaSyBdMXeH7ecjaVOajmftCfndMKtEB28DJUg
+    url:  https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent
+    key:  
