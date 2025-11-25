@@ -50,4 +50,4 @@ logging:
 gemini:
   api:
     url:  https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent
-    key:  AIzaSyCm5WXNZvcKMCI0AH-g8P0ufFVvJVUq1pc
+    key:  
