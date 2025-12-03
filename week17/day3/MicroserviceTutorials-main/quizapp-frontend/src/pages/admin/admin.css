@@ -1,0 +1,152 @@
+.admin-container {
+  max-width: 900px;
+}
+
+.admin-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.admin-input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.step {
+  padding: 10px 20px;
+  background: #e2e8f0;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.step.active {
+  background: #2563eb;
+  color: white;
+  opacity: 1;
+}
+
+.admin-card {
+  animation: fadeIn 0.3s ease;
+}
+
+.question-list {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.question-item {
+  padding: 14px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.question-item:hover {
+  background: #e2e8f0;
+}
+
+.question-item.selected {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+textarea.admin-input {
+  resize: none;
+}
+
+.option-box input {
+  margin-top: 8px;
+}
+
+.admin-card {
+  animation: fadeIn 0.3s ease;
+}
+
+
+.filter-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.question-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.question-table th,
+.question-table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.question-table th {
+  background: #f1f5f9;
+  font-weight: 700;
+}
+
+.question-table tr:hover {
+  background: #f9fafb;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: #1e40af;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
