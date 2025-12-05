@@ -1,0 +1,164 @@
+/* ========== ROOT THEME VARIABLES (LIGHT + DARK MODE) ========== */
+:root {
+  --bg: #f4f7fb;
+  --text: #1e293b;
+  --card-bg: white;
+  --option-bg: #f1f5f9;
+  --option-hover: #e2e8f0;
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --correct: #dcfce7;
+  --wrong: #fee2e2;
+}
+
+.dark {
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --card-bg: #1e293b;
+  --option-bg: #334155;
+  --option-hover: #475569;
+}
+
+/* ========== GLOBAL LAYOUT ========== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* PAGE WRAPPER */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ========== BUTTONS ========== */
+button, .btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 14px 26px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ========== QUIZ CARD LIST ========== */
+.quiz-card {
+  background: var(--card-bg);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.quiz-card:hover {
+  transform: translateY(-3px);
+}
+
+.quiz-card-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ========== QUESTION CARD ========== */
+.card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  transition: 0.25s ease;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ========== QUESTION OPTIONS ========== */
+.option {
+  padding: 16px;
+  margin: 14px 0;
+  background: var(--option-bg);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s ease, border 0.2s ease, transform 0.1s ease;
+}
+
+.option:hover {
+  background: var(--option-hover);
+  transform: scale(1.01);
+}
+
+/* selected but not correct yet */
+.option.selected {
+  background: #dbeafe;
+  border-color: var(--primary);
+}
+
+/* after submit / auto evaluation */
+.option.correct {
+  background: var(--correct);
+  border-color: #16a34a;
+}
+
+.option.wrong {
+  background: var(--wrong);
+  border-color: #dc2626;
+}
+
+/* ========== PROGRESS BAR ========== */
+.progress-container {
+  width: 100%;
+  background: #e2e8f0;
+  height: 10px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.progress-bar {
+  height: 10px;
+  background: var(--primary);
+  border-radius: 10px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* ========== DARK MODE BUTTON ========== */
+.toggle-dark {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  padding: 10px 14px;
+  background: var(--option-bg);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--option-hover);
+}
