@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  namespace: basicapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service
+          image: rsujal/user-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8083
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "docker"
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:mysql://mysql:3306/demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "root"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "root"
+            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: "update"
+            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+              value: "http://discovery-service:8761/eureka/"
+
+            # --- THE FIX ---
+            - name: EUREKA_INSTANCE_HOSTNAME
+              value: "user-service"
+            - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
+              value: "false"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+  namespace: basicapp
+spec:
+  selector:
+    app: user-service
+  ports:
+    - port: 8083
+      targetPort: 8083
+  type: ClusterIP

@@ -1,0 +1,27 @@
+QUIZ REPORT
+
+Q: Which loop in Java allows the code to be executed at least once?
+Your Answer: do-while loop
+Correct Answer: do-while loop
+Result: Correct
+
+Q: What is the correct way to declare a constant variable in Java?
+Your Answer: final int x = 5;
+Correct Answer: final int x = 5;
+Result: Correct
+
+Q: What is the output of the following Java code snippet?
+Your Answer: 4
+Correct Answer: 5
+Result: Wrong
+
+Q: Which Java keyword is used to create a subclass?
+Your Answer: class
+Correct Answer: extends
+Result: Wrong
+
+Q: Which Java operator is used to concatenate two strings?
+Your Answer: +
+Correct Answer: +
+Result: Correct
+

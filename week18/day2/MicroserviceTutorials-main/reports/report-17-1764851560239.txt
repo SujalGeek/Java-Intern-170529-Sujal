@@ -1,0 +1,17 @@
+QUIZ REPORT
+
+Q: What does the "static" keyword mean in Java?
+Your Answer: Not Attempted
+Correct Answer: It indicates that a method can be accessed without creating an instance of the class.
+Result: Wrong
+
+Q: What is the correct way to declare a constant variable in Java?
+Your Answer: Not Attempted
+Correct Answer: final int x = 5;
+Result: Wrong
+
+Q: What is the purpose of the "break" statement in Java?
+Your Answer: Not Attempted
+Correct Answer: To terminate a loop or switch statement and transfer control to the next statement.
+Result: Wrong
+

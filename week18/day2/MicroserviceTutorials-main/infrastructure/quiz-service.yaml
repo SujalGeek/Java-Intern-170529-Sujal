@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quiz-service
+  namespace: basicapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quiz-service
+  template:
+    metadata:
+      labels:
+        app: quiz-service
+    spec:
+      containers:
+        - name: quiz-service
+          image: rsujal/quiz-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "docker"
+            
+            # --- DATABASE CONFIG ---
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:mysql://mysql:3306/demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "root"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "root"
+            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: "update"
+
+            # --- SERVER & EUREKA CONFIG (THE FIX) ---
+            # 1. Force the app to listen on port 8081
+            - name: SERVER_PORT
+              value: "8081"
+            # 2. Tell Eureka to access me via my Service Name, NOT localhost
+            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+              value: "http://discovery-service:8761/eureka/"
+            - name: EUREKA_INSTANCE_HOSTNAME
+              value: "quiz-service"
+            - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
+              value: "false"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quiz-service
+  namespace: basicapp
+spec:
+  selector:
+    app: quiz-service
+  ports:
+    - port: 8081
+      targetPort: 8081
+  type: ClusterIP
