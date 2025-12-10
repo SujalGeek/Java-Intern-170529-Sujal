@@ -1,0 +1,17 @@
+QUIZ REPORT
+
+Q: What is the purpose of the "break" statement in Java?
+Your Answer: To terminate a loop or switch statement and transfer control to the next statement.
+Correct Answer: To terminate a loop or switch statement and transfer control to the next statement.
+Result: Correct
+
+Q: In Java, what is the default value of an uninitialized boolean variable?
+Your Answer: 0
+Correct Answer: false
+Result: Wrong
+
+Q: Which Java operator is used to concatenate two strings?
+Your Answer: Not Attempted
+Correct Answer: +
+Result: Wrong
+
