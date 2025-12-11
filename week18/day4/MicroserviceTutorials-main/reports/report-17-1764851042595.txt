@@ -1,0 +1,17 @@
+QUIZ REPORT
+
+Q: What does the "static" keyword mean in Java?
+Your Answer: Not Attempted
+Correct Answer: null
+Result: Wrong
+
+Q: What is the correct way to declare a constant variable in Java?
+Your Answer: Not Attempted
+Correct Answer: null
+Result: Wrong
+
+Q: What is the purpose of the "break" statement in Java?
+Your Answer: Not Attempted
+Correct Answer: null
+Result: Wrong
+

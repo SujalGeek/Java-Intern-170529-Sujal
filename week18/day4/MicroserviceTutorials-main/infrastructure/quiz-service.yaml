@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quiz-service
+  namespace: basicapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quiz-service
+  template:
+    metadata:
+      labels:
+        app: quiz-service
+    spec:
+      containers:
+        - name: quiz-service
+          image: rsujal/quiz-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8090
+          
+          # --- MOUNT THE STORAGE ---
+          volumeMounts:
+            - name: reports-storage
+              mountPath: /app/files
+
+          env:
+            - name: SERVER_PORT
+              value: "8090"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "docker"
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:mysql://mysql:3306/demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "root"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "root"
+            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: "update"
+            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+              value: "http://discovery-service:8761/eureka/"
+
+            # --- EUREKA CONFIG (The Bulletproof Fix) ---
+            # 1. Force the name to match the K8s Service Name
+            - name: EUREKA_INSTANCE_HOSTNAME
+              value: "quiz-service"
+            # 2. Disable IP preference so it uses the Hostname above
+            - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
+              value: "false"
+
+      volumes:
+        - name: reports-storage
+          persistentVolumeClaim:
+            claimName: quiz-reports-pvc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quiz-service
+  namespace: basicapp
+spec:
+  selector:
+    app: quiz-service
+  ports:
+    - port: 8090
+      targetPort: 8090
+  type: ClusterIP
