@@ -24,57 +24,7 @@ spec:
           volumeMounts:
             - name: reports-storage
               mountPath: /app/files
-          env:
-            - name: SERVER_PORT
-              value: "8083"
-            - name: SPRING_PROFILES_ACTIVE
-              value: "docker"
-            - name: SPRING_DATASOURCE_URL
-              value: "jdbc:mysql://mysql:3306/demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
-            - name: SPRING_DATASOURCE_USERNAME
-              value: "root"
-            - name: SPRING_DATASOURCE_PASSWORD
-              value: "root"
-            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
-              value: "update"
-            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
-              value: "http://discovery-service:8761/eureka/"
-            
-            - name: EUREKA_INSTANCE_HOSTNAME
-              value: "user-service"
-            - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
-              value: "false"
-
-            - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GOOGLE_CLIENT_ID
-              value: "206580369969-v2iv5bklnjbj52jkefgva63dde6pl3fq.apps.googleusercontent.com"
-            - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GOOGLE_CLIENT_SECRET
-              value: "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"
-            - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GOOGLE_SCOPE
-              value: "email,profile,openid"
-            - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GOOGLE_REDIRECT_URI
-              value: "{baseUrl}/login/oauth2/code/google"
-
-            # --- EMAIL CONFIG (UPDATED FOR PORT 465) ---
-            - name: SPRING_MAIL_HOST
-              value: "smtp.gmail.com"
-            - name: SPRING_MAIL_PORT
-              value: "465"  # <--- CHANGED FROM 587
-            - name: SPRING_MAIL_USERNAME
-              value: "sujalmorwani@gmail.com"
-            - name: SPRING_MAIL_PASSWORD
-              value: "zxgf mchl bxxh plyw"
-            - name: "SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH"
-              value: "true"
-            - name: "SPRING_MAIL_PROPERTIES_MAIL_SMTP_SSL_ENABLE" # <--- ADDED THIS (Force SSL)
-              value: "true"
-            - name: "SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE" # <--- CHANGED TO FALSE
-              value: "false"
-
-            - name: SENDGRID_API_KEY
-              value: "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"  # <--- Replace with your actual key
-            - name: SPRING_MAIL_FROM_EMAIL
-              value: "sujalmorwani@gmail.com"
-
+          
       # --- DEFINE THE STORAGE ---
       volumes:
         - name: reports-storage
