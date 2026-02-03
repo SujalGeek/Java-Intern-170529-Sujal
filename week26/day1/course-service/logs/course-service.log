@@ -1,0 +1,386 @@
+2026-02-03T17:01:12.784+05:30  INFO 11740 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 11740 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-02-03T17:01:12.791+05:30 DEBUG 11740 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-02-03T17:01:12.794+05:30  INFO 11740 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-03T17:01:14.656+05:30  INFO 11740 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-03T17:01:14.787+05:30  INFO 11740 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 4 JPA repository interfaces.
+2026-02-03T17:01:15.727+05:30  INFO 11740 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-03T17:01:15.743+05:30  INFO 11740 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-03T17:01:15.744+05:30  INFO 11740 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-02-03T17:01:15.830+05:30  INFO 11740 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-03T17:01:15.831+05:30  INFO 11740 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2952 ms
+2026-02-03T17:01:16.068+05:30  INFO 11740 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-03T17:01:16.238+05:30  INFO 11740 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-03T17:01:16.315+05:30  INFO 11740 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-03T17:01:16.816+05:30  INFO 11740 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-03T17:01:16.854+05:30  INFO 11740 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-03T17:01:17.162+05:30  INFO 11740 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27db45f
+2026-02-03T17:01:17.163+05:30  INFO 11740 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-03T17:01:17.228+05:30  WARN 11740 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-03T17:01:17.230+05:30  WARN 11740 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-02-03T17:01:18.843+05:30  INFO 11740 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03T17:01:18.933+05:30  INFO 11740 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03T17:01:19.698+05:30  INFO 11740 --- [course-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-03T17:01:21.089+05:30  INFO 11740 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-02-03T17:01:21.098+05:30  INFO 11740 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 9.129 seconds (process running for 13.049)
+2026-02-03T17:04:17.831+05:30  INFO 11740 --- [course-service] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-03T17:04:17.832+05:30  INFO 11740 --- [course-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-03T17:04:17.836+05:30  INFO 11740 --- [course-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-02-03T17:04:18.208+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-02-03T17:07:26.957+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id 
+    from
+        courses c1_0 
+    where
+        c1_0.course_code=? 
+    limit
+        ?
+2026-02-03T17:07:39.229+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id 
+    from
+        courses c1_0 
+    where
+        c1_0.course_code=? 
+    limit
+        ?
+2026-02-03T17:07:39.358+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        courses
+        (course_code, course_name, created_at, credits, description, is_active, max_students, semester, teacher_id, updated_at, year) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-03T17:08:04.522+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-02-03T17:08:31.596+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-02-03T17:08:33.560+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-02-03T17:08:34.987+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-02-03T17:08:36.572+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-02-03T17:08:38.578+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-02-03T17:08:40.886+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-02-03T17:15:24.580+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id 
+    from
+        courses c1_0 
+    where
+        c1_0.course_code=? 
+    limit
+        ?
+2026-02-03T17:15:24.587+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        courses
+        (course_code, course_name, created_at, credits, description, is_active, max_students, semester, teacher_id, updated_at, year) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-03T17:17:24.499+05:30 DEBUG 11740 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-02-03T17:19:11.776+05:30  INFO 11740 --- [course-service] [RMI TCP Connection(27)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-02-03T17:19:11.793+05:30  INFO 11740 --- [course-service] [RMI TCP Connection(27)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03T17:19:11.796+05:30  INFO 11740 --- [course-service] [RMI TCP Connection(27)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-03T17:19:11.804+05:30  INFO 11740 --- [course-service] [RMI TCP Connection(27)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-03T17:19:18.233+05:30  INFO 21812 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 21812 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-02-03T17:19:18.236+05:30 DEBUG 21812 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-02-03T17:19:18.236+05:30  INFO 21812 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-03T17:19:19.421+05:30  INFO 21812 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-03T17:19:19.521+05:30  INFO 21812 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 4 JPA repository interfaces.
+2026-02-03T17:19:20.269+05:30  INFO 21812 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-03T17:19:20.283+05:30  INFO 21812 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-03T17:19:20.283+05:30  INFO 21812 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-02-03T17:19:20.350+05:30  INFO 21812 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-03T17:19:20.351+05:30  INFO 21812 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2046 ms
+2026-02-03T17:19:20.547+05:30  INFO 21812 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-03T17:19:20.650+05:30  INFO 21812 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-03T17:19:20.720+05:30  INFO 21812 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-03T17:19:21.100+05:30  INFO 21812 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-03T17:19:21.138+05:30  INFO 21812 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-03T17:19:21.420+05:30  INFO 21812 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@146f3d22
+2026-02-03T17:19:21.428+05:30  INFO 21812 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-03T17:19:21.501+05:30  WARN 21812 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-03T17:19:21.503+05:30  WARN 21812 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-02-03T17:19:22.626+05:30  INFO 21812 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03T17:19:22.757+05:30 DEBUG 21812 --- [course-service] [main] org.hibernate.SQL                        : 
+    alter table courses 
+       modify column semester integer
+2026-02-03T17:19:22.985+05:30  INFO 21812 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03T17:19:23.574+05:30  INFO 21812 --- [course-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-03T17:19:24.868+05:30  INFO 21812 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-02-03T17:19:24.895+05:30  INFO 21812 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 7.194 seconds (process running for 10.676)
+2026-02-03T17:19:58.512+05:30  INFO 21812 --- [course-service] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-03T17:19:58.513+05:30  INFO 21812 --- [course-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-03T17:19:58.516+05:30  INFO 21812 --- [course-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-03T17:25:52.561+05:30  INFO 21812 --- [course-service] [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-02-03T17:25:52.576+05:30  INFO 21812 --- [course-service] [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03T17:25:52.578+05:30  INFO 21812 --- [course-service] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-03T17:25:52.587+05:30  INFO 21812 --- [course-service] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-03T17:25:56.239+05:30  INFO 10160 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 10160 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-02-03T17:25:56.241+05:30 DEBUG 10160 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-02-03T17:25:56.242+05:30  INFO 10160 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-03T17:25:57.135+05:30  INFO 10160 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-03T17:25:57.218+05:30  INFO 10160 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2026-02-03T17:25:57.883+05:30  INFO 10160 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-03T17:25:57.897+05:30  INFO 10160 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-03T17:25:57.897+05:30  INFO 10160 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-02-03T17:25:57.970+05:30  INFO 10160 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-03T17:25:57.970+05:30  INFO 10160 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1665 ms
+2026-02-03T17:25:58.192+05:30  INFO 10160 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-03T17:25:58.257+05:30  INFO 10160 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-03T17:25:58.316+05:30  INFO 10160 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-03T17:25:58.647+05:30  INFO 10160 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-03T17:25:58.698+05:30  INFO 10160 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-03T17:25:58.950+05:30  INFO 10160 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55061418
+2026-02-03T17:25:58.954+05:30  INFO 10160 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-03T17:25:59.009+05:30  WARN 10160 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-03T17:25:59.011+05:30  WARN 10160 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-02-03T17:26:00.121+05:30  INFO 10160 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03T17:26:00.241+05:30  INFO 10160 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03T17:26:00.730+05:30  INFO 10160 --- [course-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-03T17:26:01.829+05:30  INFO 10160 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-02-03T17:26:01.839+05:30  INFO 10160 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 6.168 seconds (process running for 7.528)
+2026-02-03T17:26:27.525+05:30  INFO 10160 --- [course-service] [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-02-03T17:26:27.540+05:30  INFO 10160 --- [course-service] [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03T17:26:27.543+05:30  INFO 10160 --- [course-service] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-03T17:26:27.551+05:30  INFO 10160 --- [course-service] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-03T17:29:29.152+05:30  INFO 7716 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 7716 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-02-03T17:29:29.154+05:30 DEBUG 7716 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-02-03T17:29:29.157+05:30  INFO 7716 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-03T17:29:30.365+05:30  INFO 7716 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-03T17:29:30.450+05:30  INFO 7716 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 4 JPA repository interfaces.
+2026-02-03T17:29:31.135+05:30  INFO 7716 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-03T17:29:31.158+05:30  INFO 7716 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-03T17:29:31.159+05:30  INFO 7716 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-02-03T17:29:31.251+05:30  INFO 7716 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-03T17:29:31.252+05:30  INFO 7716 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2027 ms
+2026-02-03T17:29:31.467+05:30  INFO 7716 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-03T17:29:31.554+05:30  INFO 7716 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-03T17:29:31.600+05:30  INFO 7716 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-03T17:29:31.911+05:30  INFO 7716 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-03T17:29:31.948+05:30  INFO 7716 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-03T17:29:32.213+05:30  INFO 7716 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ed9d173
+2026-02-03T17:29:32.217+05:30  INFO 7716 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-03T17:29:32.308+05:30  WARN 7716 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-03T17:29:32.310+05:30  WARN 7716 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-02-03T17:29:33.571+05:30  INFO 7716 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03T17:29:33.711+05:30  INFO 7716 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03T17:29:34.315+05:30  INFO 7716 --- [course-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-03T17:29:35.424+05:30  INFO 7716 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-02-03T17:29:35.433+05:30  INFO 7716 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 6.895 seconds (process running for 9.828)
+2026-02-03T17:29:44.710+05:30  INFO 7716 --- [course-service] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-03T17:29:44.717+05:30  INFO 7716 --- [course-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-03T17:29:44.718+05:30  INFO 7716 --- [course-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-03T17:32:43.050+05:30 DEBUG 7716 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-02-03T17:32:52.416+05:30 DEBUG 7716 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-02-03T17:34:01.289+05:30 DEBUG 7716 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-02-03T17:38:55.106+05:30 DEBUG 7716 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.semester=? 
+        and c1_0.year=?
