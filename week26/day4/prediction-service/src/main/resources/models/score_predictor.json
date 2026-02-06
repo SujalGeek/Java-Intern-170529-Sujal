@@ -1,0 +1,22 @@
+{
+  "model_type": "LinearRegression",
+  "features": [
+    "attendance_percentage",
+    "quiz_average",
+    "assignment_average",
+    "midterm_score",
+    "participation_score",
+    "study_hours_per_week",
+    "previous_gpa"
+  ],
+  "coefficients": [
+    0.1438567084261422,
+    0.25213973203375556,
+    0.25077012083889944,
+    0.2512555526477941,
+    1.021388656888813,
+    -0.03982379506999657,
+    0.05317225542934173
+  ],
+  "intercept": 0.4208494073222795
+}
