@@ -1,0 +1,8 @@
+flask
+sentence-transformers
+numpy
+scikit-learn
+torch
+transformers
+sentencepiece
+accelerate
