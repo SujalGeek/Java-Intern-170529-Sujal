@@ -908,7 +908,7 @@
 #         print("⏳ Loading Groq LLM (Llama-3.1-8b)...")
 
 #         # IMPORTANT: Set your real key here
-#         os.environ["GROQ_API_KEY"] = "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"
+#         os.environ["GROQ_API_KEY"] = ""
 
 #         self.llm = ChatGroq(
 #             model="llama-3.1-8b-instant",
@@ -1040,7 +1040,7 @@
 
 #     def __init__(self):
 #         print("Loading Groq LLM...")
-#         os.environ["GROQ_API_KEY"] = "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"
+#         os.environ["GROQ_API_KEY"] = ""
 
 #         self.llm = ChatGroq(
 #             model="llama-3.1-8b-instant",
