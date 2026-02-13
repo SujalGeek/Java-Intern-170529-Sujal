@@ -1,0 +1,28 @@
+2026-02-04T14:26:58.746+05:30  INFO 15812 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 15812 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-02-04T14:26:58.755+05:30 DEBUG 15812 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-02-04T14:26:58.759+05:30  INFO 15812 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-04T14:27:00.751+05:30  INFO 15812 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-04T14:27:00.974+05:30  INFO 15812 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 191 ms. Found 4 JPA repository interfaces.
+2026-02-04T14:27:02.423+05:30  INFO 15812 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-04T14:27:02.449+05:30  INFO 15812 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-04T14:27:02.449+05:30  INFO 15812 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-02-04T14:27:02.735+05:30  INFO 15812 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-04T14:27:02.735+05:30  INFO 15812 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3877 ms
+2026-02-04T14:27:03.096+05:30  INFO 15812 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-04T14:27:03.275+05:30  INFO 15812 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-04T14:27:03.368+05:30  INFO 15812 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-04T14:27:04.165+05:30  INFO 15812 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-04T14:27:04.225+05:30  INFO 15812 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-04T14:27:04.911+05:30  INFO 15812 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@410382cb
+2026-02-04T14:27:04.920+05:30  INFO 15812 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-04T14:27:05.107+05:30  WARN 15812 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-04T14:27:05.109+05:30  WARN 15812 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-02-04T14:27:07.652+05:30  INFO 15812 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-04T14:27:07.789+05:30  INFO 15812 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04T14:27:08.675+05:30  INFO 15812 --- [course-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-04T14:27:10.998+05:30  INFO 15812 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-02-04T14:27:11.020+05:30  INFO 15812 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 13.351 seconds (process running for 16.824)
+2026-02-04T14:45:51.187+05:30  INFO 15812 --- [course-service] [RMI TCP Connection(28)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-02-04T14:45:51.235+05:30  INFO 15812 --- [course-service] [RMI TCP Connection(28)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04T14:45:51.238+05:30  INFO 15812 --- [course-service] [RMI TCP Connection(28)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-04T14:45:51.243+05:30  INFO 15812 --- [course-service] [RMI TCP Connection(28)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
