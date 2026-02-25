@@ -1,0 +1,17 @@
+# flask
+# sentence-transformers
+# numpy
+# scikit-learn
+# torch
+transformers
+sentencepiece
+accelerate
+
+flask
+sentence-transformers
+torch
+pymupdf
+langchain
+langchain-groq
+scikit-learn
+numpy
