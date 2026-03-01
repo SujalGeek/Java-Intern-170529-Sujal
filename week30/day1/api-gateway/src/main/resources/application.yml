@@ -1,0 +1,80 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: API-GATEWAY
+
+  cloud:
+    gateway:
+      routes:
+        # User Authentication & Profiles
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/auth/**, /api/users/**
+
+        # Course Content, Enrollments, and Submissions
+        - id: COURSE-SERVICE
+          uri: lb://COURSE-SERVICE
+          predicates:
+            - Path=/api/course/**
+
+        - id: ENROLLMENT
+          uri: lb://COURSE-SERVICE
+          predicates:
+            - Path=/api/enrollments/**
+
+        - id: SUBMISSION
+          uri: lb://COURSE-SERVICE
+          predicates:
+            - Path=/api/submissions/**
+
+        # Quiz & Assignments
+        - id: QUIZ-SERVICE
+          uri: lb://QUIZ-SERVICE
+          predicates:
+            - Path=/api/quiz/**
+
+        - id: ASSIGNMENT-SERVICE
+          uri: lb://ASSIGNMENT-SERVICE
+          predicates:
+            - Path=/api/assignment/**
+
+        # Results & Performance
+        - id: EXAM-RESULT-SERVICE
+          uri: lb://EXAM-RESULT-SERVICE
+          predicates:
+            - Path=/api/exam-results/**
+
+        - id: PERFORMANCE-SERVICE
+          uri: lb://PERFORMANCE-SERVICE
+          predicates:
+            - Path=/api/performance/**
+
+        # AI, Analytics & Predictions
+        - id: PREDICTION-SERVICE
+          uri: lb://PREDICTION-SERVICE
+          predicates: 
+            - Path=/api/predict/**
+
+        - id: ANALYTICS-SERVICE
+          uri: lb://ANALYTICS-SERVICE
+          predicates:
+            - Path=/api/analytics/**
+
+        - id: AI-INTEGRATION-SERVICE
+          uri: lb://AI-INTEGRATION-SERVICE
+          predicates:
+            - Path=/api/v1/exams/**, /api/v1/admin/**
+
+# Eureka Client Configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+# JWT Configuration (mapped to your JwtService @Value annotations)
+jwt:
+  secret: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30
+  expiration: 86400000
