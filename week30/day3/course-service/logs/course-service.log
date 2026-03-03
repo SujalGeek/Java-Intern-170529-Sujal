@@ -1,0 +1,1005 @@
+2026-03-03T00:04:36.543+05:30  INFO 10000 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T10:17:54.957+05:30  INFO 23564 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 23564 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-03-03T10:17:54.960+05:30 DEBUG 23564 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-03-03T10:17:54.962+05:30  INFO 23564 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-03T10:18:03.490+05:30  INFO 23564 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-03T10:18:05.396+05:30  INFO 23564 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1798 ms. Found 4 JPA repository interfaces.
+2026-03-03T10:18:07.427+05:30  INFO 23564 --- [course-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fbf21d35-44a1-334e-8dcf-953b4fa2a65c
+2026-03-03T10:18:08.641+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-03T10:18:08.648+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.657+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.710+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.724+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.727+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x0000027cba494eb8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.736+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.792+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.815+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.822+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.828+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.841+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.855+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.890+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplateConfig' of type [com.example.course_service.config.RestTemplateConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:08.994+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:09.018+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:09.024+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:09.029+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:09.037+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:09.040+05:30  WARN 23564 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T10:18:10.510+05:30  INFO 23564 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-03T10:18:10.565+05:30  INFO 23564 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-03T10:18:10.567+05:30  INFO 23564 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-03T10:18:11.095+05:30  INFO 23564 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-03T10:18:11.100+05:30  INFO 23564 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 15881 ms
+2026-03-03T10:18:11.998+05:30  INFO 23564 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-03T10:18:12.399+05:30  INFO 23564 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-03T10:18:12.634+05:30  INFO 23564 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-03T10:18:14.033+05:30  INFO 23564 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-03T10:18:14.153+05:30  INFO 23564 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-03T10:18:17.329+05:30  INFO 23564 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41026e5c
+2026-03-03T10:18:17.343+05:30  INFO 23564 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-03T10:18:17.694+05:30  WARN 23564 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-03T10:18:17.699+05:30  WARN 23564 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-03T10:18:22.800+05:30  INFO 23564 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-03T10:18:23.182+05:30  INFO 23564 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T10:18:25.630+05:30  INFO 23564 --- [course-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-03T10:18:31.691+05:30  INFO 23564 --- [course-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-03T10:18:32.130+05:30  WARN 23564 --- [course-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-03T10:18:32.369+05:30  INFO 23564 --- [course-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-03T10:18:32.552+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-03T10:18:32.583+05:30  INFO 23564 --- [course-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T10:18:32.694+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-03T10:18:32.695+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-03T10:18:32.695+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-03T10:18:32.695+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-03T10:18:32.697+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-03T10:18:32.698+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-03T10:18:32.698+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-03T10:18:35.967+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-03T10:18:35.975+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-03T10:18:35.988+05:30  INFO 23564 --- [course-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-03T10:18:36.019+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1772513316017 with initial instances count: 0
+2026-03-03T10:18:36.025+05:30  INFO 23564 --- [course-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application COURSE-SERVICE with eureka with status UP
+2026-03-03T10:18:36.027+05:30  INFO 23564 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772513316027, current=UP, previous=STARTING]
+2026-03-03T10:18:36.046+05:30  INFO 23564 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-03T10:18:36.095+05:30  INFO 23564 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-03-03T10:18:36.097+05:30  INFO 23564 --- [course-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-03-03T10:18:36.357+05:30  INFO 23564 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-03T10:18:36.392+05:30  INFO 23564 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 43.845 seconds (process running for 50.814)
+2026-03-03T10:19:05.991+05:30  INFO 23564 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-03T10:19:05.991+05:30  INFO 23564 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-03T10:19:05.991+05:30  INFO 23564 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-03T10:19:05.991+05:30  INFO 23564 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-03T10:19:05.991+05:30  INFO 23564 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-03T10:19:05.991+05:30  INFO 23564 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-03-03T10:19:05.993+05:30  INFO 23564 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-03T10:19:06.041+05:30  INFO 23564 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-03T10:23:32.724+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T10:28:32.751+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T10:33:32.762+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T10:38:32.778+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T10:43:32.788+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T10:48:32.817+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T10:53:32.826+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T10:58:32.835+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:03:32.842+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:08:32.853+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:13:32.869+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:18:32.884+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:23:32.903+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:28:32.925+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:33:32.941+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:38:32.950+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:43:32.952+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:48:32.959+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:53:32.967+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T11:58:32.984+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:03:32.997+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:08:33.017+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:13:33.039+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:18:33.050+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:23:33.064+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:28:33.076+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:33:33.094+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:38:33.109+05:30  INFO 23564 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:40:55.827+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-03T12:40:55.831+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application COURSE-SERVICE with eureka with status DOWN
+2026-03-03T12:40:55.831+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772521855831, current=DOWN, previous=UP]
+2026-03-03T12:40:55.831+05:30  INFO 23564 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-03T12:40:55.852+05:30  INFO 23564 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-03T12:40:55.855+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T12:40:55.860+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-03T12:40:55.863+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-03T12:40:55.864+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-03-03T12:40:58.874+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-03-03T12:40:58.889+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - deregister  status: 200
+2026-03-03T12:40:58.897+05:30  INFO 23564 --- [course-service] [RMI TCP Connection(177)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-03-03T12:41:25.679+05:30  INFO 13060 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 13060 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-03-03T12:41:25.681+05:30 DEBUG 13060 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-03-03T12:41:25.684+05:30  INFO 13060 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-03T12:41:28.039+05:30  INFO 13060 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-03T12:41:28.316+05:30  INFO 13060 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 259 ms. Found 4 JPA repository interfaces.
+2026-03-03T12:41:28.733+05:30  INFO 13060 --- [course-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fbf21d35-44a1-334e-8dcf-953b4fa2a65c
+2026-03-03T12:41:28.953+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-03T12:41:28.956+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.958+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.969+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.971+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.972+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x000001be87490eb8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.975+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.983+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.991+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.993+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.995+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:28.998+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:29.004+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:29.013+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplateConfig' of type [com.example.course_service.config.RestTemplateConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:29.052+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:29.055+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:29.057+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:29.058+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:29.060+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:29.061+05:30  WARN 13060 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T12:41:29.391+05:30  INFO 13060 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-03T12:41:29.404+05:30  INFO 13060 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-03T12:41:29.404+05:30  INFO 13060 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-03T12:41:29.539+05:30  INFO 13060 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-03T12:41:29.540+05:30  INFO 13060 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3748 ms
+2026-03-03T12:41:29.806+05:30  INFO 13060 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-03T12:41:29.969+05:30  INFO 13060 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-03T12:41:30.082+05:30  INFO 13060 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-03T12:41:30.654+05:30  INFO 13060 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-03T12:41:30.720+05:30  INFO 13060 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-03T12:41:31.060+05:30  INFO 13060 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e44cb34
+2026-03-03T12:41:31.065+05:30  INFO 13060 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-03T12:41:31.163+05:30  WARN 13060 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-03T12:41:31.164+05:30  WARN 13060 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-03T12:41:33.063+05:30  INFO 13060 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-03T12:41:33.217+05:30  INFO 13060 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T12:41:34.067+05:30  INFO 13060 --- [course-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-03T12:41:35.366+05:30  INFO 13060 --- [course-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-03T12:41:35.429+05:30  WARN 13060 --- [course-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-03T12:41:35.491+05:30  INFO 13060 --- [course-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-03T12:41:35.545+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-03T12:41:35.551+05:30  INFO 13060 --- [course-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:41:35.581+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-03T12:41:35.581+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-03T12:41:35.581+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-03T12:41:35.581+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-03T12:41:35.581+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-03T12:41:35.581+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-03T12:41:35.582+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-03T12:41:36.065+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-03T12:41:36.070+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-03T12:41:36.074+05:30  INFO 13060 --- [course-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-03T12:41:36.081+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1772521896080 with initial instances count: 9
+2026-03-03T12:41:36.083+05:30  INFO 13060 --- [course-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application COURSE-SERVICE with eureka with status UP
+2026-03-03T12:41:36.085+05:30  INFO 13060 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772521896085, current=UP, previous=STARTING]
+2026-03-03T12:41:36.087+05:30  INFO 13060 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-03T12:41:36.121+05:30  INFO 13060 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-03-03T12:41:36.122+05:30  INFO 13060 --- [course-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-03-03T12:41:36.138+05:30  INFO 13060 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 11.323 seconds (process running for 12.973)
+2026-03-03T12:41:36.152+05:30  INFO 13060 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-03T12:46:35.598+05:30  INFO 13060 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T12:49:33.339+05:30  INFO 13060 --- [course-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-03T12:49:33.339+05:30  INFO 13060 --- [course-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-03T12:49:33.339+05:30  INFO 13060 --- [course-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-03-03T12:49:33.540+05:30 DEBUG 13060 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-03T12:49:33.708+05:30 DEBUG 13060 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=? 
+        and e1_0.course_id=?
+2026-03-03T12:50:39.885+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-03T12:50:39.887+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application COURSE-SERVICE with eureka with status DOWN
+2026-03-03T12:50:39.888+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772522439888, current=DOWN, previous=UP]
+2026-03-03T12:50:39.888+05:30  INFO 13060 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-03T12:50:39.906+05:30  INFO 13060 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-03T12:50:39.907+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T12:50:39.910+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-03T12:50:39.917+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-03T12:50:39.918+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-03-03T12:50:42.922+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-03-03T12:50:42.938+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - deregister  status: 200
+2026-03-03T12:50:42.942+05:30  INFO 13060 --- [course-service] [RMI TCP Connection(18)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-03-03T13:58:40.772+05:30  INFO 27656 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 27656 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-03-03T13:58:40.774+05:30 DEBUG 27656 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-03-03T13:58:40.777+05:30  INFO 27656 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-03T13:58:42.349+05:30  INFO 27656 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-03T13:58:42.662+05:30  INFO 27656 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 299 ms. Found 4 JPA repository interfaces.
+2026-03-03T13:58:43.201+05:30  INFO 27656 --- [course-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fbf21d35-44a1-334e-8dcf-953b4fa2a65c
+2026-03-03T13:58:43.565+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-03T13:58:43.569+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.571+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.583+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.586+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.588+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x000002d290490c80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.590+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.600+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.609+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.611+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.613+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.616+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.623+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.631+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplateConfig' of type [com.example.course_service.config.RestTemplateConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.669+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.676+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.677+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.678+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.681+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:43.683+05:30  WARN 27656 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T13:58:44.122+05:30  INFO 27656 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-03T13:58:44.136+05:30  INFO 27656 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-03T13:58:44.136+05:30  INFO 27656 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-03T13:58:44.273+05:30  INFO 27656 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-03T13:58:44.274+05:30  INFO 27656 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3415 ms
+2026-03-03T13:58:44.540+05:30  INFO 27656 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-03T13:58:44.903+05:30  INFO 27656 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-03T13:58:45.041+05:30  INFO 27656 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-03T13:58:45.750+05:30  INFO 27656 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-03T13:58:45.838+05:30  INFO 27656 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-03T13:58:46.191+05:30  INFO 27656 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a984952
+2026-03-03T13:58:46.195+05:30  INFO 27656 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-03T13:58:46.301+05:30  WARN 27656 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-03T13:58:46.304+05:30  WARN 27656 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-03T13:58:48.044+05:30  INFO 27656 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-03T13:58:48.142+05:30  INFO 27656 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T13:58:49.943+05:30  INFO 27656 --- [course-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-03T13:58:50.046+05:30  WARN 27656 --- [course-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-03T13:58:50.162+05:30  INFO 27656 --- [course-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-03T13:58:50.242+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-03T13:58:50.252+05:30  INFO 27656 --- [course-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T13:58:50.292+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-03T13:58:50.292+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-03T13:58:50.292+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-03T13:58:50.292+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-03T13:58:50.292+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-03T13:58:50.293+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-03T13:58:50.293+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-03T13:58:51.519+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-03T13:58:51.523+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-03T13:58:51.529+05:30  INFO 27656 --- [course-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-03T13:58:51.537+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1772526531535 with initial instances count: 0
+2026-03-03T13:58:51.541+05:30  INFO 27656 --- [course-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application COURSE-SERVICE with eureka with status UP
+2026-03-03T13:58:51.542+05:30  INFO 27656 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772526531542, current=UP, previous=STARTING]
+2026-03-03T13:58:51.547+05:30  INFO 27656 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-03T13:58:51.588+05:30  INFO 27656 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-03-03T13:58:51.589+05:30  INFO 27656 --- [course-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-03-03T13:58:51.615+05:30  INFO 27656 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 11.681 seconds (process running for 13.424)
+2026-03-03T13:58:51.762+05:30  INFO 27656 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-03T13:59:21.528+05:30  INFO 27656 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-03T13:59:21.529+05:30  INFO 27656 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-03T13:59:21.529+05:30  INFO 27656 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-03T13:59:21.529+05:30  INFO 27656 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-03T13:59:21.529+05:30  INFO 27656 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-03T13:59:21.530+05:30  INFO 27656 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-03-03T13:59:21.530+05:30  INFO 27656 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-03T13:59:21.573+05:30  INFO 27656 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-03T14:03:48.141+05:30  INFO 27656 --- [course-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-03T14:03:48.141+05:30  INFO 27656 --- [course-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-03T14:03:48.143+05:30  INFO 27656 --- [course-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-03T14:03:48.413+05:30 DEBUG 27656 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-03T14:03:48.720+05:30 DEBUG 27656 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=? 
+        and e1_0.course_id=?
+2026-03-03T14:03:48.737+05:30 DEBUG 27656 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        count(e1_0.enrollment_id) 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=? 
+        and e1_0.enrollment_status=?
+2026-03-03T14:03:48.740+05:30 DEBUG 27656 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        count(e1_0.enrollment_id) 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-03T14:03:48.839+05:30 DEBUG 27656 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        enrollments
+        (course_id, enrollment_date, enrollment_status, student_id) 
+    values
+        (?, ?, ?, ?)
+2026-03-03T14:03:48.969+05:30  WARN 27656 --- [course-service] [http-nio-8082-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2026-03-03T14:03:48.969+05:30 ERROR 27656 --- [course-service] [http-nio-8082-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'courseId' doesn't have a default value
+2026-03-03T14:03:50.307+05:30  INFO 27656 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:08:50.313+05:30  INFO 27656 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:12:42.963+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-03T14:12:42.966+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application COURSE-SERVICE with eureka with status DOWN
+2026-03-03T14:12:42.966+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772527362966, current=DOWN, previous=UP]
+2026-03-03T14:12:42.967+05:30  INFO 27656 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-03T14:12:42.982+05:30  INFO 27656 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-03T14:12:42.985+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T14:12:42.987+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-03T14:12:42.996+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-03T14:12:42.997+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-03-03T14:12:46.003+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-03-03T14:12:46.027+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - deregister  status: 200
+2026-03-03T14:12:46.042+05:30  INFO 27656 --- [course-service] [RMI TCP Connection(20)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-03-03T14:12:52.996+05:30  INFO 26700 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 26700 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-03-03T14:12:52.998+05:30 DEBUG 26700 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-03-03T14:12:53.000+05:30  INFO 26700 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-03T14:12:54.290+05:30  INFO 26700 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-03T14:12:54.742+05:30  INFO 26700 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 432 ms. Found 4 JPA repository interfaces.
+2026-03-03T14:12:55.428+05:30  INFO 26700 --- [course-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fbf21d35-44a1-334e-8dcf-953b4fa2a65c
+2026-03-03T14:12:55.809+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-03T14:12:55.809+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.809+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.828+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.828+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.828+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x00000221394a8eb8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.838+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.878+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.892+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.893+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.895+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.898+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.905+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.911+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplateConfig' of type [com.example.course_service.config.RestTemplateConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.964+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.980+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.983+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.983+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.988+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:55.988+05:30  WARN 26700 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:12:56.589+05:30  INFO 26700 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-03T14:12:56.610+05:30  INFO 26700 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-03T14:12:56.612+05:30  INFO 26700 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-03T14:12:56.834+05:30  INFO 26700 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-03T14:12:56.834+05:30  INFO 26700 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3766 ms
+2026-03-03T14:12:57.258+05:30  INFO 26700 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-03T14:12:57.423+05:30  INFO 26700 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-03T14:12:57.537+05:30  INFO 26700 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-03T14:12:57.551+05:30 ERROR 26700 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to resolve name [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+2026-03-03T14:12:57.553+05:30  WARN 26700 --- [course-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to resolve name [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+2026-03-03T14:12:57.560+05:30  INFO 26700 --- [course-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-03T14:12:57.592+05:30  INFO 26700 --- [course-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-03T14:12:57.640+05:30 ERROR 26700 --- [course-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to resolve name [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1775) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.example.course_service.CourseServiceApplication.main(CourseServiceApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:154) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:236) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:180) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:167) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl.<init>(MetadataBuilderImpl.java:740) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.<init>(MetadataBuilderImpl.java:140) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.MetadataSources.getMetadataBuilder(MetadataSources.java:164) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:277) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:198) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:63) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:126) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:150) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	... 31 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:216) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:536) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:515) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	... 32 common frames omitted
+Caused by: java.lang.Throwable: null
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:209) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	... 38 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:206) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+		... 38 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:206) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+		... 38 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:206) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+		... 38 common frames omitted
+
+2026-03-03T14:13:29.622+05:30  INFO 3024 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 3024 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-03-03T14:13:29.624+05:30 DEBUG 3024 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-03-03T14:13:29.625+05:30  INFO 3024 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-03T14:13:30.782+05:30  INFO 3024 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-03T14:13:31.073+05:30  INFO 3024 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 276 ms. Found 4 JPA repository interfaces.
+2026-03-03T14:13:31.436+05:30  INFO 3024 --- [course-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fbf21d35-44a1-334e-8dcf-953b4fa2a65c
+2026-03-03T14:13:31.645+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-03T14:13:31.647+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.648+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.661+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.664+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.665+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x000001caab492a58] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.666+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.677+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.683+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.684+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.687+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.690+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.696+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.703+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplateConfig' of type [com.example.course_service.config.RestTemplateConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.735+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.740+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.742+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.743+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.746+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:31.747+05:30  WARN 3024 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:13:32.089+05:30  INFO 3024 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-03T14:13:32.101+05:30  INFO 3024 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-03T14:13:32.101+05:30  INFO 3024 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-03T14:13:32.355+05:30  INFO 3024 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-03T14:13:32.356+05:30  INFO 3024 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2649 ms
+2026-03-03T14:13:32.606+05:30  INFO 3024 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-03T14:13:32.700+05:30  INFO 3024 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-03T14:13:32.759+05:30  INFO 3024 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-03T14:13:32.769+05:30 ERROR 3024 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to resolve name [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+2026-03-03T14:13:32.770+05:30  WARN 3024 --- [course-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to resolve name [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+2026-03-03T14:13:32.772+05:30  INFO 3024 --- [course-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-03T14:13:32.794+05:30  INFO 3024 --- [course-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-03T14:13:32.830+05:30 ERROR 3024 --- [course-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to resolve name [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1775) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.example.course_service.CourseServiceApplication.main(CourseServiceApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:154) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:236) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:180) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:167) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl.<init>(MetadataBuilderImpl.java:740) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.<init>(MetadataBuilderImpl.java:140) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.MetadataSources.getMetadataBuilder(MetadataSources.java:164) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:277) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:198) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:63) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:126) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:150) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	... 31 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:216) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:536) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:515) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	... 32 common frames omitted
+Caused by: java.lang.Throwable: null
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:209) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	... 38 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:206) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+		... 38 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:206) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+		... 38 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.springframework.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:206) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+		... 38 common frames omitted
+
+2026-03-03T14:15:16.320+05:30  INFO 21032 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 21032 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-03-03T14:15:16.322+05:30 DEBUG 21032 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-03-03T14:15:16.323+05:30  INFO 21032 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-03T14:15:17.461+05:30  INFO 21032 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-03T14:15:18.001+05:30  INFO 21032 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 522 ms. Found 4 JPA repository interfaces.
+2026-03-03T14:15:18.711+05:30  INFO 21032 --- [course-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fbf21d35-44a1-334e-8dcf-953b4fa2a65c
+2026-03-03T14:15:19.100+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-03T14:15:19.106+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.108+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.130+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.136+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.138+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x0000016e394ad7e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.144+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.260+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.294+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.298+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.299+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.303+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.316+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.338+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplateConfig' of type [com.example.course_service.config.RestTemplateConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.385+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.394+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.398+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.400+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.401+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:19.403+05:30  WARN 21032 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:15:20.164+05:30  INFO 21032 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-03T14:15:20.188+05:30  INFO 21032 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-03T14:15:20.190+05:30  INFO 21032 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-03T14:15:20.380+05:30  INFO 21032 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-03T14:15:20.382+05:30  INFO 21032 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3987 ms
+2026-03-03T14:15:20.802+05:30  INFO 21032 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-03T14:15:21.000+05:30  INFO 21032 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-03T14:15:21.110+05:30  INFO 21032 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-03T14:15:21.863+05:30  INFO 21032 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-03T14:15:21.940+05:30  INFO 21032 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-03T14:15:22.370+05:30  INFO 21032 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@181098bf
+2026-03-03T14:15:22.379+05:30  INFO 21032 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-03T14:15:22.552+05:30  WARN 21032 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-03T14:15:22.558+05:30  WARN 21032 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-03T14:15:25.070+05:30  INFO 21032 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-03T14:15:25.244+05:30 DEBUG 21032 --- [course-service] [main] org.hibernate.SQL                        : 
+    create table assignments (
+        assignment_id bigint not null auto_increment,
+        correct_answer TEXT,
+        course_id bigint not null,
+        description TEXT,
+        due_date datetime(6),
+        max_score integer,
+        title varchar(255) not null,
+        primary key (assignment_id)
+    ) engine=InnoDB
+2026-03-03T14:15:25.308+05:30 DEBUG 21032 --- [course-service] [main] org.hibernate.SQL                        : 
+    create table courses (
+        course_id bigint not null auto_increment,
+        course_code varchar(20) not null,
+        course_name varchar(100) not null,
+        created_at datetime(6),
+        credits integer,
+        description TEXT,
+        is_active bit,
+        is_indexed bit,
+        max_students integer,
+        semester integer,
+        teacher_id bigint,
+        updated_at datetime(6),
+        year integer,
+        primary key (course_id)
+    ) engine=InnoDB
+2026-03-03T14:15:25.362+05:30 DEBUG 21032 --- [course-service] [main] org.hibernate.SQL                        : 
+    create table submissions (
+        submission_id bigint not null auto_increment,
+        ai_feedback TEXT,
+        assignment_id bigint not null,
+        grade_obtained float(53),
+        status enum ('PENDING','GRADED'),
+        student_answer TEXT,
+        student_id bigint not null,
+        submitted_at datetime(6),
+        primary key (submission_id)
+    ) engine=InnoDB
+2026-03-03T14:15:25.395+05:30 DEBUG 21032 --- [course-service] [main] org.hibernate.SQL                        : 
+    alter table courses 
+       drop index UK_p02ts69sh53ptd62m3c67v0
+2026-03-03T14:15:25.498+05:30 DEBUG 21032 --- [course-service] [main] org.hibernate.SQL                        : 
+    alter table courses 
+       add constraint UK_p02ts69sh53ptd62m3c67v0 unique (course_code)
+2026-03-03T14:15:25.546+05:30  INFO 21032 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T14:15:28.123+05:30  INFO 21032 --- [course-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-03T14:15:28.286+05:30  WARN 21032 --- [course-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-03T14:15:28.403+05:30  INFO 21032 --- [course-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-03T14:15:28.471+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-03T14:15:28.480+05:30  INFO 21032 --- [course-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:15:28.534+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-03T14:15:28.534+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-03T14:15:28.534+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-03T14:15:28.534+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-03T14:15:28.534+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-03T14:15:28.535+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-03T14:15:28.535+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-03T14:15:29.156+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-03T14:15:29.161+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-03T14:15:29.166+05:30  INFO 21032 --- [course-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-03T14:15:29.173+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1772527529172 with initial instances count: 9
+2026-03-03T14:15:29.177+05:30  INFO 21032 --- [course-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application COURSE-SERVICE with eureka with status UP
+2026-03-03T14:15:29.178+05:30  INFO 21032 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772527529178, current=UP, previous=STARTING]
+2026-03-03T14:15:29.182+05:30  INFO 21032 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-03T14:15:29.222+05:30  INFO 21032 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-03-03T14:15:29.223+05:30  INFO 21032 --- [course-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-03-03T14:15:29.246+05:30  INFO 21032 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 13.648 seconds (process running for 15.032)
+2026-03-03T14:15:29.257+05:30  INFO 21032 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-03T14:17:54.848+05:30  INFO 21032 --- [course-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-03T14:17:54.848+05:30  INFO 21032 --- [course-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-03T14:17:54.848+05:30  INFO 21032 --- [course-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-03-03T14:17:55.097+05:30 DEBUG 21032 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-03T14:19:23.801+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-03T14:19:23.803+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application COURSE-SERVICE with eureka with status DOWN
+2026-03-03T14:19:23.804+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772527763804, current=DOWN, previous=UP]
+2026-03-03T14:19:23.804+05:30  INFO 21032 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-03T14:19:23.827+05:30  INFO 21032 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-03T14:19:23.828+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T14:19:23.830+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-03T14:19:23.841+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-03T14:19:23.842+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-03-03T14:19:26.851+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-03-03T14:19:26.863+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - deregister  status: 200
+2026-03-03T14:19:26.871+05:30  INFO 21032 --- [course-service] [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-03-03T14:19:32.669+05:30  INFO 17440 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 17440 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-03-03T14:19:32.671+05:30 DEBUG 17440 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-03-03T14:19:32.673+05:30  INFO 17440 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-03T14:19:33.916+05:30  INFO 17440 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-03T14:19:34.236+05:30  INFO 17440 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 304 ms. Found 4 JPA repository interfaces.
+2026-03-03T14:19:34.730+05:30  INFO 17440 --- [course-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fbf21d35-44a1-334e-8dcf-953b4fa2a65c
+2026-03-03T14:19:35.155+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-03T14:19:35.157+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.163+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.187+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.191+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.193+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x000001e6aa48c400] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.199+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.213+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.224+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.227+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.231+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.233+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.243+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.253+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplateConfig' of type [com.example.course_service.config.RestTemplateConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.301+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.315+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.317+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.317+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.317+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.317+05:30  WARN 17440 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-03T14:19:35.877+05:30  INFO 17440 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-03T14:19:35.900+05:30  INFO 17440 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-03T14:19:35.900+05:30  INFO 17440 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-03T14:19:36.050+05:30  INFO 17440 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-03T14:19:36.050+05:30  INFO 17440 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3287 ms
+2026-03-03T14:19:36.448+05:30  INFO 17440 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-03T14:19:36.590+05:30  INFO 17440 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-03T14:19:36.674+05:30  INFO 17440 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-03T14:19:37.220+05:30  INFO 17440 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-03T14:19:37.277+05:30  INFO 17440 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-03T14:19:38.043+05:30  INFO 17440 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d74507c
+2026-03-03T14:19:38.060+05:30  INFO 17440 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-03T14:19:38.345+05:30  WARN 17440 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-03T14:19:38.359+05:30  WARN 17440 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-03T14:19:41.889+05:30  INFO 17440 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-03T14:19:42.069+05:30  INFO 17440 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T14:19:45.069+05:30  INFO 17440 --- [course-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-03T14:19:45.187+05:30  WARN 17440 --- [course-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-03T14:19:45.287+05:30  INFO 17440 --- [course-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-03T14:19:45.360+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-03T14:19:45.369+05:30  INFO 17440 --- [course-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:19:45.417+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-03T14:19:45.417+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-03T14:19:45.417+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-03T14:19:45.417+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-03T14:19:45.417+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-03T14:19:45.417+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-03T14:19:45.417+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-03T14:19:46.605+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-03T14:19:46.616+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-03T14:19:46.621+05:30  INFO 17440 --- [course-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-03T14:19:46.637+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1772527786634 with initial instances count: 9
+2026-03-03T14:19:46.645+05:30  INFO 17440 --- [course-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application COURSE-SERVICE with eureka with status UP
+2026-03-03T14:19:46.647+05:30  INFO 17440 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772527786647, current=UP, previous=STARTING]
+2026-03-03T14:19:46.653+05:30  INFO 17440 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-03T14:19:46.719+05:30  INFO 17440 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-03-03T14:19:46.735+05:30  INFO 17440 --- [course-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-03-03T14:19:46.770+05:30  INFO 17440 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 14.991 seconds (process running for 16.528)
+2026-03-03T14:19:46.797+05:30  INFO 17440 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-03T14:21:41.404+05:30  INFO 17440 --- [course-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-03T14:21:41.404+05:30  INFO 17440 --- [course-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-03T14:21:41.407+05:30  INFO 17440 --- [course-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-03-03T14:21:41.637+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-03T14:21:41.907+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=? 
+        and e1_0.course_id=?
+2026-03-03T14:21:41.944+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        count(e1_0.enrollment_id) 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=? 
+        and e1_0.enrollment_status=?
+2026-03-03T14:21:41.949+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        count(e1_0.enrollment_id) 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-03T14:21:42.067+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        enrollments
+        (course_id, enrollment_date, enrollment_status, student_id) 
+    values
+        (?, ?, ?, ?)
+2026-03-03T14:24:45.435+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:25:10.116+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id 
+    from
+        courses c1_0 
+    where
+        c1_0.course_code=? 
+    limit
+        ?
+2026-03-03T14:25:10.137+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        courses
+        (course_code, course_name, created_at, credits, description, is_active, is_indexed, max_students, semester, teacher_id, updated_at, year) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-03T14:25:56.187+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-03T14:25:56.194+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=? 
+        and e1_0.course_id=?
+2026-03-03T14:25:56.197+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        count(e1_0.enrollment_id) 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=? 
+        and e1_0.enrollment_status=?
+2026-03-03T14:25:56.203+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        count(e1_0.enrollment_id) 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-03T14:25:56.207+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        enrollments
+        (course_id, enrollment_date, enrollment_status, student_id) 
+    values
+        (?, ?, ?, ?)
+2026-03-03T14:28:27.793+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-03T14:29:45.448+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:34:45.460+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:39:45.470+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:44:45.519+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:49:45.535+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:53:55.860+05:30 DEBUG 17440 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-03T14:54:45.548+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T14:59:45.554+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:04:45.574+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:09:45.587+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:14:45.596+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:19:45.600+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:24:45.605+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:29:45.617+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:34:45.636+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:39:45.645+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:44:45.657+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:49:45.669+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:54:45.678+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T15:59:45.685+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:04:45.707+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:09:45.728+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:14:45.745+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:19:45.764+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:24:45.776+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:29:45.797+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:34:45.842+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:39:45.859+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:44:45.877+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:49:45.895+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:54:45.911+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T16:59:45.925+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:04:45.930+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:09:45.935+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:14:45.939+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:19:45.961+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:24:45.974+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:29:45.987+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:34:46.006+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:39:46.013+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:44:46.020+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:49:46.028+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:54:46.039+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T17:59:46.048+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T18:04:46.086+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-03T18:09:46.093+05:30  INFO 17440 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
