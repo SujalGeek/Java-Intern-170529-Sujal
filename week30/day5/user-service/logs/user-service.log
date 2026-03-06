@@ -1,0 +1,824 @@
+2026-03-06T11:17:25.094+05:30  INFO 8500 --- [user-service] [main] c.e.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.9 with PID 8500 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\user-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\user-service)
+2026-03-06T11:17:25.108+05:30  INFO 8500 --- [user-service] [main] c.e.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T11:17:28.343+05:30  INFO 8500 --- [user-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-06T11:17:28.744+05:30  INFO 8500 --- [user-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 368 ms. Found 4 JPA repository interfaces.
+2026-03-06T11:17:29.247+05:30  INFO 8500 --- [user-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=28d6215a-ed40-3b53-a0fb-7eb293c36c30
+2026-03-06T11:17:30.434+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-06T11:17:30.453+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.465+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.497+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.507+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.513+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x0000013a8154ea68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.523+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.539+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.574+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.580+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.586+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.590+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.613+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.646+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.655+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.663+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.672+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:30.680+05:30  WARN 8500 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T11:17:31.775+05:30  INFO 8500 --- [user-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-06T11:17:31.797+05:30  INFO 8500 --- [user-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-06T11:17:31.797+05:30  INFO 8500 --- [user-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-06T11:17:32.038+05:30  INFO 8500 --- [user-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-06T11:17:32.040+05:30  INFO 8500 --- [user-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6820 ms
+2026-03-06T11:17:33.409+05:30  INFO 8500 --- [user-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-06T11:17:33.641+05:30  INFO 8500 --- [user-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-06T11:17:33.798+05:30  INFO 8500 --- [user-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-06T11:17:34.713+05:30  INFO 8500 --- [user-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-06T11:17:34.817+05:30  INFO 8500 --- [user-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-06T11:17:35.696+05:30  INFO 8500 --- [user-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d035815
+2026-03-06T11:17:35.712+05:30  INFO 8500 --- [user-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-06T11:17:39.177+05:30  INFO 8500 --- [user-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-06T11:17:39.487+05:30  INFO 8500 --- [user-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-06T11:17:41.709+05:30  WARN 8500 --- [user-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5fef2bb2-0346-4db6-8b60-d1462119c0ca
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-06T11:17:43.532+05:30  INFO 8500 --- [user-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-03-06T11:17:43.719+05:30  INFO 8500 --- [user-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b85fc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@255eadf5, org.springframework.security.web.context.SecurityContextHolderFilter@10ecdd85, org.springframework.security.web.header.HeaderWriterFilter@222ebd21, org.springframework.security.web.authentication.logout.LogoutFilter@4baf0b7f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cdf3815, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d1f60cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13ebbdab, org.springframework.security.web.session.SessionManagementFilter@55aadbf2, org.springframework.security.web.access.ExceptionTranslationFilter@2a8e93db, org.springframework.security.web.access.intercept.AuthorizationFilter@4bb05a4e]
+2026-03-06T11:17:45.242+05:30  INFO 8500 --- [user-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-06T11:17:45.388+05:30  WARN 8500 --- [user-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-06T11:17:45.632+05:30  INFO 8500 --- [user-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-06T11:17:45.744+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-06T11:17:45.794+05:30  INFO 8500 --- [user-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T11:17:45.857+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-06T11:17:45.857+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-06T11:17:45.870+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-06T11:17:45.870+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-06T11:17:45.870+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-06T11:17:45.870+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-06T11:17:45.870+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-06T11:17:47.439+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-06T11:17:47.446+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-06T11:17:47.454+05:30  INFO 8500 --- [user-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-06T11:17:47.464+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1772776067464 with initial instances count: 0
+2026-03-06T11:17:47.492+05:30  INFO 8500 --- [user-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2026-03-06T11:17:47.492+05:30  INFO 8500 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772776067492, current=UP, previous=STARTING]
+2026-03-06T11:17:47.492+05:30  INFO 8500 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/81DH353.mshome.net:user-service:8080: registering service...
+2026-03-06T11:17:47.565+05:30  INFO 8500 --- [user-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-06T11:17:47.567+05:30  INFO 8500 --- [user-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2026-03-06T11:17:47.620+05:30  INFO 8500 --- [user-service] [main] c.e.user_service.UserServiceApplication  : Started UserServiceApplication in 23.949 seconds (process running for 27.786)
+2026-03-06T11:17:47.910+05:30  INFO 8500 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/81DH353.mshome.net:user-service:8080 - registration status: 204
+2026-03-06T11:17:48.323+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-06T11:17:48.323+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-06T11:17:48.329+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-03-06T11:18:17.447+05:30  INFO 8500 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-06T11:18:17.447+05:30  INFO 8500 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-06T11:18:17.447+05:30  INFO 8500 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-06T11:18:17.447+05:30  INFO 8500 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-06T11:18:17.447+05:30  INFO 8500 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-06T11:18:17.447+05:30  INFO 8500 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-03-06T11:18:17.447+05:30  INFO 8500 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-06T11:18:17.537+05:30  INFO 8500 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-06T11:22:45.877+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T11:27:45.894+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T11:32:05.288+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T11:32:05.330+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T11:32:05.340+05:30  WARN 8500 --- [user-service] [http-nio-8080-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/login' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-03-06T11:32:05.373+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T11:32:45.907+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T11:37:45.917+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T11:42:04.932+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T11:42:04.932+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T11:42:04.940+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T11:42:05.503+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/15
+2026-03-06T11:42:05.503+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T11:42:05.511+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/15
+2026-03-06T11:42:05.656+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/15
+2026-03-06T11:42:05.658+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T11:42:05.663+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/15
+2026-03-06T11:42:45.934+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T11:47:45.941+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T11:48:03.666+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T11:48:03.669+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T11:48:03.669+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T11:48:04.014+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T11:48:04.014+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T11:48:04.014+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T11:48:04.042+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T11:48:04.044+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T11:48:04.050+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T11:51:55.641+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2026-03-06T11:51:55.643+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T11:51:55.658+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2026-03-06T11:51:55.710+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2026-03-06T11:51:55.722+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /error
+2026-03-06T11:51:55.745+05:30 DEBUG 8500 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T11:52:45.952+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T11:57:45.958+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:02:45.970+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:07:46.007+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:12:46.020+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:17:46.031+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:22:46.050+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:27:46.058+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:32:46.079+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:37:46.102+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:42:46.108+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:47:46.125+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:52:46.142+05:30  INFO 8500 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T12:55:11.254+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-06T12:55:11.260+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-SERVICE with eureka with status DOWN
+2026-03-06T12:55:11.260+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772781911260, current=DOWN, previous=UP]
+2026-03-06T12:55:11.260+05:30  INFO 8500 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/81DH353.mshome.net:user-service:8080: registering service...
+2026-03-06T12:55:11.297+05:30  INFO 8500 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/USER-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/USER-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:885)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:85)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:113)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:181)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:101)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:87)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	... 21 more
+
+2026-03-06T12:55:11.298+05:30  WARN 8500 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/USER-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-03-06T12:55:11.304+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-06T12:55:11.310+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-06T12:55:11.315+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-06T12:55:11.317+05:30  INFO 8500 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/USER-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/USER-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:885)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:85)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:113)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:181)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:101)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:87)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	... 22 more
+
+2026-03-06T12:55:11.318+05:30  WARN 8500 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/USER-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-03-06T12:55:11.319+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-03-06T12:55:11.318+05:30  WARN 8500 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/81DH353.mshome.net:user-service:8080 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.1.jar:2.0.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-03-06T12:55:11.326+05:30  WARN 8500 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.1.jar:2.0.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-03-06T12:55:11.330+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-03-06T12:55:11.372+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/USER-SERVICE/81DH353.mshome.net:user-service:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/USER-SERVICE/81DH353.mshome.net:user-service:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:885)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1086)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:85)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:113)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:181)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:101)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:87)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	... 69 more
+
+2026-03-06T12:55:11.373+05:30  WARN 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/USER-SERVICE/81DH353.mshome.net:user-service:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-03-06T12:55:11.374+05:30 ERROR 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/81DH353.mshome.net:user-service:8080 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892) ~[eureka-client-2.0.1.jar:2.0.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.1.0.jar:4.1.0]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.1.0.jar:4.1.0]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1086) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160) ~[spring-boot-3.2.0.jar:3.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-03-06T12:55:11.386+05:30  INFO 8500 --- [user-service] [RMI TCP Connection(128)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-03-06T14:17:56.574+05:30  INFO 30380 --- [user-service] [main] c.e.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.9 with PID 30380 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\user-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\user-service)
+2026-03-06T14:17:56.579+05:30  INFO 30380 --- [user-service] [main] c.e.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T14:18:02.558+05:30  INFO 30380 --- [user-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-06T14:18:03.348+05:30  INFO 30380 --- [user-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 765 ms. Found 4 JPA repository interfaces.
+2026-03-06T14:18:04.624+05:30  INFO 30380 --- [user-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=28d6215a-ed40-3b53-a0fb-7eb293c36c30
+2026-03-06T14:18:06.169+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-06T14:18:06.199+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.218+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.247+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.253+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.258+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x000001a90354dcd8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.271+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.304+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.330+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.336+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.338+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.343+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.367+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.407+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.416+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.422+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.439+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:06.448+05:30  WARN 30380 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-06T14:18:07.828+05:30  INFO 30380 --- [user-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-06T14:18:07.893+05:30  INFO 30380 --- [user-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-06T14:18:07.894+05:30  INFO 30380 --- [user-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-06T14:18:08.341+05:30  INFO 30380 --- [user-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-06T14:18:08.342+05:30  INFO 30380 --- [user-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11599 ms
+2026-03-06T14:18:10.518+05:30  INFO 30380 --- [user-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-06T14:18:10.723+05:30  INFO 30380 --- [user-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-06T14:18:10.827+05:30  INFO 30380 --- [user-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-06T14:18:11.585+05:30  INFO 30380 --- [user-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-06T14:18:11.757+05:30  INFO 30380 --- [user-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-06T14:18:12.354+05:30  INFO 30380 --- [user-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c2fea95
+2026-03-06T14:18:12.360+05:30  INFO 30380 --- [user-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-06T14:18:15.963+05:30  INFO 30380 --- [user-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-06T14:18:16.151+05:30  INFO 30380 --- [user-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-06T14:18:18.575+05:30  WARN 30380 --- [user-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2e9379f7-2e50-4eba-9c46-48817bcd3cd2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-06T14:18:20.204+05:30  INFO 30380 --- [user-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-03-06T14:18:20.364+05:30  INFO 30380 --- [user-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ac3739d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dad684f, org.springframework.security.web.context.SecurityContextHolderFilter@473048f9, org.springframework.security.web.header.HeaderWriterFilter@3b256d50, org.springframework.security.web.authentication.logout.LogoutFilter@3c28cd9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3237522b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ad7cc49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@572c50b6, org.springframework.security.web.session.SessionManagementFilter@2d728a9c, org.springframework.security.web.access.ExceptionTranslationFilter@31eb5ed6, org.springframework.security.web.access.intercept.AuthorizationFilter@6b5e8b3a]
+2026-03-06T14:18:21.827+05:30  INFO 30380 --- [user-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-06T14:18:21.942+05:30  WARN 30380 --- [user-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-06T14:18:22.182+05:30  INFO 30380 --- [user-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-06T14:18:22.267+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-06T14:18:22.280+05:30  INFO 30380 --- [user-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T14:18:22.352+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-06T14:18:22.352+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-06T14:18:22.353+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-06T14:18:22.353+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-06T14:18:22.353+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-06T14:18:22.353+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-06T14:18:22.353+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-06T14:18:23.122+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-06T14:18:23.128+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-06T14:18:23.135+05:30  INFO 30380 --- [user-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-06T14:18:23.146+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1772786903144 with initial instances count: 0
+2026-03-06T14:18:23.169+05:30  INFO 30380 --- [user-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2026-03-06T14:18:23.171+05:30  INFO 30380 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1772786903171, current=UP, previous=STARTING]
+2026-03-06T14:18:23.176+05:30  INFO 30380 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/81DH353.mshome.net:user-service:8080: registering service...
+2026-03-06T14:18:23.224+05:30  INFO 30380 --- [user-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-06T14:18:23.226+05:30  INFO 30380 --- [user-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2026-03-06T14:18:23.276+05:30  INFO 30380 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/81DH353.mshome.net:user-service:8080 - registration status: 204
+2026-03-06T14:18:23.280+05:30  INFO 30380 --- [user-service] [main] c.e.user_service.UserServiceApplication  : Started UserServiceApplication in 29.102 seconds (process running for 49.398)
+2026-03-06T14:18:24.070+05:30  INFO 30380 --- [user-service] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-06T14:18:24.071+05:30  INFO 30380 --- [user-service] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-06T14:18:24.075+05:30  INFO 30380 --- [user-service] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-03-06T14:18:53.136+05:30  INFO 30380 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-06T14:18:53.136+05:30  INFO 30380 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-06T14:18:53.136+05:30  INFO 30380 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-06T14:18:53.136+05:30  INFO 30380 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-06T14:18:53.136+05:30  INFO 30380 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-06T14:18:53.136+05:30  INFO 30380 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-03-06T14:18:53.136+05:30  INFO 30380 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-06T14:18:53.178+05:30  INFO 30380 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-06T14:23:22.372+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T14:28:22.389+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T14:29:12.734+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T14:29:12.755+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:29:12.769+05:30  WARN 30380 --- [user-service] [http-nio-8080-exec-3] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/login' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-03-06T14:29:12.791+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T14:29:18.546+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T14:29:18.546+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:29:18.554+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T14:30:50.292+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T14:30:50.294+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:30:50.294+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T14:30:50.705+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/15
+2026-03-06T14:30:50.707+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:30:50.711+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/15
+2026-03-06T14:30:50.799+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/15
+2026-03-06T14:30:50.806+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:30:50.811+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/15
+2026-03-06T14:31:28.630+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T14:31:28.638+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:31:28.641+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T14:31:28.882+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T14:31:28.882+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T14:31:28.882+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:31:28.883+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:31:28.885+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T14:31:28.885+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T14:31:44.443+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T14:31:44.447+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T14:31:44.448+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:31:44.449+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:31:44.455+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T14:31:44.469+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T14:33:22.399+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T14:38:22.403+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T14:43:22.408+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T14:44:41.310+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T14:44:41.312+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:44:41.313+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T14:44:41.665+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T14:44:41.666+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:44:41.671+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T14:44:41.700+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T14:44:41.702+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:44:41.705+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T14:48:22.423+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T14:49:30.075+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T14:49:30.075+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:49:30.075+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T14:49:30.419+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T14:49:30.421+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:49:30.423+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T14:49:30.462+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T14:49:30.463+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T14:49:30.465+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T14:53:22.428+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T14:58:22.446+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:02:27.563+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T15:02:27.565+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:02:27.567+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T15:03:22.465+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:04:32.731+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T15:04:32.731+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:04:32.731+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T15:05:58.850+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T15:05:58.851+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:05:58.852+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T15:05:59.192+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:05:59.192+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:05:59.192+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:05:59.221+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:05:59.224+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:05:59.225+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:08:22.481+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:11:44.283+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T15:11:44.292+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:11:44.292+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T15:11:44.585+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:11:44.588+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:11:44.588+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:11:44.610+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:11:44.610+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:11:44.612+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:13:22.497+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:13:26.538+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T15:13:26.538+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:13:26.539+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T15:13:26.758+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:13:26.759+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:13:26.761+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:13:26.790+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:13:26.792+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:13:26.794+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:18:22.499+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:19:46.355+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T15:19:46.355+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:19:46.362+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T15:19:46.684+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:19:46.687+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:19:46.693+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:19:46.714+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:19:46.714+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:19:46.716+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:19:53.768+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:19:53.768+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:19:53.775+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:19:53.797+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:19:53.799+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:19:53.799+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:23:22.514+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:28:22.518+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:33:22.532+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:38:22.535+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:43:22.537+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:48:22.542+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:53:22.551+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T15:53:24.053+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T15:53:24.056+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:53:24.060+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T15:53:24.575+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:53:24.576+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:53:24.578+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:53:24.622+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T15:53:24.622+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T15:53:24.625+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T15:58:22.568+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:03:22.600+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:08:22.610+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:13:22.627+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:18:22.633+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:23:22.650+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:28:22.665+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:33:22.681+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:38:22.698+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:43:22.709+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:48:22.721+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:53:22.728+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T16:58:22.736+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:02:32.348+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T17:02:32.355+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:02:32.361+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T17:02:32.727+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:02:32.727+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:02:32.727+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:02:32.758+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:02:32.760+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:02:32.762+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:03:22.756+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:08:22.775+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:13:22.790+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:17:29.632+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T17:17:29.632+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:17:29.635+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T17:17:29.988+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:17:29.988+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:17:29.988+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:17:30.021+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:17:30.021+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:17:30.022+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:18:22.797+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:19:51.111+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:19:51.114+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:19:51.117+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:19:51.141+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:19:51.142+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:19:51.144+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:23:22.805+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:23:27.892+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:23:27.893+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:23:27.894+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:23:27.927+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:23:27.928+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:23:27.930+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:28:22.816+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:33:22.823+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:33:36.810+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T17:33:36.813+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:33:36.814+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T17:33:37.165+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:33:37.166+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:33:37.166+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:33:37.207+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:33:37.210+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:33:37.215+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:34:20.670+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:34:20.670+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:34:20.670+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:34:20.700+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:34:20.701+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:34:20.703+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:38:22.831+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:40:05.042+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T17:40:05.046+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:40:05.046+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T17:40:05.262+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:40:05.262+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:40:05.263+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:40:05.283+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:40:05.285+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:40:05.285+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:41:20.106+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:41:20.108+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:41:20.111+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:41:20.130+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:41:20.130+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:41:20.132+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:43:22.842+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:48:22.844+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:50:27.275+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T17:50:27.290+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:50:27.291+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T17:50:27.614+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:50:27.616+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:50:27.616+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:50:27.641+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:50:27.642+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:50:27.644+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:51:03.299+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T17:51:03.299+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:51:03.299+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T17:51:03.529+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:51:03.529+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:51:03.530+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:51:03.549+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:51:03.549+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:51:03.553+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:53:22.866+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T17:53:28.410+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:53:28.412+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:53:28.419+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:53:28.452+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T17:53:28.453+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T17:53:28.454+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T17:58:22.880+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T18:03:22.890+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T18:05:42.407+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T18:05:42.407+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T18:05:42.407+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T18:05:42.881+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T18:05:42.883+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T18:05:42.883+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T18:05:42.917+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T18:05:42.917+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T18:05:42.919+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T18:07:55.460+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2026-03-06T18:07:55.460+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T18:07:55.492+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2026-03-06T18:07:55.534+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /error
+2026-03-06T18:07:55.539+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /error
+2026-03-06T18:07:55.556+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T18:08:22.902+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-06T18:10:23.266+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-06T18:10:23.269+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T18:10:23.272+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-06T18:10:23.622+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T18:10:23.627+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T18:10:23.631+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T18:10:23.683+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/21
+2026-03-06T18:10:23.684+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-06T18:10:23.687+05:30 DEBUG 30380 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/21
+2026-03-06T18:13:23.079+05:30  INFO 30380 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
