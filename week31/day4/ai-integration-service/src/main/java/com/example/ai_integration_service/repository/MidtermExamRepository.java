@@ -1,0 +1,17 @@
+package com.example.ai_integration_service.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.ai_integration_service.entity.MidtermExam;
+
+@Repository
+public interface MidtermExamRepository extends JpaRepository<MidtermExam, Long>{
+
+	Optional<MidtermExam> findTopByCourseIdOrderByMidtermIdDesc(Long courseId);
+
+	List<MidtermExam> findAllByCourseIdOrderByMidtermIdDesc(Long courseId);
+}
