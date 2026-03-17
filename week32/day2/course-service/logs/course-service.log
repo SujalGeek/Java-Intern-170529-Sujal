@@ -1,0 +1,3461 @@
+2026-03-17T10:38:39.016+05:30  INFO 9508 --- [course-service] [main] c.e.c.CourseServiceApplication           : Starting CourseServiceApplication using Java 21.0.9 with PID 9508 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\course-service)
+2026-03-17T10:38:39.027+05:30 DEBUG 9508 --- [course-service] [main] c.e.c.CourseServiceApplication           : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-03-17T10:38:39.028+05:30  INFO 9508 --- [course-service] [main] c.e.c.CourseServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-17T10:38:46.652+05:30  INFO 9508 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-17T10:38:47.518+05:30  INFO 9508 --- [course-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 840 ms. Found 4 JPA repository interfaces.
+2026-03-17T10:38:48.816+05:30  INFO 9508 --- [course-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8e67e5e2-643f-3755-9e7d-bb356cbb7fbf
+2026-03-17T10:38:50.272+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-17T10:38:50.290+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.306+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.459+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.502+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.513+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x000001c4814a8a10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.557+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.574+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.586+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.588+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.649+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.679+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.727+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.759+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplateConfig' of type [com.example.course_service.config.RestTemplateConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.862+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.885+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.905+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.906+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.910+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:50.920+05:30  WARN 9508 --- [course-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-17T10:38:51.718+05:30  INFO 9508 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-17T10:38:51.774+05:30  INFO 9508 --- [course-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-17T10:38:51.780+05:30  INFO 9508 --- [course-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-17T10:38:52.308+05:30  INFO 9508 --- [course-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-17T10:38:52.326+05:30  INFO 9508 --- [course-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12247 ms
+2026-03-17T10:38:52.994+05:30  INFO 9508 --- [course-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-17T10:38:53.266+05:30  INFO 9508 --- [course-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-17T10:38:53.387+05:30  INFO 9508 --- [course-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-17T10:38:54.270+05:30  INFO 9508 --- [course-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-17T10:38:54.355+05:30  INFO 9508 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-17T10:38:54.991+05:30  INFO 9508 --- [course-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e020dd1
+2026-03-17T10:38:54.997+05:30  INFO 9508 --- [course-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-17T10:38:55.185+05:30  WARN 9508 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-17T10:38:55.189+05:30  WARN 9508 --- [course-service] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-17T10:38:58.841+05:30  INFO 9508 --- [course-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-17T10:38:59.061+05:30  INFO 9508 --- [course-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-17T10:39:03.987+05:30  INFO 9508 --- [course-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-17T10:39:04.377+05:30  WARN 9508 --- [course-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-17T10:39:04.613+05:30  INFO 9508 --- [course-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-17T10:39:04.766+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-17T10:39:04.779+05:30  INFO 9508 --- [course-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T10:39:04.856+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-17T10:39:04.857+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-17T10:39:04.857+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-17T10:39:04.857+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-17T10:39:04.858+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-17T10:39:04.858+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-17T10:39:04.859+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-17T10:39:06.354+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-17T10:39:06.376+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-17T10:39:06.386+05:30  INFO 9508 --- [course-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-17T10:39:06.411+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1773724146409 with initial instances count: 0
+2026-03-17T10:39:06.425+05:30  INFO 9508 --- [course-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application COURSE-SERVICE with eureka with status UP
+2026-03-17T10:39:06.439+05:30  INFO 9508 --- [course-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1773724146439, current=UP, previous=STARTING]
+2026-03-17T10:39:06.443+05:30  INFO 9508 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082: registering service...
+2026-03-17T10:39:06.530+05:30  INFO 9508 --- [course-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-03-17T10:39:06.532+05:30  INFO 9508 --- [course-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-03-17T10:39:06.566+05:30  INFO 9508 --- [course-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COURSE-SERVICE/81DH353.mshome.net:course-service:8082 - registration status: 204
+2026-03-17T10:39:06.661+05:30  INFO 9508 --- [course-service] [main] c.e.c.CourseServiceApplication           : Started CourseServiceApplication in 32.842 seconds (process running for 39.318)
+2026-03-17T10:39:36.379+05:30  INFO 9508 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-17T10:39:36.382+05:30  INFO 9508 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-17T10:39:36.383+05:30  INFO 9508 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-17T10:39:36.383+05:30  INFO 9508 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-17T10:39:36.383+05:30  INFO 9508 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-17T10:39:36.383+05:30  INFO 9508 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-03-17T10:39:36.384+05:30  INFO 9508 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-17T10:39:36.472+05:30  INFO 9508 --- [course-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-17T10:44:04.871+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T10:44:46.181+05:30  INFO 9508 --- [course-service] [http-nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-17T10:44:46.181+05:30  INFO 9508 --- [course-service] [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-17T10:44:46.194+05:30  INFO 9508 --- [course-service] [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2026-03-17T10:44:46.802+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:44:46.997+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:44:47.133+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:44:49.710+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T10:44:59.634+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T10:44:59.700+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T10:44:59.712+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:44:59.734+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:46:37.300+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T10:46:37.368+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T10:46:37.368+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:46:37.404+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:46:39.129+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T10:46:39.477+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T10:46:50.804+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:46:59.380+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T10:46:59.414+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T10:46:59.433+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:46:59.464+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:49:04.910+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T10:52:09.643+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T10:52:09.694+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T10:52:09.694+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:52:09.759+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:52:17.395+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T10:52:17.490+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T10:52:21.281+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T10:52:21.615+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T10:54:04.923+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T10:59:04.940+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:04:04.955+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:09:04.963+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:14:04.985+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:19:05.003+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:24:05.011+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:29:05.014+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:34:05.048+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:39:05.093+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:44:05.105+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:49:05.124+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:54:05.136+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T11:59:05.153+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:04:05.168+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:09:05.187+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:14:05.199+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:19:05.209+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:24:05.225+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:29:05.240+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:34:05.255+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:39:05.279+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:44:05.288+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:49:05.300+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:54:05.315+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T12:59:05.332+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:04:05.343+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:09:05.350+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:14:05.357+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:19:05.366+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:24:05.381+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:29:05.385+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:34:05.396+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:39:05.424+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:44:05.432+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:49:05.447+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:54:05.462+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T13:59:05.470+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:04:05.503+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:09:05.549+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:14:05.564+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:19:05.576+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:24:05.584+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:29:05.595+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:34:05.613+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:36:45.652+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T14:36:45.824+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T14:36:45.935+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T14:36:47.352+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T14:36:51.885+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T14:36:51.938+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T14:36:51.948+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T14:36:51.993+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T14:39:05.622+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:44:05.637+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:49:05.693+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:54:05.701+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T14:59:05.713+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:03:21.566+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:03:21.675+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:03:21.724+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:03:23.255+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:03:28.585+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T15:03:28.639+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T15:03:28.671+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:03:28.697+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:04:05.721+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:09:05.754+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:10:58.309+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:10:58.407+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:10:58.618+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:11:00.305+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:11:18.702+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:11:18.736+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:11:18.993+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:11:19.722+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:11:23.451+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T15:11:23.616+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T15:11:23.631+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:11:23.669+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:14:05.757+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:14:41.016+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:14:41.252+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:14:41.354+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:14:41.902+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:19:05.801+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:19:14.744+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:19:14.805+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:19:14.950+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:19:15.376+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:22:33.946+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T15:22:34.126+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T15:22:34.163+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T15:22:34.232+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T15:22:34.241+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T15:22:34.246+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T15:22:38.970+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T15:22:38.973+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T15:22:38.979+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T15:22:39.005+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T15:22:39.010+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T15:22:39.014+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T15:22:52.391+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:22:52.418+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:22:52.521+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:22:52.741+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:24:05.816+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:27:54.062+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:27:54.085+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:27:54.189+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:27:54.416+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:28:31.042+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:28:31.298+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:29:05.834+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:30:44.450+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:30:44.466+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:30:44.545+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:30:44.739+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:30:47.097+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:30:47.144+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T15:30:56.293+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T15:34:05.856+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:39:05.871+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:44:05.883+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:49:05.901+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:54:05.921+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T15:59:05.931+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:04:05.940+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:09:05.949+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:14:05.955+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:19:05.967+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:24:05.978+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:29:05.988+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:34:06.006+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:34:52.350+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:34:52.394+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:34:52.467+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:34:52.910+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T16:35:00.286+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:35:02.260+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:35:23.982+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:35:24.019+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:35:24.142+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:35:24.458+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T16:36:46.590+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T16:36:46.793+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T16:36:48.049+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T16:36:48.075+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T16:36:48.075+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:36:48.091+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T16:39:06.013+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:44:06.020+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:49:06.030+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:54:06.047+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T16:59:06.060+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:04:06.072+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:09:06.083+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:09:11.790+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:09:11.821+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:09:11.870+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:09:11.874+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:09:14.838+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:09:15.068+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:12:16.840+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:12:16.851+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:12:16.874+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:12:16.880+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:12:39.454+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T17:12:39.556+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T17:12:39.592+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T17:12:40.154+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T17:13:40.124+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T17:13:40.390+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T17:13:40.830+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T17:13:40.924+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T17:13:40.933+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T17:13:40.980+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.teacher_id=?
+2026-03-17T17:13:42.592+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T17:13:42.880+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.course_id=? 
+        and e1_0.enrollment_status=?
+2026-03-17T17:13:55.945+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:13:55.957+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:13:55.980+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:13:55.983+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:13:57.873+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T17:13:57.963+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:13:57.963+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T17:13:57.967+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:13:57.986+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:13:57.995+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:13:58.896+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:13:58.925+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:14:00.218+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:14:00.228+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:14:00.280+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:14:00.292+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:14:06.138+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:14:16.111+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:14:16.142+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:14:16.173+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:14:16.177+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:17:31.081+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:31.093+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:17:31.155+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:31.162+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:17:38.545+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:38.551+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:17:38.571+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:38.597+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:17:39.341+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:39.380+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:46.411+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:46.416+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:17:46.446+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:46.450+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:17:47.069+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:47.079+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:17:47.116+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:17:47.121+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:19:06.146+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:20:10.617+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:20:10.624+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:20:10.662+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:20:10.665+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:20:13.134+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:20:13.134+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:20:13.163+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:20:13.170+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:20:20.695+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:20:20.702+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:20:20.738+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:20:20.742+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:20:21.659+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:20:21.691+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:17.381+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:17.387+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:21:17.415+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:17.419+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:21:19.971+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:19.976+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:21:20.003+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:20.009+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:21:28.113+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:28.133+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:28.821+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T17:21:28.843+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0
+2026-03-17T17:21:28.857+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:28.862+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:21:28.885+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:28.889+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:21:30.670+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:30.670+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:21:30.693+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        e1_0.enrollment_id,
+        e1_0.course_id,
+        e1_0.enrollment_date,
+        e1_0.semester,
+        e1_0.enrollment_status,
+        e1_0.student_id 
+    from
+        enrollments e1_0 
+    where
+        e1_0.student_id=?
+2026-03-17T17:21:30.698+05:30 DEBUG 9508 --- [course-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.course_id,
+        c1_0.course_code,
+        c1_0.course_name,
+        c1_0.created_at,
+        c1_0.credits,
+        c1_0.description,
+        c1_0.is_active,
+        c1_0.is_indexed,
+        c1_0.max_students,
+        c1_0.semester,
+        c1_0.teacher_id,
+        c1_0.updated_at,
+        c1_0.year 
+    from
+        courses c1_0 
+    where
+        c1_0.course_id=?
+2026-03-17T17:24:06.167+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:29:06.179+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:34:06.193+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:39:06.201+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:44:06.247+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:49:06.257+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:54:06.268+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T17:59:06.277+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-17T18:04:06.287+05:30  INFO 9508 --- [course-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
