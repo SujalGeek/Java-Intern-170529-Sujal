@@ -1,0 +1,512 @@
+2026-03-19T10:14:35.762+05:30  INFO 20176 --- [user-service] [main] c.e.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.9 with PID 20176 (C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\user-service\target\classes started by 170529 in C:\Users\170529\Documents\workspace-spring-tools-for-eclipse-4.32.2.RELEASE\user-service)
+2026-03-19T10:14:35.776+05:30  INFO 20176 --- [user-service] [main] c.e.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-19T10:14:40.981+05:30  INFO 20176 --- [user-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19T10:14:41.595+05:30  INFO 20176 --- [user-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 583 ms. Found 4 JPA repository interfaces.
+2026-03-19T10:14:42.682+05:30  INFO 20176 --- [user-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=28d6215a-ed40-3b53-a0fb-7eb293c36c30
+2026-03-19T10:14:44.258+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-19T10:14:44.273+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.283+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.312+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.373+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.380+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x000002b18154ea10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.399+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.428+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.456+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.465+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.466+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.471+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.495+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.536+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.541+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.545+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.556+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:44.576+05:30  WARN 20176 --- [user-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-19T10:14:45.414+05:30  INFO 20176 --- [user-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-19T10:14:45.464+05:30  INFO 20176 --- [user-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-19T10:14:45.464+05:30  INFO 20176 --- [user-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-19T10:14:45.743+05:30  INFO 20176 --- [user-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-19T10:14:45.743+05:30  INFO 20176 --- [user-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9806 ms
+2026-03-19T10:14:47.132+05:30  INFO 20176 --- [user-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-19T10:14:47.330+05:30  INFO 20176 --- [user-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-03-19T10:14:47.431+05:30  INFO 20176 --- [user-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-19T10:14:48.318+05:30  INFO 20176 --- [user-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19T10:14:48.426+05:30  INFO 20176 --- [user-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-19T10:14:48.999+05:30  INFO 20176 --- [user-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14bd523b
+2026-03-19T10:14:49.004+05:30  INFO 20176 --- [user-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-19T10:14:51.435+05:30  INFO 20176 --- [user-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19T10:14:51.629+05:30  INFO 20176 --- [user-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T10:14:53.067+05:30  WARN 20176 --- [user-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 90fbdadb-9459-46ad-bbd8-09f99ef68a99
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-19T10:14:54.908+05:30  INFO 20176 --- [user-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-03-19T10:14:55.087+05:30  INFO 20176 --- [user-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19e93a38, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4baf0b7f, org.springframework.security.web.context.SecurityContextHolderFilter@572c50b6, org.springframework.security.web.header.HeaderWriterFilter@18ab86a2, org.springframework.security.web.authentication.logout.LogoutFilter@ced7e4a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76e14208, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50ba10de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30f39d9d, org.springframework.security.web.session.SessionManagementFilter@3c657771, org.springframework.security.web.access.ExceptionTranslationFilter@77fec3b6, org.springframework.security.web.access.intercept.AuthorizationFilter@31330344]
+2026-03-19T10:14:56.407+05:30  INFO 20176 --- [user-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-19T10:14:56.516+05:30  WARN 20176 --- [user-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-19T10:14:56.719+05:30  INFO 20176 --- [user-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-19T10:14:56.832+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-19T10:14:56.843+05:30  INFO 20176 --- [user-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T10:14:56.909+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-19T10:14:56.909+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-19T10:14:56.910+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-19T10:14:56.910+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-19T10:14:56.910+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-19T10:14:56.910+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-19T10:14:56.910+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-19T10:14:57.864+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-19T10:14:57.867+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-19T10:14:57.874+05:30  INFO 20176 --- [user-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-19T10:14:57.884+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1773895497882 with initial instances count: 0
+2026-03-19T10:14:57.909+05:30  INFO 20176 --- [user-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2026-03-19T10:14:57.910+05:30  INFO 20176 --- [user-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1773895497910, current=UP, previous=STARTING]
+2026-03-19T10:14:57.914+05:30  INFO 20176 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/81DH353.mshome.net:user-service:8080: registering service...
+2026-03-19T10:14:57.973+05:30  INFO 20176 --- [user-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-19T10:14:57.974+05:30  INFO 20176 --- [user-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2026-03-19T10:14:58.015+05:30  INFO 20176 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/81DH353.mshome.net:user-service:8080 - registration status: 204
+2026-03-19T10:14:58.043+05:30  INFO 20176 --- [user-service] [main] c.e.user_service.UserServiceApplication  : Started UserServiceApplication in 24.114 seconds (process running for 28.578)
+2026-03-19T10:14:58.659+05:30  INFO 20176 --- [user-service] [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19T10:14:58.659+05:30  INFO 20176 --- [user-service] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-19T10:14:58.665+05:30  INFO 20176 --- [user-service] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-03-19T10:15:27.816+05:30  INFO 20176 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-19T10:15:27.818+05:30  INFO 20176 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-19T10:15:27.819+05:30  INFO 20176 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-19T10:15:27.820+05:30  INFO 20176 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-19T10:15:27.820+05:30  INFO 20176 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-19T10:15:27.821+05:30  INFO 20176 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-03-19T10:15:27.821+05:30  INFO 20176 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-19T10:15:27.849+05:30  INFO 20176 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-19T10:19:56.611+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T10:24:56.650+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T10:29:56.682+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T10:34:56.695+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T10:38:25.796+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T10:38:25.898+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T10:38:25.914+05:30  WARN 20176 --- [user-service] [http-nio-8080-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/login' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-03-19T10:38:25.971+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T10:38:28.389+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T10:38:28.389+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T10:38:28.398+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T10:38:28.667+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T10:38:28.674+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T10:38:28.682+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T10:39:56.712+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T10:41:43.300+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T10:41:43.304+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T10:41:43.313+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T10:41:43.383+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T10:41:43.385+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T10:41:43.398+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T10:42:45.111+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T10:42:45.115+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T10:42:45.129+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T10:42:45.322+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T10:42:45.328+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T10:42:45.409+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T10:43:23.131+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T10:43:23.133+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T10:43:23.137+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T10:43:23.186+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T10:43:23.188+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T10:43:23.199+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T10:44:56.749+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T10:49:56.761+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T10:54:56.771+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T10:59:56.813+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:04:56.818+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:07:33.995+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T11:07:34.000+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:07:34.014+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T11:07:34.678+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:07:34.679+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:07:34.682+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:07:34.745+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:07:34.747+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:07:34.749+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:09:19.381+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:09:19.382+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:09:19.386+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:09:19.435+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:09:19.435+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:09:19.439+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:09:45.267+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:09:45.272+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:09:45.275+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:09:45.337+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:09:45.338+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:09:45.341+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:09:56.831+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:10:42.649+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:10:42.649+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:10:42.658+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:10:42.739+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:10:42.739+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:10:42.755+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:14:56.836+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:19:56.863+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:24:56.876+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:26:34.266+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T11:26:34.270+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:26:34.272+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T11:26:35.359+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:26:35.359+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:26:35.364+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:26:35.574+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:26:35.576+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:26:35.579+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:27:04.056+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:27:04.058+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:27:04.101+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:27:04.200+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:27:04.200+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:27:04.209+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:29:56.881+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:30:59.702+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:30:59.712+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:30:59.722+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:30:59.829+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:30:59.833+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:30:59.834+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:33:30.899+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:33:30.902+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:33:30.902+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:33:30.998+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:33:30.999+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:33:31.003+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:33:55.774+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:33:55.776+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:33:55.778+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:33:55.840+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:33:55.850+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:33:55.856+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:34:56.887+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:35:44.566+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:35:44.569+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:35:44.573+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:35:44.658+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T11:35:44.660+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T11:35:44.664+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T11:39:56.900+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:44:56.911+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:49:56.917+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:54:56.931+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T11:59:56.946+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:04:56.960+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:09:56.969+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:14:56.986+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:16:27.779+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/users/logout
+2026-03-19T12:16:27.783+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:16:27.790+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/users/logout
+2026-03-19T12:19:57.001+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:24:57.010+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:29:57.023+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:34:57.040+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:39:57.057+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:42:53.531+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T12:42:53.536+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:42:53.539+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T12:42:53.894+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:42:53.894+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:42:53.897+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:42:53.960+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:42:53.960+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:42:53.962+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:43:57.065+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:43:57.065+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:43:57.069+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:43:57.134+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:43:57.134+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:43:57.145+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:44:24.779+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:44:24.785+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:44:24.785+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:44:24.832+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:44:24.832+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:44:24.837+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:44:57.074+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:46:08.340+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:46:08.342+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:46:08.346+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:46:08.387+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:46:08.387+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:46:08.387+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:47:10.322+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:47:10.323+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:47:10.326+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:47:10.368+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:47:10.368+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:47:10.373+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:49:57.088+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:54:57.104+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T12:58:11.459+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T12:58:11.461+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:58:11.461+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T12:58:11.828+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:58:11.828+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:58:11.828+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:58:11.907+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:58:11.913+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:58:11.918+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:59:24.412+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:59:24.414+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:59:24.418+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:59:24.453+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T12:59:24.459+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T12:59:24.463+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T12:59:57.111+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:04:57.119+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:09:57.124+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:14:57.135+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:19:57.137+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:24:57.141+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:29:57.143+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:34:57.164+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:39:57.182+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:44:57.195+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:49:57.198+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:54:57.217+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T13:59:57.222+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:04:14.627+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/users/logout
+2026-03-19T14:04:14.627+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:04:14.634+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/users/logout
+2026-03-19T14:04:36.751+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T14:04:36.753+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:04:36.753+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T14:04:37.097+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:04:37.097+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:04:37.097+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:04:37.147+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:04:37.147+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:04:37.153+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:04:37.283+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:04:37.285+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:04:37.288+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:04:39.633+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T14:04:39.633+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:04:39.633+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T14:04:57.226+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:09:57.241+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:14:57.249+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:19:57.263+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:24:57.270+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:29:57.286+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:34:57.292+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:37:40.659+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T14:37:40.668+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:37:40.671+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T14:37:41.219+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:37:41.220+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:37:41.222+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:37:41.449+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:37:41.451+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:37:41.455+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:37:41.709+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:37:41.711+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:37:41.713+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:37:43.991+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T14:37:43.993+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:37:43.994+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T14:38:38.531+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:38:38.533+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:38:38.536+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:38:38.613+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:38:38.617+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:38:38.621+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:38:38.856+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:38:38.856+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:38:38.861+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:38:39.910+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T14:38:39.911+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:38:39.912+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T14:39:57.301+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:44:57.316+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:49:57.332+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:54:57.345+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T14:55:02.876+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T14:55:02.880+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:55:02.888+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T14:55:03.486+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:55:03.490+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:55:03.492+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:55:03.648+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:55:03.650+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:55:03.653+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:55:03.791+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T14:55:03.791+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:55:03.797+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T14:55:05.813+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T14:55:05.815+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T14:55:05.815+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T14:59:57.363+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:00:30.952+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T15:00:30.957+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:00:30.962+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T15:00:31.027+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T15:00:31.029+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:00:31.032+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T15:00:31.170+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T15:00:31.173+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:00:31.174+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T15:00:31.898+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:00:31.898+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:00:31.901+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:00:52.024+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T15:00:52.027+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:00:52.027+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T15:00:52.345+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:00:52.345+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:00:52.345+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:00:52.381+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:00:52.383+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:00:52.387+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:01:07.183+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:01:07.185+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:01:07.189+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:01:07.240+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:01:07.240+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:01:07.243+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:01:26.222+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:01:26.226+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:01:26.226+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:01:26.293+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:01:26.293+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:01:26.295+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:04:19.777+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:04:19.777+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:04:19.777+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:04:19.813+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:04:19.817+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:04:19.817+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:04:32.423+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:04:32.427+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:04:32.429+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:04:32.517+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:04:32.518+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:04:32.521+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:04:40.844+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:04:40.846+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:04:40.847+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:04:40.897+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:04:40.901+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:04:40.901+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:04:57.370+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:06:49.798+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:06:49.798+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:06:49.800+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:06:49.838+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:06:49.840+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:06:49.843+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:09:57.375+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:12:30.038+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:12:30.041+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:12:30.042+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:12:30.092+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:12:30.092+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:12:30.095+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:12:34.768+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/users/logout
+2026-03-19T15:12:34.768+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:12:34.768+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/users/logout
+2026-03-19T15:12:50.643+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T15:12:50.643+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:12:50.645+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T15:12:50.981+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T15:12:50.983+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:12:50.983+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T15:12:51.010+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T15:12:51.012+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:12:51.012+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T15:12:51.090+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T15:12:51.090+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:12:51.090+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T15:12:51.888+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:12:51.888+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:12:51.891+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:14:57.388+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:18:29.094+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:18:29.096+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:18:29.097+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:18:29.878+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:18:29.878+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:18:29.883+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:19:57.408+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:24:57.423+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:29:57.461+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:34:57.517+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:39:57.527+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:44:57.567+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:46:05.396+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T15:46:05.401+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:46:05.409+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T15:46:05.771+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:46:05.771+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:46:05.777+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:46:05.929+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:46:05.929+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:46:05.929+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:47:27.199+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:47:27.200+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:47:27.201+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:47:27.237+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:47:27.237+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:47:27.240+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:49:21.560+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:49:21.563+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:49:21.567+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:49:21.605+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:49:21.605+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:49:21.605+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:49:57.583+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:51:36.773+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:51:36.773+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:51:36.773+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:51:36.805+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:51:36.808+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:51:36.809+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:53:09.894+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/users/logout
+2026-03-19T15:53:09.897+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:53:09.900+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/users/logout
+2026-03-19T15:53:28.658+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-19T15:53:28.659+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:53:28.660+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-03-19T15:53:28.881+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T15:53:28.882+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:53:28.882+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T15:53:28.910+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T15:53:28.910+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:53:28.911+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T15:53:29.054+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T15:53:29.055+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:53:29.056+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T15:53:29.731+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T15:53:29.732+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T15:53:29.734+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T15:54:57.588+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T15:59:57.592+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-19T16:05:51.060+05:30  WARN 20176 --- [user-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m26s791ms210µs400ns).
+2026-03-19T16:18:22.007+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T16:18:22.009+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T16:18:22.011+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T16:18:22.056+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T16:18:22.058+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T16:18:22.060+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T16:18:22.962+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T16:18:22.962+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T16:18:22.964+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T16:18:24.055+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T16:18:24.055+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T16:18:24.055+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T16:18:24.922+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T16:18:24.922+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T16:18:24.924+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T16:18:24.945+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T16:18:24.945+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T16:18:24.945+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T16:18:25.126+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/users/31
+2026-03-19T16:18:25.128+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T16:18:25.132+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/users/31
+2026-03-19T16:18:25.792+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/users/32
+2026-03-19T16:18:25.792+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19T16:18:25.796+05:30 DEBUG 20176 --- [user-service] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/users/32
+2026-03-19T16:18:47.183+05:30  WARN 20176 --- [user-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m56s125ms911µs600ns).
+2026-03-19T16:19:20.522+05:30  INFO 20176 --- [user-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
