@@ -1,0 +1,22 @@
+--index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://pypi.org/simple
+
+# Core ML Stack (Pinned for compatibility)
+numpy<2.0.0
+torch==2.4.0+cpu
+torchvision==0.19.0+cpu
+
+# NLP Stack
+sentence-transformers==3.0.1
+transformers>=4.44.0
+accelerate
+
+# Service Stack
+flask
+langchain
+langchain-groq
+chromadb
+pymupdf
+python-dotenv
+groq
+PyPDF2
