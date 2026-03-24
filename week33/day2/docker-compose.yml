@@ -1,0 +1,158 @@
+version: '3.8'
+
+services:
+  # --- 1. DATABASE LAYER ---
+  mysql-db:
+    image: mysql:8.0
+    container_name: student-analytics-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init-db:/docker-entrypoint-initdb.d 
+
+  # --- 2. INFRASTRUCTURE LAYER ---
+  discovery-service:
+    image: rsujal/edupulse-discovery-service:v1
+    container_name: discovery-service
+    ports:
+      - "8761:8761"
+
+  api-gateway:
+    image: rsujal/edupulse-api-gateway:v1
+    container_name: api-gateway
+    ports:
+      - "8091:8091"
+    depends_on:
+      - discovery-service
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  # --- 2. AI & NLP LAYER ---
+
+  chroma-db:
+    image: chromadb/chroma:latest
+    container_name: chroma-db
+    ports:
+      - "8000:8000"
+
+  # --- 3. AI & NLP LAYER ---
+  hybrid-nlp-service:
+    image: rsujal/edupulse-hybrid-nlp-service:v5
+    container_name: hybrid-nlp-service
+    ports:
+      - "5001:5001"
+    depends_on:
+      - chroma-db
+    environment:
+      # YE DO LINES ADD KARO warna NLP start nahi hoga
+      - CHROMA_SERVER_HOST=chroma-db
+      - CHROMA_SERVER_HTTP_PORT=8000
+
+  # --- 4. THE ARMY OF MICROSERVICES (13+ SERVICES) ---
+
+  user-service:
+    image: rsujal/edupulse-user-service:v1
+    container_name: user-service
+    depends_on:
+      - mysql-db
+      - discovery-service
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_user?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  course-service:
+    image: rsujal/edupulse-course-service:v1
+    container_name: course-service
+    depends_on:
+      - mysql-db
+      - discovery-service
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_db?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  quiz-service:
+    image: rsujal/edupulse-quiz-service:v1
+    container_name: quiz-service
+    depends_on:
+      - mysql-db
+      - hybrid-nlp-service
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_db?createDatabaseIfNotExist=true
+      - NLP_SERVICE_URL=http://hybrid-nlp-service:5001
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  ai-integration-service:
+    image: rsujal/edupulse-ai-integration-service:v1
+    container_name: ai-integration-service
+    depends_on:
+      - mysql-db
+      - hybrid-nlp-service
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_db?createDatabaseIfNotExist=true
+      - NLP_SERVICE_URL=http://hybrid-nlp-service:5001
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  exam-result-service:
+    image: rsujal/edupulse-exam-result-service:v1
+    container_name: exam-result-service
+    depends_on:
+      - mysql-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_db?createDatabaseIfNotExist=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  assignment-service:
+    image: rsujal/edupulse-assignment-service:v1
+    container_name: assignment-service
+    depends_on:
+      - mysql-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_db?createDatabaseIfNotExist=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  performance-service:
+    image: rsujal/edupulse-performance-service:v1
+    container_name: performance-service
+    depends_on:
+      - prediction-service
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_db?createDatabaseIfNotExist=true
+      - PREDICT_URL=http://prediction-service:8083/api/predict/complete
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  prediction-service:
+    image: rsujal/edupulse-prediction:v1
+    container_name: prediction-service
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_db?createDatabaseIfNotExist=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  analytics-service:
+    image: rsujal/edupulse-analytics-service:v1
+    container_name: analytics-service
+    depends_on:
+      - mysql-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_db?createDatabaseIfNotExist=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+
+  # --- 5. FRONTEND LAYER ---
+  student-analytics-ui:
+    image: rsujal/quizapp-frontend:v2
+    container_name: student-analytics-ui
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8091
+    depends_on:
+      - api-gateway
+
+volumes:
+  db_data:
