@@ -1,0 +1,288 @@
+# ==========================================
+# 1. GLOBAL CONFIGURATION
+# ==========================================
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: edupulse-config
+data:
+  SPRING_DATASOURCE_URL: "jdbc:mysql://mysql-service.default.svc.cluster.local:3306/student_analytics_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true"
+  SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: "org.hibernate.dialect.MySQLDialect"
+  # Standard Spring Cloud Eureka Variables
+  SPRING_CLOUD_EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: "http://10.102.2.214:8761/eureka/"
+  EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://10.102.2.214:8761/eureka/"
+  # EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://discovery-service:8761/eureka/"
+  EUREKA_INSTANCE_PREFER_IP_ADDRESS: "true"
+  # Service URLs
+  NLP_SERVICE_URL: "http://hybrid-nlp-service:5001"
+  AI_SERVICE_URL: "http://hybrid-nlp-service:5001"
+  PREDICT_SERVICE_URL: "http://prediction-service:8083/api/predict/complete"
+  JWT_SECRET: "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970"
+  CHROMA_SERVER_HOST: "chroma-db"
+  CHROMA_SERVER_HTTP_PORT: "8000"
+
+---
+# ==========================================
+# 2. MYSQL DATABASE
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: mysql
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:8.0
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "root"
+        volumeMounts:
+        - name: mysql-storage
+          mountPath: /var/lib/mysql
+        resources:
+          limits:
+            memory: "512Mi"
+      volumes:
+      - name: mysql-storage
+        persistentVolumeClaim:
+          claimName: mysql-pvc
+        hostPath:
+          path: /mnt/c/mysql-data # Windows path (ensure folder exists)
+          type: DirectoryOrCreate
+        ports:
+        - containerPort: 3306
+        resources:
+          limits:
+            memory: "512Mi"
+
+---
+# ==========================================
+# 3. CHROMA DB
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: chroma-db
+spec:
+  ports:
+    - port: 8000
+  selector:
+    app: chroma-db
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chroma-db
+spec:
+  selector:
+    matchLabels:
+      app: chroma-db
+  template:
+    metadata:
+      labels:
+        app: chroma-db
+    spec:
+      containers:
+      - name: chroma-db
+        image: chromadb/chroma:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            memory: "512Mi"
+
+---
+# ==========================================
+# 4. DISCOVERY SERVICE (Eureka Server)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: discovery-service
+spec:
+  ports:
+    - port: 8761
+  selector:
+    app: discovery-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: discovery-service
+spec:
+  selector:
+    matchLabels:
+      app: discovery-service
+  template:
+    metadata:
+      labels:
+        app: discovery-service
+    spec:
+      containers:
+      - name: discovery-service
+        image: rsujal/edupulse-discovery-service:v1
+        ports:
+        - containerPort: 8761
+        env:
+        - name: EUREKA_INSTANCE_HOSTNAME
+          value: "discovery-service"
+
+---
+# ==========================================
+# 5. USER SERVICE (Fixed Eureka Registration)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+spec:
+  ports:
+    - port: 8080
+  selector:
+    app: user-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+      - name: user-service
+        image: rsujal/edupulse-user-service:v1
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_APPLICATION_NAME
+          value: "user-service"
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:mysql://mysql-service.default.svc.cluster.local:3306/student_analytics_user?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true"
+        - name: SPRING_CLOUD_EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
+          value: "http://10.102.2.214:8761/eureka/"
+          # value: "http://discovery-service:8761/eureka/"
+        envFrom:
+        - configMapRef:
+            name: edupulse-config
+        resources:
+          requests:
+            memory: "600Mi"
+          limits:
+            memory: "900Mi"
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 15
+
+---
+# ==========================================
+# 6. API GATEWAY (Fixed Routing)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-gateway
+spec:
+  ports:
+    - port: 8091
+  selector:
+    app: api-gateway
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+spec:
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+      - name: api-gateway
+        image: rsujal/edupulse-api-gateway:v1
+        ports:
+        - containerPort: 8091
+        env:
+        - name: SPRING_APPLICATION_NAME
+          value: "api-gateway"
+        - name: SPRING_CLOUD_EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
+          value: "http://10.102.2.214:8761/eureka/"
+          # value: "http://discovery-service:8761/eureka/"
+        envFrom:
+        - configMapRef:
+            name: edupulse-config
+        resources:
+          limits:
+            memory: "512Mi"
+
+---
+# ==========================================
+# 7. HYBRID NLP SERVICE
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: hybrid-nlp-service
+spec:
+  ports:
+    - port: 5001
+  selector:
+    app: hybrid-nlp-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hybrid-nlp-service
+spec:
+  selector:
+    matchLabels:
+      app: hybrid-nlp-service
+  template:
+    metadata:
+      labels:
+        app: hybrid-nlp-service
+    spec:
+      containers:
+      - name: hybrid-nlp-service
+        image: rsujal/edupulse-hybrid-nlp-service:v5
+        ports:
+        - containerPort: 5001
+        envFrom:
+        - configMapRef:
+            name: edupulse-config
+        resources:
+          requests:
+            memory: "800Mi"
+          limits:
+            memory: "1.2Gi"
