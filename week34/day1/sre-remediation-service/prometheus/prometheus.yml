@@ -1,0 +1,16 @@
+global:
+  scrape_interval: 15s
+
+rule_files:
+  - "alert_rules.yml" # Hum ye file abhi banayenge
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - 'alertmanager:9093' # Alertmanager ka address
+
+scrape_configs:
+  - job_name: 'sre-service'
+    static_configs:
+      - targets: ['sre-remediation-service:9090']
