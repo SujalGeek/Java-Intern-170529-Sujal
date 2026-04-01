@@ -1,0 +1,37 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery-service
+
+eureka:
+  client:
+    # K8s mein Eureka ko khud ko register karne ki zaroorat nahi hoti single node par
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      # Isse Variable bana lo safety ke liye
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+
+  server:
+    enable-self-preservation: false
+    # Jab 10 services connect hongi toh response cache fast hona chahiye
+    response-cache-update-interval-ms: 5000 
+
+  instance:
+    # 🔥 IMPORTANT FOR KUBERNETES:
+    # Localhost ki jagah hostname ko variable rakho
+    hostname: ${EUREKA_INSTANCE_HOSTNAME:localhost}
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    com.netflix.eureka: INFO
+    com.netflix.discovery: INFO

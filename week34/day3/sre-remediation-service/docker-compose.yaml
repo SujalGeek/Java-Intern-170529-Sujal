@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  # --- DB Layer ---
+  mysql-db:
+    image: mysql:8.0
+    container_name: student-analytics-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - edupulse-network
+
+  # --- Discovery Layer ---
+  discovery-service:
+    image: rsujal/edupulse-discovery-service:v1
+    container_name: discovery-service
+    ports:
+      - "8761:8761"
+    networks:
+      - edupulse-network
+
+  # --- Monitoring & Alerting ---
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+    networks:
+      - edupulse-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9095:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/alert_rules.yml:/etc/prometheus/alert_rules.yml
+    networks:
+      - edupulse-network
+    depends_on:
+      - alertmanager
+
+  # --- The "Buggy" App ---
+  user-service:
+    image: rsujal/user-service:v1
+    container_name: user-service
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://student-analytics-mysql:3306/student_analytics_user?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    networks:
+      - edupulse-network
+    depends_on:
+      - mysql-db
+      - discovery-service
+
+  # --- AI SRE Agent ---
+  sre-remediation-service:
+    image: rsujal/sre-remediation-service:v3
+    container_name: sre-remediation-service
+    ports:
+      - "9090:9090"
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GITHUB_REPO=SujalGeek/testing-sre
+      - GITHUB_MAIN_BRANCH=main
+      - GEMINI_API_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
+    networks:
+      - edupulse-network
+    depends_on:
+      - prometheus
+
+networks:
+  edupulse-network:
+    driver: bridge
