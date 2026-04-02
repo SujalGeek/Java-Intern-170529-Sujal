@@ -1,0 +1,90 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: API-GATEWAY
+
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        # 1. AI Integration (Priority Route)
+        - id: AI-INTEGRATION-SERVICE
+#          uri: http://ai-integration-service:8084
+          uri: lb://AI-INTEGRATION-SERVICE
+          predicates:
+            - Path=/api/v1/exams/**, /api/v1/admin/**
+
+        # 2. User Authentication & Profile
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/auth/**, /api/users/**
+
+        # 3. Course Service (Cleaned up)
+        - id: COURSE-SERVICE
+          uri: lb://COURSE-SERVICE
+          predicates:
+            - Path=/api/course/**
+
+        - id: ENROLLMENT
+          uri: lb://COURSE-SERVICE
+          predicates:
+            - Path=/api/enrollments/**
+
+        - id: SUBMISSION
+          uri: lb://COURSE-SERVICE
+          predicates:
+            - Path=/api/submissions/**
+
+        # 4. Quiz & Assignments
+        - id: QUIZ-SERVICE
+          uri: lb://QUIZ-SERVICE
+          predicates:
+            - Path=/api/quiz/**
+
+        - id: ASSIGNMENT-SERVICE
+          uri: lb://ASSIGNMENT-SERVICE
+          predicates:
+            - Path=/api/assignments/**
+
+        # 5. Results & Performance
+        - id: EXAM-RESULT-SERVICE
+          uri: lb://EXAM-RESULT-SERVICE
+          predicates:
+            - Path=/api/exam-results/**
+
+        - id: PERFORMANCE-SERVICE
+          uri: lb://PERFORMANCE-SERVICE
+          predicates:
+            - Path=/api/performance/**
+
+        # 6. Analytics & Predictions
+        - id: PREDICTION-SERVICE
+          uri: lb://PREDICTION-SERVICE
+          predicates: 
+            - Path=/api/predict/**
+
+        - id: ANALYTICS-SERVICE
+          uri: lb://ANALYTICS-SERVICE
+          predicates:
+            - Path=/api/analytics/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+
+jwt:
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+  expiration: 86400000
+  refresh-expiration: 604800000
