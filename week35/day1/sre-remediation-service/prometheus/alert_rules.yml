@@ -1,0 +1,11 @@
+groups:
+  - name: self-healing-rules
+    rules:
+      - alert: JavaErrorDetected
+        expr: core_errors_total > 0 # Example metric
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Java Exception detected in Microservice"
+          description: "Triggering AI Remediation for automated fix."
