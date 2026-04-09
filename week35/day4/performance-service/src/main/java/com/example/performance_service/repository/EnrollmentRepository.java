@@ -1,0 +1,41 @@
+package com.example.performance_service.repository;
+
+import java.util.List; 
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.example.performance_service.entity.Enrollment;
+import com.example.performance_service.entity.Performance;
+
+@Repository
+public interface EnrollmentRepository extends JpaRepository<Enrollment, Long>{
+
+//	List<Enrollment> findByStudentId(Long studentId);
+	
+//	List<Enrollment> findByCourseId(Long courseId);
+//	
+//	Optional<Enrollment> findByStudentIdAndCourseId(Long studentId,Long courseId);
+//	
+//	@Query("select count(e) from Enrollment e where e.studentId = ?1and e.status = ?2")
+//	long countByStudentIdAndStatus(Long statusId,Enrollment.Status status);
+//	
+//	@Query("select count(e) from Enrollment e where e.courseId = ?1and e.status = ?2")
+//	long countByCourseIdAndStatus(Long courseId,Enrollment.Status status);
+	
+	
+	List<Enrollment> findByStudentId(Long studentId);
+    
+    List<Enrollment> findByCourseId(Long courseId);
+    
+    Optional<Enrollment> findByStudentIdAndCourseId(Long studentId, Long courseId);
+    
+    // Built-in Magic: Spring writes the "SELECT COUNT" for you!
+    long countByStudentIdAndStatus(Long studentId, Enrollment.Status status);
+    
+    long countByCourseIdAndStatus(Long courseId, Enrollment.Status status);
+
+    Optional<Enrollment> findFirstByStudentId(Long studentId);
+    }
