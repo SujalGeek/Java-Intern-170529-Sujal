@@ -1,0 +1,148 @@
+# ==========================================
+# 7. API GATEWAY (Port 8091)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-gateway
+spec:
+  ports:
+    - port: 8091
+  selector:
+    app: api-gateway
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+spec:
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+      - name: api-gateway
+        image: rsujal/edupulse-api-gateway:v1
+        ports:
+        - containerPort: 8091
+        envFrom:
+        - configMapRef:
+            name: edupulse-config
+        resources:
+          limits:
+            memory: "512Mi"
+
+---
+# ==========================================
+# 8. COURSE SERVICE (Port 8081)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: course-service
+spec:
+  ports:
+    - port: 8082
+  selector:
+    app: course-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: course-service
+spec:
+  selector:
+    matchLabels:
+      app: course-service
+  template:
+    metadata:
+      labels:
+        app: course-service
+    spec:
+      containers:
+      - name: course-service
+        image: rsujal/edupulse-course-service:v3
+        envFrom:
+        - configMapRef:
+            name: edupulse-config
+        resources:
+          limits:
+            memory: "512Mi"
+
+---
+# ==========================================
+# 9. QUIZ SERVICE (Port 8082)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: quiz-service
+spec:
+  ports:
+    - port: 8082
+  selector:
+    app: quiz-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quiz-service
+spec:
+  selector:
+    matchLabels:
+      app: quiz-service
+  template:
+    metadata:
+      labels:
+        app: quiz-service
+    spec:
+      containers:
+      - name: quiz-service
+        image: rsujal/edupulse-quiz-service:v1
+        envFrom:
+        - configMapRef:
+            name: edupulse-config
+        resources:
+          limits:
+            memory: "512Mi"
+
+---
+# ==========================================
+# 10. ASSIGNMENT SERVICE (Port 8085)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: assignment-service
+spec:
+  ports:
+    - port: 8085
+  selector:
+    app: assignment-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: assignment-service
+spec:
+  selector:
+    matchLabels:
+      app: assignment-service
+  template:
+    metadata:
+      labels:
+        app: assignment-service
+    spec:
+      containers:
+      - name: assignment-service
+        image: rsujal/edupulse-assignment-service:v1
+        envFrom:
+        - configMapRef:
+            name: edupulse-config
+        resources:
+          limits:
+            memory: "512Mi"

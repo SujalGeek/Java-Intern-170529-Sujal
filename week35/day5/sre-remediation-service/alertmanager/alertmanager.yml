@@ -1,0 +1,8 @@
+route:
+  receiver: 'sre-agent-webhook'
+
+receivers:
+  - name: 'sre-agent-webhook'
+    webhook_configs:
+      - url: 'http://sre-remediation-service:9090/alertmanager'
+        send_resolved: true
