@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # --- Monitoring & Alerting ---
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+    networks:
+      - sre-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9095:9090"
+    extra_hosts:                                
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/alert_rules.yml:/etc/prometheus/alert_rules.yml
+    networks:
+      - sre-network
+    depends_on:
+      - alertmanager
+
+  # --- AI SRE Agent ---
+  sre-remediation-service:
+    image: rsujal/sre-remediation-service:v6
+    container_name: sre-remediation-service
+    ports:
+      - "9090:9090"
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GITHUB_REPO=SujalGeek/testing-sre
+      - GITHUB_MAIN_BRANCH=main
+      - GEMINI_API_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent
+    networks:
+      - sre-network
+    depends_on:
+      - prometheus
+
+networks:
+  sre-network:
+    driver: bridge

@@ -1,0 +1,15 @@
+flask
+sentence-transformers
+torch
+pymupdf
+langchain
+langchain-groq
+scikit-learn
+numpy
+chromadb
+transformers
+sentencepiece
+accelerate
+python-dotenv
+groq
+PyPDF2

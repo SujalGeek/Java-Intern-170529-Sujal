@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Palette for EduPulse */
+  --color-brand-dark: #050a18;
+  --color-brand-sidebar: #0b1224;
+  --color-brand-emerald: #10b981;
+  
+  /* Custom Border Radius (Jo tere warnings aa rahe the) */
+  --radius-4xl: 2rem;
+  --radius-5xl: 3rem;
+
+  /* Smooth Animation */
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Global Reset & Base Styles */
+@layer base {
+  :root {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f8fafc; /* Default Light mode */
+    color: #0f172a;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  :root.dark {
+    background-color: var(--color-brand-dark); /* Industrial Dark mode */
+    color: #f1f5f9;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+/* Specific Fix for Dropdowns in Light Mode */
+html:not(.dark) select, 
+html:not(.dark) option {
+  background-color: white !important;
+  color: #0f172a !important;
+}
+
+/* Scrollbar customization (Industrial look) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #10b98133;
+  border-radius: 10px;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ffffff11;
+}
