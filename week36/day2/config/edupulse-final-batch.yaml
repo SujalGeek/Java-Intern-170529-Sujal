@@ -1,0 +1,74 @@
+# ==========================================
+# 11. PERFORMANCE SERVICE (Port 8084)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: performance-service
+spec:
+  ports:
+    - port: 8085
+  selector:
+    app: performance-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: performance-service
+spec:
+  selector:
+    matchLabels:
+      app: performance-service
+  template:
+    metadata:
+      labels:
+        app: performance-service
+    spec:
+      containers:
+      - name: performance-service
+        image: rsujal/edupulse-performance-service:v2
+        envFrom:
+        - configMapRef:
+            name: edupulse-config
+        resources:
+          limits:
+            memory: "512Mi"
+
+---
+# ==========================================
+# 12. PREDICTION SERVICE (Flask/Python - Port 8083)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: prediction-service
+spec:
+  ports:
+    - port: 8083
+  selector:
+    app: prediction-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prediction-service
+spec:
+  selector:
+    matchLabels:
+      app: prediction-service
+  template:
+    metadata:
+      labels:
+        app: prediction-service
+    spec:
+      containers:
+      - name: prediction-service
+        image: rsujal/edupulse-prediction:v2
+        ports:
+        - containerPort: 8083
+        envFrom:
+        - configMapRef:
+            name: edupulse-config
+        resources:
+          limits:
+            memory: "512Mi"
