@@ -1,0 +1,863 @@
+### Summary of Proxy Design Pattern Lecture
+
+The video lecture provides a detailed explanation of the **Proxy Design Pattern**, a structural design pattern that introduces an intermediary object (proxy) between a client (user) and a real object (resource). This pattern controls access to the resource, enabling additional functionality such as validation, lazy loading, access control, or remote access, without changing the client code.
+
+---
+
+### Core Concepts
+
+- **Proxy Design Pattern** introduces a **proxy object** between the client (user) and the real resource.
+- The client sends requests to the proxy instead of directly interacting with the resource.
+- The proxy controls the request by validating, authenticating, or managing access before forwarding the request to the real resource.
+- The client is unaware whether it is communicating with the proxy or the real resource.
+- The proxy replicates the interface of the real resource, making it indistinguishable from the client’s perspective.
+
+---
+
+### Why Use a Proxy?
+
+- The real resource may contain **critical or sensitive data** requiring validation or authentication before access.
+- To **avoid expensive resource creation or operations** until actually needed (lazy loading).
+- To protect the resource by **controlling and restricting access** based on client permissions.
+- To represent a resource **located remotely**, hiding the complexity of establishing network connections.
+
+---
+
+### Types of Proxy Patterns Explained
+
+| Proxy Type         | Purpose                                                    | Example Use Case                              |
+|--------------------|------------------------------------------------------------|-----------------------------------------------|
+| **Virtual Proxy**    | Defers expensive resource creation until necessary (lazy loading) | Image loading and display where loading is costly |
+| **Protection Proxy** | Controls access by authenticating or authorizing clients   | Restricting premium features to authorized users |
+| **Remote Proxy**     | Represents an object in a different address space (e.g., remote server) | Accessing remote data/service over network    |
+
+---
+
+### Detailed Examples
+
+#### 1. Virtual Proxy (Image Display)
+
+- **Scenario:** An `ImageDisplay` class loads and displays images, but loading involves expensive operations like loading from disk, compression, and filtering.
+- **Problem:** If an `ImageDisplay` object is created but never used (display method not called), resources are wasted.
+- **Solution:** Introduce an `ImageProxy` class implementing the same interface (`IDisplay`), which holds a reference to `ImageDisplay` but delays object creation until the `display()` method is called.
+- **Behavior:**  
+  - On `ImageProxy` creation, no expensive loading occurs.
+  - When `display()` is called for the first time, `ImageProxy` creates the `ImageDisplay` object and delegates the call.
+  - Subsequent calls use the already created `ImageDisplay`.
+- **Benefit:** Saves memory and delays expensive operations until actually required.
+
+#### 2. Protection Proxy (Document Unlocking)
+
+- **Scenario:** A `RealDocumentReader` class with a method `unlockPDF(filePath, password)` unlocks PDF files.
+- **Problem:** Not all users should have access to unlock PDFs; only premium users are allowed.
+- **Solution:** Introduce a `DocumentReaderProxy` that holds a reference to a `User` object and the real document reader.
+- **Behavior:**  
+  - When `unlockPDF` is called on the proxy, it first checks if the user is premium.
+  - If authorized, it forwards the call to the real document reader.
+  - Otherwise, it denies access or throws an exception.
+- **Benefit:** Implements access control without modifying the real document reader.
+
+#### 3. Remote Proxy (Data Service)
+
+- **Scenario:** A `DataService` class fetches data from a remote database server.
+- **Problem:** The client should not manage establishing network connections or know the remote server details.
+- **Solution:** Introduce a `DataServiceProxy` that abstracts remote communication.
+- **Behavior:**  
+  - The proxy establishes the connection lazily (on first method call) or eagerly (on creation) depending on the implementation.
+  - It forwards requests to the remote `DataService`.
+- **Benefit:** Simplifies client interaction with remote resources and hides network complexity.
+
+---
+
+### UML Diagram Overview
+
+- **Interface (Subject):** Declares operations like `display()`, `unlockPDF()`, or `fetchData()`.
+- **Real Subject:** Implements the interface and contains the actual complex or remote logic.
+- **Proxy Subject:** Also implements the interface, holds a reference to the real subject, and controls access.
+- **Client:** Interacts with the interface, unaware if it’s communicating with a proxy or real subject.
+
+---
+
+### Key Insights
+
+- **Proxy pattern provides a surrogate or placeholder** to control access to another object.
+- Proxies can perform **authentication, lazy initialization, access control, or remote communication** transparently.
+- The pattern **decouples clients from the complexity** of object creation, access, or network communication.
+- Proxy objects maintain the **same interface** as the real object to ensure seamless substitution.
+- Proxies are widely used in real-world applications such as **security features, caching, lazy loading, and remote services**.
+- Hybrid proxies combining features (e.g., remote + protection) are possible.
+
+---
+
+### Summary Table: Proxy Types and Characteristics
+
+| Proxy Type       | Key Feature                         | Access Control | Resource Location | Creation Timing       |
+|------------------|-----------------------------------|----------------|-------------------|----------------------|
+| Virtual Proxy    | Lazy loading of expensive objects | No             | Local             | Deferred until needed |
+| Protection Proxy | Validates user permissions         | Yes            | Local             | Immediate or deferred |
+| Remote Proxy     | Access to remote objects            | Optional       | Remote            | Immediate or deferred |
+
+---
+
+### Use Cases
+
+- Implementing **premium features** where only authorized users can access certain methods.
+- Avoiding **heavy resource loading** until absolutely necessary.
+- Abstracting and hiding **remote service calls** from clients.
+- Adding **validation or caching layers** without changing existing code.
+
+---
+
+### Conclusion
+
+The Proxy Design Pattern is a versatile, structural pattern that **provides controlled and efficient access to complex or sensitive resources**. It supports **lazy loading, protection, and remote access** scenarios through a unified interface. Understanding the proxy pattern enables developers to design **scalable, maintainable, and secure applications** with clear separation of concerns.
+
+---
+
+### Keywords
+
+- Proxy Design Pattern  
+- Virtual Proxy  
+- Protection Proxy  
+- Remote Proxy  
+- Lazy Loading  
+- Access Control  
+- Surrogate Object  
+- Interface  
+- Client-Server Communication  
+- Resource Management  
+- Authentication  
+- Network Transparency
+
+
+### Summary of the Video on Command Design Pattern
+
+The video provides an in-depth explanation of the **Command Design Pattern**, illustrating its structure, purpose, implementation, and real-world use cases primarily through a classic example of a smart home automation system.
+
+---
+
+### Core Concepts and Structure
+
+- **Command Design Pattern** encapsulates a request as an object, allowing clients to parameterize different requests, queue or log them, and support undoable operations.
+- The pattern involves **three main roles**:
+  - **Source (Invoker):** The client that initiates the request.
+  - **Command:** An object that represents the request and knows how to execute it.
+  - **Receiver:** The object that performs the actual work when the command is executed.
+
+---
+
+### Motivation and Problem Statement
+
+- Without the command pattern, the invoker (e.g., a remote control) would be tightly coupled with specific devices (like lights, fans, AC), violating the **Open-Closed Principle** (OCP).
+- To allow flexibility and dynamic changes in command execution, commands are encapsulated as objects that the invoker interacts with, making the system loosely coupled.
+
+---
+
+### Example: Smart Home Automation System
+
+- The application controls multiple smart devices (light, fan, AC) via buttons on a remote.
+- **Without Command Pattern:** Each button in the remote would be directly connected to a device class with hardcoded methods (e.g., `light.on()`, `fan.on()`), leading to rigid and tightly coupled code.
+- **With Command Pattern:**
+  - The remote holds references to **command objects**, not devices directly.
+  - Each command object is linked to a specific device and implements an **`execute()`** method that calls device-specific actions (e.g., turning the light on).
+  - The remote uses a **`setCommand()`** method to dynamically assign commands to buttons.
+  - The remote's **`pressButton()`** method calls `execute()` on the assigned command.
+
+---
+
+### Detailed Implementation Highlights
+
+| Component          | Description                                                                                   |
+|--------------------|-----------------------------------------------------------------------------------------------|
+| **Command Interface**  | Abstract class/interface with methods: $$\text{execute()}$$ and $$\text{undo()}$$ (undo reverses execute). |
+| **Concrete Commands**  | Classes like `LightCommand`, `FanCommand` implementing the interface, holding references to respective devices, and implementing $$\text{execute()}$$ and $$\text{undo()}$$ methods. |
+| **Receiver Classes**   | E.g., `Light`, `Fan` classes with device-specific methods like `on()` and `off()`.          |
+| **Invoker (Remote)**   | Contains an array/vector of commands and a boolean array tracking each button's state (pressed or not). Supports dynamic command assignment and toggling between execute and undo. |
+
+- The remote supports **multiple buttons**, each mapped dynamically to different command objects.
+- It maintains a **pressed state** (boolean) per button to toggle between `execute()` and `undo()`.
+- When a button is pressed:
+  - If the button state is false (off), it calls the command's `execute()` to perform the action and sets state to true.
+  - If the button state is true (on), it calls the command's `undo()` to reverse the action and sets state to false.
+
+---
+
+### Benefits of the Command Pattern
+
+- **Loose coupling** between invoker and receiver.
+- Commands can be dynamically assigned and changed at runtime without modifying the invoker.
+- Supports **undo/redo functionality** naturally.
+- Commands can be **queued, logged, or executed asynchronously**.
+- Facilitates implementation of complex features like **macro commands** or **transactional behavior**.
+
+---
+
+### Addressing Common Doubts
+
+- **Why does the abstract Command interface not hold a reference to receivers?**  
+  Because the interface defines the contract (`execute()`, `undo()`), but the concrete commands hold references to specific receivers to perform actions. This keeps the abstraction clean and separates concerns.
+
+- **Why not abstract the receivers into a common interface?**  
+  Due to the **Liskov Substitution Principle** violation in practice—different devices have different capabilities beyond simple `on()`/`off()` methods (e.g., AC has temperature control, fans have speed settings). Thus, receivers are concrete classes, and commands handle receiver-specific logic.
+
+---
+
+### Real-World Use Cases
+
+- **Undo functionality in applications:**  
+  Text editors, Photoshop, and similar apps implement undo/redo by encapsulating actions as commands, which can be executed and reversed.
+
+- **Keyboard shortcuts:**  
+  Assigning commands dynamically to keys for actions like brightness control, minimizing windows, etc., allowing flexible and decoupled control.
+
+- **Home automation and device control:**  
+  Remotes or control panels use commands to manage various devices without tight coupling.
+
+---
+
+### UML Diagram Summary
+
+| Class/Interface    | Relationships                                  | Responsibilities                                      |
+|--------------------|------------------------------------------------|-------------------------------------------------------|
+| `ICommand` (Interface) | Abstract; declares `execute()`, `undo()`       | Defines command contract                              |
+| `LightCommand`         | Implements `ICommand`; has reference to `Light` | Executes and undoes light control                    |
+| `FanCommand`           | Implements `ICommand`; has reference to `Fan`   | Executes and undoes fan control                      |
+| `Light`                | Concrete receiver with methods `on()`, `off()`   | Performs actual device operations                     |
+| `Fan`                  | Concrete receiver with methods `on()`, `off()`   | Performs actual device operations                     |
+| `RemoteControl`        | Has array of `ICommand`; tracks button states   | Invoker that triggers commands and manages button states |
+
+---
+
+### Key Insights
+
+- **Command pattern transforms requests into objects, enabling flexible and extensible software design.**
+- It **decouples the sender and receiver**, promoting loose coupling.
+- Supports **undoable operations** by maintaining paired `execute()` and `undo()` methods.
+- Enables **dynamic command assignment**, facilitating runtime changes without class modifications.
+- Real-world applications of the pattern validate its importance in UI controls and automation.
+
+---
+
+### Conclusion
+
+The video thoroughly explains the **Command Design Pattern** using a practical smart home example, demonstrates its implementation with dynamic command assignment and undo functionality, and clarifies common doubts about abstraction and coupling. It emphasizes the pattern’s significance in real-world software, especially in applications requiring undo/redo features and flexible command execution. The pattern is both easy to understand and implement, making it a valuable tool in a software engineer’s design patterns arsenal.
+
+---
+
+### Keywords
+
+- Command Design Pattern  
+- Invoker, Command, Receiver  
+- Execute, Undo  
+- Loose Coupling  
+- Open-Closed Principle  
+- Smart Home Automation  
+- Undoable Operations  
+- Dynamic Command Assignment  
+- SOLID Principles  
+- Keyboard Shortcuts  
+- Software Design Patterns
+
+
+### Summary of the Video on Memento Design Pattern
+
+This video presents a detailed explanation of the **Memento Design Pattern**, focusing on its purpose, components, practical use cases, and implementation using a database transaction management example.
+
+---
+
+### Core Concept
+
+- The **Memento Design Pattern** allows saving snapshots (states) of an object at various points in time.
+- These snapshots can be stored and restored later, enabling functionalities like **undo** or **rollback**.
+- It is particularly useful when an object's state changes frequently, and reverting to a previous stable state is necessary.
+
+---
+
+### Key Components
+
+| Component    | Definition                                                                                   | Responsibility                                                                                  |
+|--------------|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Originator** | The object whose state changes over time. Example: an object `$OB1$` with states like `$state_1, state_2, state_3$`. | Creates snapshots of its current state and can restore its state from a memento.               |
+| **Memento**   | A snapshot of the Originator’s state at a particular time.                                   | Stores the state internally; provides methods to get (retrieve) and set (store) the state.     |
+| **Caretaker** | Manages and stores mementos.                                                                | Keeps track of mementos; decides when to save or restore states but does not modify state data.|
+
+---
+
+### Use Case: Database Transaction Management
+
+- The video explains **how the Memento Pattern applies to database transactions**, especially in **SQL and NoSQL databases**.
+- When performing **Create, Update, Delete (CRUD)** operations in a database, inconsistent states may arise if a transaction fails midway (e.g., partial updates).
+- **Atomicity** of transactions means either all changes succeed, or none do — if a failure occurs, the system must rollback to the previous consistent state.
+- Here, the **Memento Pattern helps by saving the snapshot of the database state before changes** and restoring it if a rollback is necessary.
+
+---
+
+### Practical Implementation Overview
+
+- The database is modeled as a simple in-memory map: $$\text{Map<String, String>}$$.
+- The database class has CRUD operations plus two additional methods:
+  - **createMemento()**: creates a snapshot of the current map state.
+  - **restoreFromMemento(memento)**: restores the map state from a given memento.
+
+- The **Memento class** holds a copy of the map state and provides:
+  - `setState(map)` — saves the snapshot.
+  - `getState()` — returns the saved snapshot.
+
+- The **Caretaker**, named **TransactionManager**, manages a single memento representing the previous stable state:
+  - On **beginTransaction(db)**, it requests a memento from the database and stores it.
+  - On **commit()**, it discards the stored memento (transaction successful).
+  - On **rollback(db)**, it instructs the database to restore from the stored memento.
+
+---
+
+### Workflow in Transaction Example
+
+1. **Begin Transaction**
+   - Save the current state as a memento.
+2. **Perform Operations**
+   - Insert, update, or delete entries in the map.
+3. **Commit or Rollback**
+   - If all operations succeed, commit deletes the memento.
+   - On failure, rollback restores the previous state using the memento.
+
+The video demonstrates with example insertions and rollback, showing how the map reverts to the previous state after rollback.
+
+---
+
+### UML Diagram Description
+
+- The UML diagram depicts:
+  - **Originator** has a state (map) and methods to create and restore mementos.
+  - **Memento** stores the state and offers getter and setter methods.
+  - **Caretaker** holds references to mementos and provides methods to add (begin transaction) and undo (rollback).
+
+---
+
+### Additional Insights
+
+- The **Memento Pattern provides undo capabilities** and facilitates returning to previous states in systems where state consistency is critical.
+- Real-world applications beyond database transactions include:
+  - **Version control systems like Git**, where commits serve as mementos allowing rollback to previous versions.
+  - Any application requiring **state preservation and restoration** for error recovery or undo features.
+  
+---
+
+### Summary of Key Terms and Their Roles
+
+| Term          | Role                                                                                         |
+|---------------|----------------------------------------------------------------------------------------------|
+| **Snapshot**  | A saved state of the object at a point in time (memento).                                    |
+| **Undo**      | Functionality to revert to a previous state using stored mementos.                          |
+| **Atomicity** | Database property ensuring all-or-nothing execution of transactions, supported by rollback. |
+| **Rollback**  | Reverting the object/database to a prior consistent state using a memento.                   |
+| **Commit**    | Finalizing changes, removing the need for stored mementos as the state is consistent.       |
+
+---
+
+### Conclusion
+
+- The **Memento Design Pattern** is a simple yet powerful pattern to **save and restore object states**.
+- Its **primary use case is in managing state consistency and undo capabilities**.
+- The pattern cleanly separates the concerns of state storage (memento), originator state management, and caretaker oversight.
+- The provided database transaction example clearly illustrates how the pattern helps maintain atomicity and consistency.
+
+The video encourages revisiting the UML diagram and code examples for better understanding and suggests that the Memento pattern is essential when building applications that require robust state management and rollback/undo functionality.
+
+
+### Summary of the Video Content: Strategy Design Pattern Explained
+
+This video provides a comprehensive explanation of the **Strategy Design Pattern** within the broader context of software design patterns, emphasizing its importance in creating flexible, maintainable applications. The content uses a **robot simulation example** to illustrate the drawbacks of inheritance-heavy designs and how the Strategy Pattern offers a superior solution through composition.
+
+---
+
+### Key Concepts and Insights
+
+- **Design Patterns** are proven solutions to recurring problems in software design, created by developers who faced similar issues before. They help in building flexible, evolving applications that require minimal code changes for new features.
+- Applications typically have **static parts** (unchanging) and **dynamic parts** (subject to frequent change). Design patterns aim to **extract dynamic parts** and separate them from static parts to minimize impact during changes.
+- There are **23 official design patterns**, each solving the problem of separating changing behavior in different ways.
+- **Inheritance** is a core Object-Oriented pillar, but heavy reliance on inheritance leads to complex, hard-to-maintain hierarchies, especially when behaviors multiply (e.g., walking, talking, flying variations in robots).
+- The **DRY Principle (Don't Repeat Yourself)** is violated when similar methods (e.g., flying behavior) are copied across subclasses.
+- The **Strategy Design Pattern** addresses these problems by defining:
+  - A **family of algorithms** (behaviors).
+  - Putting these algorithms into **separate classes**.
+  - Making them **interchangeable at runtime**.
+- Strategy pattern favors **composition over inheritance** by delegating behavior to separate classes/interfaces and composing them into the main class.
+
+---
+
+### Robot Simulation Example: Problem and Solution
+
+| Aspect            | Problem with Inheritance Approach                                      | Solution with Strategy Pattern                                     |
+|-------------------|------------------------------------------------------------------------|-------------------------------------------------------------------|
+| Behavior Variants | Multiple combinations of walking, talking, flying behaviors create a large, complex inheritance tree with many permutations. | Extract walking, talking, flying behaviors into separate interfaces/classes. |
+| Code Duplication  | Flying method duplicated in many subclasses violating DRY principle.   | Flying behavior implemented once in a class and reused via composition. |
+| Extensibility     | Adding new behavior types (e.g., jet flying vs. wing flying) requires expanding inheritance tree, complicating hierarchy. | New behaviors implemented as new classes without changing existing code. |
+| Flexibility       | Difficult to change behavior dynamically at runtime.                   | Behaviors can be changed dynamically by passing different strategy objects. |
+
+---
+
+### Implementation Details
+
+- Separate interfaces/abstract classes created for each behavior:
+  - **Talkable** (method: $talk()$)
+  - **Walkable** (method: $walk()$)
+  - **Flyable** (method: $fly()$)
+- Concrete implementations for each behavior include:
+  - **NormalTalk**, **NoTalk**
+  - **NormalWalk**, **NoWalk**
+  - **NormalFly**, **NoFly**, **FlyWithWings**, **FlyWithJet**
+- The **Robot class** holds references to these interfaces via composition:
+  $$ \text{Robot} \to \{ \text{Talkable}, \text{Walkable}, \text{Flyable} \} $$
+- Robot methods delegate behavior to these composed objects:
+  - $robot.talk() \Rightarrow talkable.talk()$
+  - $robot.walk() \Rightarrow walkable.walk()$
+  - $robot.fly() \Rightarrow flyable.fly()$
+- The **Projection method** (how robot looks) remains an abstract method in the Robot class or can also be extracted into its own interface for full composition, eliminating inheritance altogether.
+- This design supports **runtime behavior changes** by passing different strategy objects to the Robot constructor or setters.
+
+---
+
+### Benefits of the Strategy Design Pattern
+
+- **Supports Open/Closed Principle**: The system is open for extension (new behaviors) but closed for modification (existing code remains unchanged).
+- **Enhances flexibility**: Behaviors can be changed dynamically without modifying the Robot class.
+- **Reduces code duplication** and minimizes complex inheritance hierarchies.
+- Encourages **composition over inheritance**, which is a preferred design principle to avoid deep and complicated class trees.
+- Promotes **polymorphism**, allowing behavior to be selected and executed at runtime transparently.
+
+---
+
+### UML Diagram Overview (Standard Structure)
+
+| Component       | Description                                                                                  |
+|-----------------|----------------------------------------------------------------------------------------------|
+| **Client**      | The main class using strategies (e.g., Robot)                                               |
+| **Strategy**    | Abstract interface/class defining behavior methods (e.g., Talkable, Walkable, Flyable)       |
+| **ConcreteStrategy** | Classes implementing specific algorithms/behaviors (e.g., NormalTalk, NoTalk, FlyWithJet)    |
+| **Context**     | Holds a reference to a Strategy and delegates execution to it                               |
+
+---
+
+### Real-Life Examples of Strategy Pattern
+
+- **Payment System**: Different payment methods (UPI, Credit/Debit Card, Net Banking) implemented as separate strategies. The payment system client selects the appropriate strategy at runtime.
+- **Sorting Algorithms**: Multiple sorting strategies like QuickSort, MergeSort, InsertionSort implemented as separate strategies. Client code can switch sorting algorithms dynamically.
+
+---
+
+### Conclusion and Final Remarks
+
+- The **Strategy Design Pattern** is one of the most useful and widely applied design patterns in software development.
+- It effectively solves problems caused by complex inheritance hierarchies by promoting **behavior encapsulation** and **composition**.
+- The pattern aligns well with **SOLID principles**, especially the **Open/Closed Principle** and **DRY**.
+- Understanding and implementing the Strategy pattern prepares developers for designing scalable and maintainable systems and is a common topic in technical interviews.
+
+---
+
+### Keywords
+
+- Strategy Design Pattern  
+- Composition over Inheritance  
+- DRY Principle  
+- Open/Closed Principle  
+- Polymorphism  
+- Behavioral Design Pattern  
+- Interface/Abstract Class  
+- Runtime Behavior Change  
+- Robot Simulation Example  
+- Payment System Example  
+- Sorting Algorithm Example  
+
+---
+
+This summary strictly reflects the content presented in the video transcript and avoids any unsupported interpretations.
+
+### Summary of Template Design Pattern Lecture
+
+The video lecture provides a detailed explanation of the **Template Design Pattern**, focusing on its application in solving specific problems in software design, particularly in the context of machine learning (ML) pipelines. This pattern is introduced as a specialized design pattern that complements core design patterns already studied, enabling developers to enforce a strict sequence of operations in algorithms without allowing errors in execution order.
+
+---
+
+### Core Concepts and Key Insights
+
+- **Template Design Pattern** is a behavioral design pattern that defines the **skeleton of an algorithm** in a base class but lets subclasses override specific steps without changing the algorithm’s structure.
+- It **enforces an order of execution** for operations, ensuring that steps like data loading, preprocessing, training, evaluation, and saving are performed in the correct sequence.
+- This pattern is useful in scenarios where **the sequence of steps must remain consistent**, but the implementation of individual steps can vary by subclass.
+- It is similar in concept to the **Composite Design Pattern**, but it targets a very specific problem related to ordered execution of pipeline steps.
+
+---
+
+### Example Use Case: Machine Learning Pipeline
+
+The instructor illustrates the pattern using an ML training pipeline, where multiple ML algorithms (neural networks, decision trees, random forests, SVMs) follow the same process:
+
+1. **Load Data**
+2. **Preprocess Data**
+3. **Train Model**
+4. **Evaluate Results**
+5. **Save Model**
+
+- While the **sequence of these steps is fixed**, the implementation of each step varies depending on the ML model.
+- Without the template pattern, developers might **incorrectly reorder or skip steps** (e.g., training a model before preprocessing), causing errors.
+- The **Template Method** in the base class calls these steps in the correct order, and subclasses override only the step implementations, **preventing misuse of the pipeline order**.
+
+---
+
+### Implementation Details
+
+- A base abstract class, e.g., **ModelTrainer**, defines:
+  - An abstract or partially implemented method called **`trainPipeline()`** (the Template Method) that calls the ordered steps.
+  - Abstract methods like **`loadData()`**, **`preProcess()`**, **`trainModel()`**, **`evaluate()`**, and **`saveModel()`** which subclasses must implement.
+- Subclasses such as **NeuralNetworkTrainer** and **DecisionTreeTrainer** override these abstract methods to provide model-specific logic.
+- The **template method itself is final (or non-overridable)**, ensuring the execution order cannot be changed by subclasses.
+- Common steps such as loading and saving data can have default implementations in the base class, which subclasses may override if necessary.
+
+| Class/Method           | Responsibility                                          |
+|-----------------------|---------------------------------------------------------|
+| `ModelTrainer` (Base)  | Defines the template method and default implementations |
+| `trainPipeline()`     | Calls steps in order: load → preprocess → train → evaluate → save |
+| `loadData()`          | Abstract; data loading logic specific to model          |
+| `preProcess()`        | Abstract or default; data preprocessing                  |
+| `trainModel()`        | Abstract; model training logic                            |
+| `evaluate()`          | Abstract; model evaluation logic                          |
+| `saveModel()`         | Default or abstract; saving model logic                  |
+| Subclasses (e.g., NeuralNetworkTrainer) | Override specific steps as needed             |
+
+---
+
+### UML Diagram (Standard Template Method Pattern)
+
+- The base class holds the **template method** defining the algorithm’s structure.
+- Several **concrete subclasses** override steps.
+- The **client class** interacts only with the base class reference but executes the pipeline in the fixed order.
+
+---
+
+### Real-World Applications
+
+- The pattern is not limited to ML pipelines but applies to **any scenario requiring a fixed sequence of operations with customizable steps**.
+- Example: **UPI payment processing**
+  - Steps like validating funds, debiting the payer’s account, crediting the receiver’s account, validating the transaction, and finalizing the transaction must be executed in a strict order.
+  - Different payment methods (UPI, credit card, debit card) can override individual steps but **cannot change the order**, ensuring transactional integrity.
+
+---
+
+### Benefits and Conclusions
+
+- **Ensures consistent execution order** of complex workflows.
+- **Prevents errors** caused by incorrect sequencing or omitted steps.
+- Allows **flexibility in implementation** of individual steps by subclasses.
+- Facilitates **code reuse and maintainability** by encapsulating the fixed sequence in a single place.
+- Supports the **Open/Closed Principle (OCP)** by allowing behavior extension without modifying the base algorithm structure.
+- The pattern is **simple yet powerful**, especially useful in systems with pipelines or workflows.
+
+---
+
+### Summary Table of Template Method Characteristics
+
+| Feature                       | Description                                            |
+|-------------------------------|--------------------------------------------------------|
+| Pattern Type                  | Behavioral Design Pattern                              |
+| Purpose                      | Define algorithm skeleton, allow subclass step overrides|
+| Control Over Execution Order | Template method is final; fixed sequence of steps     |
+| Flexibility                  | Subclasses override individual steps only             |
+| Use Case Examples            | ML pipelines, payment processing workflows             |
+| Advantages                  | Enforces order, reduces errors, promotes reuse         |
+
+---
+
+### Final Remarks
+
+The lecture emphasizes that mastering the Template Design Pattern strengthens one’s understanding of **Low-Level Design (LLD)** and prepares developers for both interview questions and real-world application development. The pattern’s simplicity and utility make it a foundational tool for designing robust, maintainable software pipelines.
+
+**Practice and continual learning** of such design patterns are encouraged to build strong system design skills.
+
+### Summary of Visitor Design Pattern Video Content
+
+The video provides a detailed explanation of the **Visitor Design Pattern**, its motivation, implementation, comparison with the Strategy Pattern, and real-world use cases. The discussion is centered around solving problems related to **increasing operations on fixed object types** while adhering to **SOLID principles**, particularly the **Open/Closed Principle (OCP)** and **Single Responsibility Principle (SRP)**.
+
+---
+
+### Key Insights and Core Concepts
+
+- **Problem Statement:**
+  - A class (e.g., `A`) initially has a few methods (`M1`, `M2`).
+  - New requirements add more methods (`M3`, `M4`...), leading to continuous modifications.
+  - This violates:
+    - **Open/Closed Principle (OCP):** Class should be open for extension but closed for modification.
+    - **Single Responsibility Principle (SRP):** Multiple responsibilities cause maintenance complexity.
+  - Result: The class becomes complex and testing becomes difficult.
+
+- **Illustrative Example: Document Elements**
+  - Application handles fixed document types: **Text File**, **Image**, **Video**.
+  - Initially, each document type class has methods like `calculateSize()`, `compress()`, `scanForVirus()`.
+  - As more operations are added, every document subclass must be modified, increasing complexity and breaking OCP & SRP.
+  - Crucial assumption: **Document types are fixed** (no new document types like PDF expected frequently).
+  - **Operations (methods) increase frequently**, not the types.
+
+- **Visitor Design Pattern Solution:**
+  - **Extract operations (methods) out of document classes** into separate visitor classes.
+  - Make document classes simple with only one method:  
+    $$ \text{accept(visitor: Visitor)} $$
+  - Define an abstract visitor interface `IVisitor` with overloaded `visit()` methods for each document type:
+  
+  | Visitor Method Signature               | Purpose                               |
+  |--------------------------------------|-------------------------------------|
+  | $visit(textFile: TextFile)$           | Operation for TextFile               |
+  | $visit(image: Image)$                 | Operation for Image                  |
+  | $visit(video: Video)$                 | Operation for Video                  |
+
+  - Create concrete visitors for each operation:
+  
+  | Visitor Class           | Operation Encapsulated           |
+  |------------------------|---------------------------------|
+  | `SizeCalculatorVisitor` | Calculates size for documents   |
+  | `CompressVisitor`       | Compresses documents            |
+  | `ScanVirusVisitor`      | Scans documents for viruses     |
+
+  - Each concrete visitor overrides all `visit()` methods to implement its specific operation for each document type.
+  - Document classes implement the `accept()` method by calling:
+
+  $$
+  \text{visitor.visit(this)}
+  $$
+
+- **Benefits:**
+  - **No changes needed in document classes** when adding new operations.
+  - Operations can be added easily by creating new visitors.
+  - The document class hierarchy remains stable, fulfilling **OCP**.
+  - Code is cleaner, more maintainable, and testing becomes simpler.
+
+---
+
+### Double Dispatch Explained
+
+- **Double Dispatch** is the core mechanism enabling the Visitor pattern.
+- It refers to the decision of which method to call depending on **two types at runtime**:
+  - The type of the element (`TextFile`, `Image`, `Video`).
+  - The type of the visitor (`SizeCalculatorVisitor`, `CompressVisitor`, etc.).
+- Hence, two references collaborate to select the appropriate method implementation:
+  
+$$
+\text{element.accept(visitor)} \rightarrow \text{visitor.visit(element)}
+$$
+
+- This contrasts with **Single Dispatch**, where only one reference (usually the receiver's type) decides the method.
+
+---
+
+### Comparison: Visitor Pattern vs. Strategy Pattern
+
+| Aspect                     | Visitor Pattern                                     | Strategy Pattern                                   |
+|----------------------------|----------------------------------------------------|---------------------------------------------------|
+| **Focus**                  | Multiple operations on fixed object types          | Multiple behaviors on fixed operations             |
+| **Use Case**               | Number of operations increases, object types fixed | Number of behaviors fixed, but their implementations vary |
+| **Example**                | Document with operations: compress, scan, size     | Robot with behaviors: fly, talk, walk               |
+| **Class Design**           | Objects have one method `accept(visitor)`           | Objects hold reference to a behavior/strategy object |
+| **Extensibility**          | Add new operations by creating new visitors         | Add new behaviors by creating new strategy classes |
+| **Open/Closed Principle**  | Maintains OCP by avoiding changes in classes for new operations | Maintains OCP by encapsulating behavior variation   |
+| **Complexity**             | Slightly more complex due to double dispatch & multiple visitors | Simpler and easier to understand                    |
+
+---
+
+### UML and Code Structure (Conceptual)
+
+| Component          | Description                                                       |
+|--------------------|-------------------------------------------------------------------|
+| `IElement`         | Abstract element interface with method: `accept(IVisitor v)`      |
+| Concrete Elements  | `TextFile`, `Image`, `Video` inherit `IElement` and override `accept()` |
+| `IVisitor`         | Interface with overloaded `visit()` methods for each element type |
+| Concrete Visitors  | `SizeCalculatorVisitor`, `CompressVisitor`, `ScanVirusVisitor` implement `IVisitor` |
+
+---
+
+### Real-World Use Cases
+
+- **Game Rendering Engines:** Numerous operations (render, map fetch, etc.) on fixed element types.
+- **Compilers:** Visiting Abstract Syntax Trees (AST) nodes with varying operations like semantic analysis, code generation.
+- Any application where **operations on a fixed set of elements grow frequently** but **element types remain stable**.
+
+---
+
+### Summary of Visitor Design Pattern Definition
+
+> **Visitor Pattern allows adding new operations to existing object structures without modifying those structures by separating operations from the objects themselves.**
+
+---
+
+### Conclusion
+
+- The **Visitor Design Pattern** is ideal when the **set of object types is stable but operations on them keep increasing**.
+- It preserves the **Open/Closed Principle** by externalizing operations into visitor classes.
+- The pattern employs **double dispatch** to dynamically select the correct operation based on both visitor and element types.
+- It differs from the **Strategy Pattern**, which addresses varying behaviors on fixed operations.
+- Understanding when to use Visitor vs. Strategy is crucial for scalable and maintainable software design.
+
+---
+
+This summary captures the full essence of the explained **Visitor Design Pattern**, its implementation, benefits, and differentiations, strictly grounded in the provided transcript.
+
+
+### Summary of the Video Content: State Design Pattern Using Vending Machine Example
+
+---
+
+#### Overview of State Design Pattern
+
+- The **State Design Pattern** is a behavioral design pattern that allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+- It is useful for managing objects that have a **finite number of states** and can perform a **finite number of operations**.
+- The pattern models state transitions as a **State Machine Diagram (SMD)**, a concept from Theory of Computation.
+- Each state defines its own behavior for a set of operations, and operations can cause transitions to other states or keep the object in the same state.
+
+---
+
+#### Conceptual Example: State Transitions
+
+- Consider an object with states $A$, $B$, $C$, and $D$.
+- Operations $m_1$, $m_2$, $m_3$, $m_4$ cause state transitions such as:
+  - $A \xrightarrow{m_1} B$
+  - $B \xrightarrow{m_2} C$
+  - $C \xrightarrow{m_3} D$
+  - $D \xrightarrow{m_4} A$
+- Some operations in a given state may not change the state.
+- The key is the object can only be in one state at a time, and each operation on that state leads to a particular transition or no change.
+
+---
+
+#### Practical Example: Vending Machine States and Operations
+
+##### States of the Vending Machine:
+
+| State Name       | Description                                                   |
+|------------------|---------------------------------------------------------------|
+| **NoCoinState**   | Idle state, no coin inserted                                  |
+| **HasCoinState**  | Coin inserted, waiting for item selection                    |
+| **DispenseState** | Item is being dispensed                                       |
+| **SoldOutState**  | All items sold out, machine cannot dispense                   |
+
+##### Operations (Methods) Available:
+
+- **insertCoin**: Insert a coin into the machine.
+- **selectItem**: Select an item to buy.
+- **dispense**: Dispense the selected item.
+- **returnCoin**: Return inserted coins to the user.
+- **refill**: Refill the machine with items.
+
+##### State Transitions Overview:
+
+| Current State    | Operation      | Next State         | Notes                                          |
+|------------------|----------------|--------------------|------------------------------------------------|
+| NoCoinState      | insertCoin     | HasCoinState       | Accepts coin, moves to HasCoinState             |
+| NoCoinState      | selectItem     | NoCoinState        | Operation invalid, prompts "Insert coin first" |
+| NoCoinState      | dispense       | NoCoinState        | Operation invalid                               |
+| NoCoinState      | returnCoin     | NoCoinState        | No coins to return                              |
+| NoCoinState      | refill         | NoCoinState        | Refills items but remains in NoCoinState       |
+| HasCoinState     | insertCoin     | HasCoinState       | Accepts more coins, stays in HasCoinState      |
+| HasCoinState     | selectItem     | DispenseState      | Sufficient coins → proceeds to dispense        |
+| HasCoinState     | dispense       | HasCoinState       | Invalid before selection                         |
+| HasCoinState     | returnCoin     | NoCoinState        | Returns coins and resets state                   |
+| HasCoinState     | refill         | HasCoinState       | Refilling not allowed during transaction        |
+| DispenseState    | dispense       | NoCoinState / SoldOutState | Dispenses item; transitions depending on stock |
+| DispenseState    | insertCoin     | DispenseState      | Cannot insert during dispensing                  |
+| DispenseState    | selectItem     | DispenseState      | Cannot select item during dispensing             |
+| DispenseState    | returnCoin     | DispenseState      | Cannot return coin during dispensing             |
+| DispenseState    | refill         | DispenseState      | Cannot refill during dispensing                   |
+| SoldOutState     | refill         | NoCoinState        | Refilling restarts machine to idle state         |
+| SoldOutState     | any other op   | SoldOutState       | No operations allowed except refill               |
+
+---
+
+#### State Machine Diagram Representation
+
+- The **state machine diagram** visually represents states as nodes and transitions as directed edges labeled with operations.
+- The vending machine’s states and transitions form a cyclic and conditional flow:
+  
+$$
+\text{NoCoinState} \xrightarrow{\text{insertCoin}} \text{HasCoinState} \xrightarrow{\text{selectItem}} \text{DispenseState} \xrightarrow{\text{dispense}} \begin{cases} \text{NoCoinState} & \text{if items remaining} \\ \text{SoldOutState} & \text{if items sold out} \end{cases}
+$$
+
+- **Refill operation** allows transition from SoldOutState back to NoCoinState.
+
+---
+
+#### UML Class Diagram and Implementation Overview
+
+- **Abstract Class: VendingMachineState**
+  - Declares abstract methods: $\text{insertCoin}()$, $\text{selectItem}()$, $\text{dispense}()$, $\text{returnCoin}()$, $\text{refill}()$.
+  - Each method returns a reference to a `VendingMachineState` indicating the next state.
+- **Concrete State Classes** inherit from `VendingMachineState`:
+  - `NoCoinState`, `HasCoinState`, `DispenseState`, `SoldOutState`.
+  - Each overrides the abstract methods to implement behavior specific to that state.
+- **Context Class: VendingMachine**
+  - Maintains current state (`VendingMachineState currentState`).
+  - Holds references to all concrete state objects to avoid repeated creation.
+  - Delegates operations to the current state object.
+  - Updates `currentState` based on the state returned by state methods.
+  - Maintains inventory count, price, and inserted coins.
+  
+---
+
+#### Key Implementation Details
+
+- **Delegation:** VendingMachine methods delegate requests to the current state's corresponding method.
+- **State Transition:** Each state method returns a new state object or the same state to update the vending machine's current state.
+- **Operations Validation:** States validate if operations are valid in the current context (e.g., no selecting item without coin).
+- **Error Handling:** Invalid operations return the same state with an error message (e.g., "Please insert coin first").
+- **State Objects:** Concrete state classes hold a reference to the vending machine context to modify inventory, coins, etc.
+- **Example Flow:**
+  - Start in `NoCoinState`.
+  - On `insertCoin(₹10)`, transition to `HasCoinState` with ₹10 inserted.
+  - On `selectItem()`, check if inserted coins ≥ item price.
+    - If yes, go to `DispenseState`.
+    - Else show "Insufficient funds".
+  - On `dispense()`, dispense item, decrement inventory.
+    - Transition to `NoCoinState` if inventory remains.
+    - Transition to `SoldOutState` if inventory is zero.
+- **Refill operation** on `SoldOutState` resets inventory and transitions to `NoCoinState`.
+
+---
+
+#### Benefits and Real-World Use Cases
+
+- Avoids complex conditional logic (if-else chains) for handling multiple states and operations.
+- Provides clean separation of concerns with state-specific behavior encapsulated.
+- Scales well with additional states and operations.
+- Makes system behavior more modular, maintainable, and extensible.
+
+**Real-world applications include:**
+
+- Vending machines (as demonstrated).
+- Document editors with states like Published, Archived, Deleted.
+- ATM machines with states like Idle, CardInserted, PinEntered, Validated.
+- Any system with clearly defined finite states and operations.
+
+---
+
+#### Summary Table: Vending Machine States and Operations
+
+| State           | insertCoin            | selectItem               | dispense                 | returnCoin               | refill                  |
+|-----------------|----------------------|--------------------------|--------------------------|--------------------------|-------------------------|
+| NoCoinState     | Transition to HasCoin | Error, stay in NoCoin    | Error, stay in NoCoin    | Error, stay in NoCoin    | Refill, stay in NoCoin  |
+| HasCoinState    | Stay in HasCoin       | Transition to Dispense   | Error, stay in HasCoin   | Return coins, go to NoCoin | Error, stay in HasCoin  |
+| DispenseState   | Error, stay in Dispense | Error, stay in Dispense | Dispense item, go to NoCoin or SoldOut | Error, stay in Dispense | Error, stay in Dispense |
+| SoldOutState    | Error, stay in SoldOut | Error, stay in SoldOut   | Error, stay in SoldOut   | Error, stay in SoldOut   | Refill, go to NoCoin    |
+
+---
+
+### Key Insights
+
+- **State Design Pattern enables clean management of state-dependent behavior**, reducing code complexity.
+- The **vending machine example is a canonical demonstration** of the pattern with clear finite states and operations.
+- **Polymorphism** is heavily used: the context delegates behavior to the current state object.
+- **State transitions are explicit and controlled by state methods**, making the system extensible.
+- This pattern is especially useful in interview scenarios and practical system designs involving finite state machines.
+
+---
+
+### Conclusion
+
+This detailed explanation of the **State Design Pattern**, supported by a comprehensive **vending machine example**, showcases how to design systems with multiple states and operations cleanly and efficiently. By encapsulating state-specific behavior within state classes and delegating from a context class, the pattern eliminates complex control flow and improves maintainability. Real-world examples like document editors and ATMs further demonstrate its broad applicability.
+
+---
+
+**End of Summary**

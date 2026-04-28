@@ -1,0 +1,3 @@
+interface  Employee{
+    int salary();
+}
