@@ -1,0 +1,54 @@
+Kafka
+
+It is a distributed event streaming platform used to move data between system in real time
+Kafka is used because it solves several real-world problems extremely well:
+1. Real Time Data Streaming
+-> Sending the live location of the Uber to the consumer
+-> Netflix streams user activity
+
+2. High Performance : Millions Data per Second
+-> Massive high throughput with very low latency.
+-> Works for large scale system
+
+3. Decoupling Services
+
+Without Kafka
+-> Service A → Service B → Service C → Service D
+-> If B goes down then everything breaks
+
+With Kafka
+-> Service A → Kafka → (B, C, D) consume independently
+-> Service don't depend on each other 
+-> No downtime
+
+4. Reliability & Durability
+-> It stores the messages on the disk and replicates across multiple servers
+
+Then data never gets lost
+It handles server failures
+
+
+When to use the REST vs When to use the Kafka
+
+It handles the Synchronous communication
+It is ideal for getting data
+and updating records
+and perform the CRUD operations
+
+
+if the client waits for the answer then use REST.
+
+Use Kafka when -> Asynchronous communication
+Use Kafka when data is sent as events, and the sender doesn't need a response.
+
+ideal for
+event driven systems
+logging, tracking, analytics
+notifications
+background tasks
+
+no one waits for the reply
+If the system works event-based, broadcast, fire-and-forget, use Kafka.
+
+
+
