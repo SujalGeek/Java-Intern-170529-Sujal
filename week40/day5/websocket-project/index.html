@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Live Test</title>
+     <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #121212;
+            color: #fff;
+        }
+        #log{
+            background: #000;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #333;
+        }
+        .status-on {
+            color: #00ff00 ;
+        }
+        .status-off {
+            color: #ff0000;
+        }
+
+        </style>
+</head>
+<body>
+    <h1>WebSocket BroadCast Console</h1>
+    <p id="status" class="status-off">Connecting...</p>
+
+    <form id="message-form">
+        <input id="message-input" type="text" placeholder="Send cargo..." required />
+        <button type="submit">Deploy Message</button>
+    </form>
+
+    <h3>
+        LiveStream Logs:
+    </h3>
+    <pre id="log"></pre>
+</body>
+    <script>
+    const statusEl = document.getElementById("status");
+    const log = document.getElementById("log");
+    const input = document.getElementById("message-input");
+
+    // 1. Initiate the HandShake
+    const socket = new WebSocket("ws://localhost:8090");
+
+    const appendLog = (label, message) => {
+        const time = new Date().toLocaleTimeString();
+        const entry = `[${time}] ${label}: ${message}\n`;
+        log.textContent = entry + log.textContent; 
+    }; // Added missing brace here
+
+    socket.addEventListener('open', () => {
+        statusEl.textContent = 'CONNECTED: ws://localhost:8090';
+        statusEl.className = 'status-on';
+        appendLog('[SYSTEM]', 'Tunnel Established.');
+    });
+
+    socket.addEventListener('close', () => {
+        statusEl.textContent = 'DISCONNECTED';
+        statusEl.className = 'status-off';
+        appendLog('[SYSTEM]', 'Tunnel Collapsed.');
+    });
+
+    socket.addEventListener('message', (e) => {
+        appendLog('[RECEIVED]', e.data);
+    });
+
+    // 2. Handle Message Deployment
+    document.getElementById('message-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const msg = input.value.trim();
+        
+        if (socket.readyState === WebSocket.OPEN) {
+            socket.send(msg);
+            appendLog('[SENT]', msg);
+            input.value = '';
+        } else {
+            appendLog('[ERROR]', 'No active tunnel found. Cannot deploy cargo.');
+        }
+    });
+</script>
+
+</html>
