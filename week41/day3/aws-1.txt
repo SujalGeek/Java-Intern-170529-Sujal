@@ -1,0 +1,219 @@
+iam policies structure
+consists of the version id - identifier of the policy and then in the statement{
+there is the session id that is optional
+
+then there is effect allow or deny
+then there is principal where on which user the policy applied to
+then there is action which actions are assigned to it like to get the object or post the object
+which action allows or denies it bro
+resource is the list of resources to which the action can be applied like on the s3 bucket or something like that
+then at last the condition which should be applied or not it is optional
+
+
+attach the permission policies to the group there will be 2 options like add permissions or create inline poilices
+}
+
+while seeing the permissions in this policy
+the effect , action and resource is there
+effect means wahi allow or deny
+actions means bhi wahi ki list our apis calls which are being allowed
+
+
+you can also create your own policy
+iam -> policies -> using the json bhai directly add the action in that the drop down menu ma sab hai
+then the resources are also there bro the list is to be specific or to all
+
+
+iam password policy
+strong passwords
+minimum length + char add + specific symbol add on
+prevent password re use
+allow iam users to change their passwords
+
+
+mulit factor authentication
+mfa - the security device u known
+user -> password + security device (authenticated ) -> home
+1. virtual mfa device - google authenticators + authy
+2. universal 2nd factor (u2f) security key
+single security key
+3. hardware key fob mfa device -> provided by 3rd party
+4. govCloud in USa same hardware key (provided by 3rd party)
+
+
+security credentials to the root user
+
+how can users access the aws
+1. management console: protected by password + MFa
+2. command line interface: protected by access keys
+3. software development kits: for code: protected by access keys
+
+access keys are like passwords don't share them
+aws cli:
+
+It is the tool which directly use the commands like to create s3 bucket we can write like aws s3 then the url of the url like to list down aws s3 ls url
+
+aws sdks
+mostly people use this sdk so that they can programmingly interact with each aws cloud resources different sdks are there
+there are various apis are there
+different sdks for each programming languages like java, python, ruby,go, node.js etc
+mobile sdks too,iot device sdks
+
+
+create the access key for the cli bhai
+download .csv bhai then configure
+aws configure karo then provide the access key and secret access key
+
+aws iam list--users we can get it get all the information
+so permissions should be there to get the all the information bro -- the permissions from the iam console so all the things based on the permissions
+
+aws management console
+
+cloudshell use kiya hai console like terminal jo hota hai aws console usko hi bolte hai cloudshell
+
+iam roles for the services
+basically this is not for the users this is for the assigning permissions to the aws services
+
+common roles:
+lambda function roles
+ec2 instance roles
+roles for the cloudformation
+
+
+now security tools in the aws
+iam credentials report (account - level)
+
+it is the report that list all your account's users and status of their various credentials
+
+iam access advisor(user -level)
+
+access advisor shows the service permissions granted to the user and when those services were last accessed
+
+
+in the left side u can see the access reports where you can see the credentials report then downloaded it
+
+
+for the access advisor go the users -> access adivisor(renamed to the last access)
+finding out user has correct permissions
+
+billing setup before using any kind of services do the bill setup properly
+
+goes to cost organization and give iam to access the billing information so that we can continue with the iam user
+
+
+go the bills and look at it bhai
+go the budget create one budget then see templates -- zero spend budget (0.01 $) and add your email then good to go
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EC2 Section
+
+now the next section ec2 is the one of the most popular thing in the aws it is the virtual server which is aws cloud is providing 
+
+it is mainly used in the capability of 
+renting the vms, storing the data on the virtual drivers(ebs)
+distributing local across machines (elb)
+scaling the services using the auto scaling groups(asg)
+
+lets start it now the
+operating system: Linux,windows or mac os 
+how much compute power , how much ram needed , how much storage needed , network card : speed of the card and public ip address 
+then there is security groups
+bootstrap script at the start which u can put that in the ec2 user data
+
+user data
+bootstrapping it so when ec2 instance start then the commands automatically runs only once at the fresh start
+installing updates, softwares and downloading common files from the internet
+
+the ec2 data script runs with the root user
+
+now lets start the ec2 instance firstly select the which os do u want Linux selected then what type of instance like t2.micro is in free tier and then create key pair to login to the instance so need to generate it so that we could use it in the windows too so the 	while creating it .pem or ..ppk format is there bro so we use the ssh then the .pem is used and if you have putty we can use the .ppk (select that option based on that)
+
+allow ssh, http and https traffic from the internet and then configure the storage
+by stopping and starting the same instance the public ip address changes every time
+
+different types of ec2 instance type:
+1.general purpose
+they have good diversity of workloads such as web servers or code repositories
+
+and they have great balance between compute, memory and networking
+t2.micro comes under this category
+
+2. compute optimized 
+
+they are great for the compute intensive tasks that require high performance processors;
+batch processing workloads
+media transcoding
+high performance web servers
+gaming servers and high performance computing(hpc)
+scientific modelling and ml 
+
+all the c series comes under this categories
+
+
+3.memory optimized 
+they are used for the fast performance for workloads that process large data sets in memory
+the use cases:
+high performance , distributed web scale and then in memory databases optimized for BI and applications performing real time processing of big unstructured data
+
+4. storage optimized
+great for the storage intenstive tasks that require high, sequential read and write access to large data sets on local storage
+
+
+use cases:
+high frequency online transaction processing(OLTP) systems
+relational & NoSQL databases
+cache for in memory databases
+data warehousing applications
+distributed file systems
+
+
+
+security groups bhai:-
+
+security groups are the fundamental security in aws 
+they control how traffic is allowed into or out of our ec2 instances
+they only allow rules
+the sg rules can reference by ip or by security group 
+the sg can be attached to the multiple instances
+it locked down to a region/vpc combination
+
+if your application is not accessible then its sg issue
+if your application is connection refused error then its application error or its not launched
+all inbound traffic is blocked by default
+all outbound traffic is authorised by default
+
+
+ec2 instance -> has security group > inbound rules and outbound rules
+22 ssh port for it 21 for ftp (file transfer protocol and 80 http - access unsecured websites 
+443 https access secured websites
+3389 rdp - remote desktop protocol - log into windows instance
+
+22 sftp (secure file transfer protocol upload files using ssh
+
+click on current instance - > security you can find out inbound and outbound rules mentioned there 
+
+
+we can connect the ec2 using the ssh, putty and ec2 instance connect the ec2 instance connect will be using more
+
+never ever use the access key and secret key in the ec2 instance (on the site) instead use the role 
+attach the iam role to the ec2 instance this is the best way properly
+only through iam role linked the ec2 instance properly 
+
+
+ec2 instance purchasing options
+on demand instances- short workload, predictable pricing, pay by second
+
+reserved(1 & 3 years)
+reserved instances - long workloads
+convertible reserved instances - long workloads with flexible instances
+savings plans (1 & 3 years ) commitment to an amount of usage, long workload
+spot instances - short workloads, cheap can lose instances (less reliable)
+dedicated hosts - book an entire physical server, control instance placement
+dedicated instances - no other customers will share your hardware
+capacity reservations - reserve capacity in a specific az for any duration
+
+
+
+on demand instances - recommend for short term and un interrupted workloads , where u cant predict how application will behave
+
