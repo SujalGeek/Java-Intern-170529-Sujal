@@ -1,0 +1,5 @@
+{
+  "name": "Sportz",
+  "description": "A real-time sports dashboard featuring live WebSocket match updates, commentary feeds, and a strict neo-brutalism design system.",
+  "requestFramePermissions": []
+}
