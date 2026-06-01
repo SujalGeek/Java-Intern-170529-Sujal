@@ -115,5 +115,3 @@ response = requests.get(url)
 data = response.json()
 print("This is the data from the date and time one it is not coming here!!",data)
 
-
- 
