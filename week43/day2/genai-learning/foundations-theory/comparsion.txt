@@ -1,0 +1,123 @@
+what is the difference between ml, dl and generative ai
+
+Ai is the science of making machines act smart, like humans
+
+ML is that learns patterns from data to make predictions.
+
+DL is that ML using multilayered neural networks for complex tasks
+
+GenAI is that creates new content like text, images and music
+
+What is the large language model :
+It is a type of AI model trained to understand and generate human like text.
+
+
+the popular llms are gpt 5, gemini 2.5 , llama 4 and deepseek 
+
+why it is called as large because it has huge no of parameters on which it is trained
+for example gpt - 3 has 175 billions parameters , while newer model like gpt 4 and gpt 5 likely
+exceed this
+
+the llm workflow
+
+1. first the input text is taken from the system for processing
+2. then the tokenization happens converting  text into numerical tokens
+3. then it goes to neural networks basically a transformer architectural model (transformer processes token)
+4. then model predicts next token sequences
+5. tokens converted back to readable text
+
+
+tokenization process:
+it breaks text into smaller unit like words, subwords or characters and this allows llms to process
+language efficiently by converting these units into numericIDs , enabling better generalization and reduced
+vocabulary size
+
+
+example:
+like chat gpt is amazing!
+now it will make and split the chat into chat and g and pt and is and amazing !
+via subword tokenization, showing how even complex or unfamiliar words are broken
+
+actual token spilts may very depending on the model and tokenizer understand
+
+different types of llms
+1. proprietary llms
+like openapi - gpt-3, gpt-4,gpt-5
+google- gemini-2.5,
+anthropic- claude-opus, claude sonnet
+
+2. open source llms
+
+meta- llama 2,llama 3
+google- gemma-2,gemma-3
+openai gpt-oss
+deepseek
+
+basically the open source models can be downloaded and run on our own infrastructure , gives more flexbility
+whereas you cannot do that for proprietary 
+
+how to choose the right llm
+1. the application you are building,
+2. one is your infrastructure
+3. cost and data privacy
+
+when you infrastructure then where do u run it 
+and if you have limited hardware then you can not run the GPU's
+
+if you have control and can afford GPU and so that you can use open source model
+
+proprietary llms can cost per the api charges you can simply call the apis do not need to setup all the things
+do not need to download the models
+
+open source models are used when to work on the sensitive data
+
+Transformer architecture:
+
+Before transformer architecture came into the picture and before all the large language models
+the natural language processes and tasks such as it can be a translation of text or some text generation  
+firstly the rnn is there 
+it process entire sentence at once  (not word by word firstly)
+it is powered by self attention - captures word importance and context
+and then the revolutionized happen in 2017 happens the attention is all you need
+and then the translation , text generation
+
+for example the cat sat on the mat 
+the model knows that the cat is most likely get it with the sat which is kind of important words
+
+so basically the encoder and decoder architecture is there
+the encoder converts input text into rich contextual embeddings through multiple stacked layers. 
+each layer contains the self attention and feed forward networks, enabling bidirectional processing for
+complete context understanding
+
+transforms input into contextual embeddings
+stacked layers with self attention + feed forward
+bidirectional for full context capture
+
+
+decoder
+the decoder generates output sequences step by step, using masked self attention to preserve casuality
+and cross attention to integrate encoder information, ensuring coherent and contextually accurate outputs
+
+produces output auto -regressively 
+masked self attention prevents future token leakage
+cross attention leverages encoder representation
+
+
+in simple words:
+the encoder is the reader that carefully studying the input whereas the decoder is the the writer creating 
+the answer one word at a time,but based on how the reader understood
+
+self attention mechanism:
+
+purpose : 
+allows the model to weigh the importance of each word in a sequence relative to all others, enabling rich 
+context understand
+
+query -key value:
+self attention uses Query, Key and Value vectors(from input embeddings via linear projections)
+to model relationships between tokens.
+
+attention computation:
+attention scores - similarity between query and key and normalized with softmax then applied to values 
+produces context-aware representation for each token.
+

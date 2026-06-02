@@ -1,0 +1,5 @@
+llama-index
+llama-index-llms-groq
+llama-index-embeddings-huggingface
+chromadb
+llama-index-vector-stores-chroma
