@@ -1,0 +1,107 @@
+## Overview of 2025 Focus and Educational Initiatives at CPS X
+
+The core emphasis for CPS X in 2025 was on **AI technologies**, particularly **Agentic AI** in the second half of the year. These technologies are seen as highly transformative with significant future job market relevance, motivating ongoing in-depth work and learning.
+
+---
+
+## Dual Approach to Teaching Agentic AI
+
+- **Foundational Concepts:** Taught via the YouTube channel using LangGraph to explain Agentic AI concepts conceptually.
+- **Practical Frameworks:** Recognizing the power of libraries like **NA10**, **Crew AI**, and **Agno**, CPS X instructors developed affordable, detailed courses on these tools.
+  
+Recent launches include courses on NA10 and Agno; the upcoming launch focuses on **Crew AI**.
+
+---
+
+## Crew AI Course Details
+
+- **What is Crew AI?**  
+  A Python framework/library for building **multi-agent systems** efficiently with minimal effort yet powerful capabilities.
+
+- **Course Structure:**  
+  - Approximately 20 hours of content.  
+  - Launched on CPS X's website (link in video description).  
+  - Topics are clearly organized for easy navigation.
+
+- **Pricing:**  
+  - Standard price: ₹500  
+  - Early bird (within 10 days): ₹300 (highly affordable)
+
+---
+
+## Master Class on Crew AI
+
+To address learner feedback requesting previews of instructors and teaching styles before course purchase, CPS X introduced a **3-4 hour masterclass** taught by instructor Himanshu.
+
+- **Purpose:**  
+  - Provide a solid introduction to Crew AI fundamentals.  
+  - Enable learners to self-study Crew AI independently.  
+  - Offer a fast-track option via the full course purchase.
+
+- **Content:**  
+  - Starts with Agentic AI concepts.  
+  - Covers Crew AI fundamentals.  
+  - Includes practical projects to consolidate learning.
+
+- **Note:**  
+  This masterclass is a **standalone offering**, separate from the main course, and the projects here are exclusive to this session.
+
+---
+
+## Understanding Crew AI and Multi-Agent Systems
+
+- **Crew AI** is a Python framework designed to create **multi-agent systems (MAS)** or workflows where multiple AI agents interact and collaborate.
+
+- **Multi-Agent Systems:**  
+  Systems composed of multiple interacting intelligent agents working towards common or individual goals.
+
+---
+
+## Journey from Large Language Models (LLMs) to AI Agents
+
+- **LLMs (e.g., ChatGPT):**  
+  - Large Language Models trained on massive datasets (almost entire internet data) to understand and generate natural language.  
+  - Operate using **next word prediction**: generating text word-by-word based on user prompts.  
+  - Excellent for chatbots due to their conversational abilities.
+
+- **Development Cycle:**  
+  - LLMs evolved through reinforcement learning from human feedback (RLHF), improving based on user prompts and feedback (thumbs up/down).  
+  - This evolution paved the way for transforming LLMs into **AI agents** capable of autonomous tasks beyond simple conversation.
+
+---
+
+## Key Concepts Covered in the Masterclass
+
+| Concept                    | Explanation                                                                                  | Example/Detail                              |
+|----------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------|
+| Agentic AI                 | AI systems with autonomous decision-making capabilities                                      | Multi-agent systems built using Crew AI    |
+| Multi-Agent Systems (MAS)  | Interconnected agents collaborating or competing to achieve goals                            | Workflow automation, complex task handling |
+| Crew AI                    | Python framework for building MAS with minimal effort                                        | Framework powering multi-agent projects    |
+| Large Language Models (LLMs) | AI models trained on huge natural language datasets to predict and generate text             | ChatGPT, foundational for conversational AI|
+| Next Word Prediction       | Core LLM mechanism generating text one word at a time based on user input                    | Chatbot conversation flow                   |
+| Reinforcement Learning with Human Feedback (RLHF) | Training method improving AI outputs using user feedback                              | Enhanced LLM responses over time            |
+
+---
+
+## Practical Learning Flow in the Masterclass
+
+1. **Introduction to Agentic AI and Crew AI fundamentals**  
+2. **Hands-on coding of Crew AI concepts**  
+3. **Building a project to solidify understanding**
+
+This structure ensures learners not only grasp theory but also gain practical skills applicable in real-world scenarios.
+
+---
+
+### Summary & Key Takeaways
+
+- The main focus at CPS X in 2025 was on **Agentic AI** and its practical applications using frameworks like **Crew AI**.
+- **Crew AI** is a powerful yet accessible Python library for **multi-agent system development**, crucial for future AI workflows.
+- CPS X offers a **comprehensive 20-hour course** and a **3-4 hour masterclass** to suit both beginners and advanced learners.
+- Understanding the evolution from **LLMs (like ChatGPT)** to autonomous AI agents is critical to grasp Agentic AI’s potential.
+- The masterclass ensures learners can:
+  - Comprehend key theoretical concepts,
+  - Implement these in code,
+  - Build projects to reinforce learning.
+- Early enrollment discounts make these courses highly affordable.
+- Mastery of Crew AI and multi-agent systems positions learners well for future AI-driven job markets.
