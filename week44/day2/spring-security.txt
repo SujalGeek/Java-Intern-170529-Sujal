@@ -1,0 +1,357 @@
+spring security doing in the perfect way and revising it properly need to get it done properly
+
+lets add first the spring security in the project and add the normal dependencies
+
+
+
+starting from the scratch if you have to use it bro
+
+without the spring security we can generally hit as many apis as we can
+and unauthenctiated users can hit many apis too
+
+by default all the routes became protected and if you have to access then need to allow it using the spring security configuration
+
+(left out some routes like for register and login exclude that so we can easily send the register and login requests)
+
+during the initialize spring security a default user and password occurs and by login into the system using that username and password we can store into the cookies
+(jsessionid we can say that)
+
+we can add our own user 
+spring.security.user.name=
+spring.security.user.password=
+
+now only this username and password we be used 
+
+when we will redeploy on the server toh sab udaad jayega bhai
+
+
+spring securityfilter chain - puri ke puri spring security kaam karti hai 
+multiple independent chains bana sakte ho aur fir ek baad ek daal sakte ho
+jo bhi request aa rahi usko modify kar sako aur fir check kar sako
+
+If I not add the securityfilter chain then muje milata hai bhai servlet filter chain
+milata hai aapko pehla se hi
+
+
+already jo filterchain ma thi aur bhi add ho hota hai toh fir badi hogayi hai aab
+security filter chain ma different prekar ke filter hota hai 
+webasyncmanagerintegrationfilter , securitycontextpersistentfilter , 
+headerwriterfilter, logout filter, usernamepasswordauthenicatedfilter
+
+har ek request check according to the filter then properly filter ke according request hai nahi agar hai toh fir uss hisab se kaam karo 
+
+
+req ko leta - filter chain ke pass on - jo bhi change fir usko next filter chain ma daal deta hai 
+
+
+how to config in the code
+
+make in the config folder name at it whatever you know 
+WebSecurityConfig
+
+make this configuration  and make Bean
+public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)
+{
+httpSecurity.formLogin(Customerizer.withDefaults())
+
+return httpSecurity.build()
+
+ye cheez likha tha ki sab routes public ho jayenge, aur aap bina system me properly login kiye bhi kisi bhi route ko access kar sakte ho.
+
+now custom configuration bhai 
+so kaise kar
+one thing authorizeRequests konsi requests ko aab public dekh sakte ho konse requests ko aap authenticated ke baad meh hi dekh sakte ho 
+httpSecurity.authorizeRequests(auth -> auth.requestMatchers("/public/**").permitAll()
+.requestMatchers("/admin/**").authenticated()).formLogin(Customizer.withDefaults())
+return httpSecurity.build()
+
+if you have to check which person is logged as .hasRole is used the admin or student or other person for which the role is defined
+
+.requestMatchers("/admin/**").hasRole("ADMIN")
+.requestMatchers("/doctors/**").hasAnyRole("DOCTOR","ADMIN")
+
+
+ek UserDetails banao bhai proper series bana sakte 
+with their Roles
+
+UserDetailsService userDetailsService(){
+UserDetails user1 = User(idhar spring ma se liya).withUsername("admin")
+			.password("pass")
+// 			after applying passwordEncoder .password(passwordEncoder.encode("pass"))
+			.roles("ADMIN")
+			.build();
+
+
+
+UserDetails user2 = User(idhar spring ma se liya).withUsername("doctor")
+			.password("pass")
+// 			after applying passwordEncoder .password(passwordEncoder.encode("pass"))
+			.roles("DOCTOR")
+			.build();
+UserDetails user3 = User(idhar spring ma se liya).withUsername("patient")
+			.password("pass")
+// 			after applying passwordEncoder .password(passwordEncoder.encode("pass"))
+			.roles("PATIENT")
+			.build();
+
+return new InMemoryUserDetailsManager(user1,user2,user3);
+
+inmemory ma directly password store nahi kar sakte bhai 
+defining the password Encoder in the configuration
+
+@Bean
+public PasswordEncoder passwordEncoder(){
+return new BcryptPasswordEncoder();
+}
+
+
+private final PasswordEncoder passwordEncoder;
+
+}
+
+
+UserPasswordAuthenticationFilter ma hota kya hai bhai 
+uske andar ek doFilter method hota hai bhai
+
+uska andar hota kya firstly who check karta hai bhai ki already authenticated hai ya nahi
+if(!this.requiresAuthentication(request,response)) if it is authenticated then move ahead bro
+
+agar muje requirement hai authentication ki toh kya karenga bhai then attemptAuthentication 
+usme bhi request aur response pass on hota hai fir kya hota hai
+
+it takes username from our given username
+and also takes password from our given password  and then it creates usernamepasswordauthenticatiokntoken 
+with the help of the authenticationManager().authenticate(authRequest)
+
+so usernamepasswordauthenticationfilter delagtes responsibility to the authenticationManager the manager has different providers and it checks through provider if the user is authenticated or not 
+
+so there are different authenticationProviders
+DaoAuthenticationProvider,
+InMemoryAuthenticationProvider,
+OAuth2AuthenticationProvider
+
+if the request supports any type of provider then it should be any supports it then it will return the authenticated user
+
+so in the DaoAuthenticationProvider it requires the UserDetails and PasswordEncoder so it will get the UserDetailsService as we have made and PasswordEncoder through also and it validates it
+
+then if you move forward to next Filter then goes to that bro 
+if there is no need to next Filter then need to move ahead to the successAuthentication
+then it in the SuccessAuthentication have the securitycontext holder 
+
+
+now in depth authenticationmanager
+
+client/login -> authentication request after the Filter chain implemented by providerManager
+
+and the providermanager it holds a list of Providers List<AuthenticationProviders> providers;
+will loop through each provider;
+
+then the authenticationProvider matches it has methods like supports(); and Authentication authenticate(Authentication obj); and basically all the providers supports two methods supports() and the authenticate() and one of many AuthenticationProvider there is DaoAuthenticationProvider which is the main here to get the UserDetails from UserDetailsService (loadByUsername) and also it encode the password (there is passwordEncoder which encoder() or matches() and BcryptPasswordEncoder)
+
+now the UserDetailsService implemented by the InMemoryDetailsManager or if you have from the database need to implemented the MyUserDetailsService Impl it loadsByUsername from UserDetails bhai and it is implemented by the User entity
+
+
+so after authentication is successful and then in the securitycontext the updated one is done by the securityFilterChain bro
+
+}
+
+what is jwt and when to use
+we get the header , payload and secret key in the jwt
+in the header we have algorithm and type and in the payload the name , issuedat and expiration time is there
+and base64Url encode the header and payload and the secret key is available at the point of token generation 
+
+so base64Url encoding the header and the payload and the secret key is being hashed properly using the hmac-sha256 algorithm and the header and payload is already join using '.' concat it and then base64url is now encode the hmac-sha256 the signature is generated and now concertation is done using '.' then there is the token
+
+it creates a jwt we can not do the encryption and we can not hide the data here we can easily decode the jwt
+we created the token this is the motive of the jwt
+
+now we supposed to validate the token
+basically it is used to verify that particular user bro like if the client sends the username and password and then it validates the credentials and raise a token generation request is there to give and it sends the token in response and now client use this access token to make a request and if the access token is fulfill the request  and if the access token expires then use refresh token to get new access token 
+
+
+now it can used for the authentication bro
+
+
+now the http requests that goes to the securityFilter bro like if the not secured auth requests are there 
+then login requests goes to that and now goes to the login controller and now then authenticate using authenticationmanager and verify details using the UserDetailsService it details verified and generate and return 
+securitycontextholder
+
+and if the request is secured then in goes to the internal chain of spring security  the jwtauthFilter and now it fetch the Authorization token from Header and extract userId from the token and validates this userId with the database user and this user into the Spring SecurityContextHolder and do the chain.doFilter() next Filter 
+UserNamePasswordAuthenticationFilter checks authentication in the SecurityContextHolder and continues the chain 
+dispatcherServlet and controller and get the User from the SecurityContextHolder
+
+so madding the User entity and followed by the User Repository and during not using the inMemoryUserDetailsService so creating the bean CustomUserDetailService implementes the UserDetailsService it gets the loadUserByUserName we can get it from the UserRepository by madding the one method in it Optional<User> findByUserName(String username);
+
+and now madding the service and the controller and so using the controller we can make some dtos and so properly and we can get the data in the json format properly like madding the loginresponsedto
+
+during the madding the loginResponseDto public LoginResponseDto login(LoginRequestDto loginRequestDto)
+{
+Authentication authentication = authenticationManager.authenticate(
+new UsernamePasswordAuthenticationToken(loginRequestDto.getUsername(),loginRequestDto.getPassword())
+);
+
+User user = (User) authentication.getPrincipal();
+}
+
+for token making we have made the auth util
+and there where writing jwt.secret.key = "random string should be passed here in the application properties"
+
+@Value se liya fir jwt.secret.key
+
+private SecretKey getSecretKey(){
+return Keys.hmacShaKeyFor(jwtSecretKey.getBytes(StandaradCharsets.UTF_8));
+}
+
+private String generateAccessToken(User user){
+return Jwts.builder()
+	.subject(user.getUserName())
+	.claims("userId",user.getId().toString())
+	.issuedAt(new Date())
+	.expiration(new Date(System.currentTimeMills() + 1000*60*10))
+	.compact();
+}
+
+
+now in the auth service and the remaining code should be there 
+String token = authUtil.generateAccessToken(user);
+return new LoginResponseDto(token,user.getId());
+
+
+so before login there should be signup there 
+so made the signupresponseDto where the private Long id and private String username;
+ek loginRequestDto woh hi abhi pass on kari aur fir call kar raha hai authService.signUp()
+
+so now abhi signup method in the authService ma userRepo ko inject kar diya fir
+apna User user = userRepo.findByUserName(signupRequestDto.getUserName().orElseThrow(null));
+
+if( user != null) toh throw karo exception
+
+user = userRepo.save(User.builder()
+.username(signupRequestDto.getUsername())
+.password(signupRequestDto.getPassword())
+.build()
+);
+
+make sure u define the Builder in the User Entity
+
+we can use the model Mapper then but now using the return new SignUpResponseDto(user.getId(),user.getUserName())
+
+authenticationManager bean config karna padtha hai public AUthenticationManager authenticationManager(AuthenticationConfiguration configuration) thrwos Exception{
+return configuration.getAuthenticationManager();
+}
+
+
+and allow the auth request because if you do not allow the signup(register) or login then how it will signup 
+@bean
+httpSecurity.csrf(
+csrf -> csrf.disable()
+)
+.sesssionManagement(
+sessionconfig -> sessionconfig.sessionCreationPolicy(SessionManagementPolicy.STATELESS)
+);
+
+ye add on kar lena because hume in memory kuch store nahi karna hai csrf attack ko bhi disable karte hai 
+csrf means what jab koi authenticated user into unknowingly exceuting malicious activities on the the web application jab woh logged in hota hai tab.
+
+jab stateless api design kar rahe hota hai tab hum disable rakthe ha 
+
+By default, Spring Security mitigates this attack using the Synchronizer Token Pattern. ye hi hota hai 
+
+If your application uses token-based authentication (such as JSON Web Tokens or OAuth2 Bearer tokens) instead of cookie-based sessions, it is already stateless. Since the client must manually send the token in the Authorization header with every request, it is naturally protected against CSRF. In this case, CSRF protection is redundant and can be disabled.
+
+If your backend services are exclusively consumed by mobile applications, command-line tools (e.g., curl), or other backend microservices, there are no browser sessions involved to exploit. You can disable CSRF to simplify client-server interactions.
+
+Developers frequently disable CSRF temporarily during early development or when debugging using tools like Postman to avoid the hassle of generating and passing CSRF tokens on every API test call.
+
+aur fir encode kar ke bhejtha db ma bhai encode karke
+
+now for authentication with the jwt bhai we need to use the jwtAuthFilter bhai
+
+public class JwtAuthFilter extends OncePerRequestFilter{
+
+private final UserRepo userRepo;
+
+void doFilterInternal(HttpServletRequest req,HttpServletResponse res,FilterChain filterChain) throws Exception{
+request ke header ma se jwt nikalana hai bhai
+
+final String requestTokenHeader = request.getHeader("Authorization");
+if(reqTokenHeader == null || !requestTokenHeader.startsWith("Bearer")){
+filterChain.doFilter(request,response);
+return;
+}
+
+String token = requestTokenHeader.split("Bearer ")[1];
+String username = authUtil.getUsernameFromToken(token);
+
+so in authUtil we have to get the username from the getUsernamefromToken()
+
+so in the authUtil we have to defined the method
+public String getUsernamefromToken(String token){
+Claims claims =  Jwts.parser()
+	.verifyWith(getSecretKey())
+	.build()
+	.parsedSignedClaims(token)
+	.getPayload();
+
+return claims.getSubject();
+
+now back in the jwtauthFilter
+
+if (username != null && SecurityContextHolder.getContext().getAuthentication() == null)
+{
+User user = userRepo.findByUsername(username).orElseThrow();
+UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken  = new UsernamePasswordAuthenticationToken(user,null,user.getAuthorities());
+
+SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken)
+}
+
+filterChain.doFilter(request,response);
+
+}
+}
+}
+
+aab isko websecurityconfig ma bhi add karna padega bhai 
+
+private final JwtAuthFilter jwtAuthFilter;
+
+addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class) jwtAuthFIlter executes before UsernamePasswordAuthenticationFilter se pehla bhai
+
+now for the oauth2 provider we have write the oauth client id and client secret like we can get it from google cloud platform the oauth2 provider for google and for the GitHub it is also there
+
+spring.security.oauth2.client.registration.google.client-id=dskhdk
+spring.security.oauth2.client.registration.google.client-secret=
+
+then we have to add the oauth2Login() after addFilterBefore() method we have add the oauth2Login(oauth -> oauth.failureHander(req,res,exception ->{
+log.error("Oauth2 error: {}",exception.getMessage());
+}
+));
+
+
+so after providing the correct client id and the secret and all the things we can give in the goole and bro we can do the main thing that is allow js origins in the google cloud console where the credentials are so that if there is redirect successful happen
+
+and now the we can handle the successHandler(
+(req,res,exception)->{
+// here is the logic is big so create oauth2 successHandler in the another file
+}
+)
+
+lets made the file oauth2SuccessHandler implements AuthenticationSucessHandler{
+now add the overwrite the methods 
+
+public void onAuthenticationProvider(HttpServletRequest req,HttpServletResponse res,Authentication authentication)
+{
+Oauth2AuthenticationToken token = (Oauth2AuthenticationToken) authentication;
+Oauth2User oauth2User = (Oauth2User) token.getPrincipal();
+}
+}
+
+
+the flow of the oauth2 authorization flow
+
+now the there is client, server and authorization server is there so now 
+firstly the client sends the request and call the /oauth2/google/authentication/google and it goes to server and the server connect with the auth server with client id and secret is there and then auth server redirects to 3rd party login page and with the user providers credentials and consent and now the auth server redirect to the user and to the REDIRECT_URL with the state and code (Provided in the google cloud or in the GitHub you have mentioned)
+sends to the server (GET REQUEST is called /oauth2/code/google?state=STATE&code=AUTH_CODE and now the auth server spring security uses the AUTH_CODE to request tokens and the auth server validates the state_code and auth_code and now it provide access token to the server  and upon successful authentication it triggers ouath2successhandler
+ and get the user details from the access tojen and generate the user's access token and refresh token using the token service and set the refresh token in the cookie and return the response
+
+ 
